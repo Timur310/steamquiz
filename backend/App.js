@@ -31,6 +31,7 @@ app.get('/', function (request, reply) {
 // for the basic single game 3 review
 app.get('/api/review', async function handler(request, reply) {
 	const gamesObject = []
+	let targetGame
 	while (gamesObject.length != 3) {
 		id = appIds[(Math.floor(Math.random() * appIds.length))]
 		const gameRequest = await fetch(`https://store.steampowered.com/api/appdetails?appids=${id}`)
@@ -55,14 +56,17 @@ app.get('/api/review', async function handler(request, reply) {
 		}
 
 		gamesObject.push({
+			appId: id,
 			title: gameResponse[id].data.name,
-			img_url: gameResponse[id].data.capsule_image,
+			img_url: gameResponse[id].data.header_image,
 			review: finalReview.review
 		})
 
+		targetGame = gamesObject[(Math.floor(Math.random() * gamesObject.length))]
+
 	}
 	const response = {
-		"target": cyrb53(gamesObject[(Math.floor(Math.random() * gamesObject.length))].img_url.split("/")[6]),
+		"target": cyrb53(targetGame.appId),
 		"reviews": gamesObject
 	}
 	return response

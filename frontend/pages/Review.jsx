@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { Loader } from "../components/Loader"
+import { cyrb53 } from "../Utils"
 
 const Container = styled.div`
     background-color: #222;
@@ -9,14 +10,14 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     min-height: 100vh;
     padding: 2em;
 `
 
-const GameContainer = styled.div`
+const CardContainer = styled.div`
   height: fit-content;
-  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: space-around;
 `
@@ -35,6 +36,17 @@ const GameCard = styled.img`
   }
 `
 
+const ReviewBox = styled.div`
+  width: 100;
+  max-height: 300px;
+  border-radius: 10px;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 3px;
+  background: #353535;
+  color: #fff;
+  padding: 12px;
+  text-overflow: clip;
+`
+
 export const ReviewGame = () => {
 
   const [loading, setLoading] = useState(true)
@@ -50,16 +62,32 @@ export const ReviewGame = () => {
     fetchReview()
   }, [])
 
+  const fetchReview = async () => {
+    setLoading(true)
+    const data = await fetch('api/review')
+    const response = await data.json()
+    setGames(response)
+    setLoading(false)
+  }
+
+  const getTargetReview = () => {
+    const target = games.reviews.find(game => cyrb53(game.appId) === games.target)
+    return target.review
+  }
+
   return (
     <Container>
       {loading ? <Loader /> :
-        <GameContainer>
-          {games.reviews.map(game => {
-            return (
-              <GameCard src={game.img_url} />
-            )
-          })}
-        </GameContainer>
+        <>
+          <CardContainer>
+            {games.reviews.map(game => {
+              return (
+                <GameCard onClick={fetchReview} src={game.img_url} />
+              )
+            })}
+          </CardContainer>
+          <ReviewBox className="roboto-bold">{getTargetReview()}</ReviewBox>
+        </>
       }
     </Container>
   )

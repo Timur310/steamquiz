@@ -26949,6 +26949,21 @@
     return /* @__PURE__ */ import_react4.default.createElement(Card2, null, /* @__PURE__ */ import_react4.default.createElement(LoaderContainer, { className: "roboto-regular" }, /* @__PURE__ */ import_react4.default.createElement("p", null, "loading"), /* @__PURE__ */ import_react4.default.createElement(Words, null, /* @__PURE__ */ import_react4.default.createElement(Word, null, "Overwhelmingly Positive"), /* @__PURE__ */ import_react4.default.createElement(Word, null, "Very Positive"), /* @__PURE__ */ import_react4.default.createElement(Word, null, "Positive"), /* @__PURE__ */ import_react4.default.createElement(Word, null, "Mostly Positive"), /* @__PURE__ */ import_react4.default.createElement(Word, null, "Mixed"), /* @__PURE__ */ import_react4.default.createElement(Word, null, "Mostly Negative"))));
   };
 
+  // frontend/Utils.js
+  var cyrb53 = (str, seed = 0) => {
+    let h1 = 3735928559 ^ seed, h2 = 1103547991 ^ seed;
+    for (let i2 = 0, ch; i2 < str.length; i2++) {
+      ch = str.charCodeAt(i2);
+      h1 = Math.imul(h1 ^ ch, 2654435761);
+      h2 = Math.imul(h2 ^ ch, 1597334677);
+    }
+    h1 = Math.imul(h1 ^ h1 >>> 16, 2246822507);
+    h1 ^= Math.imul(h2 ^ h2 >>> 13, 3266489909);
+    h2 = Math.imul(h2 ^ h2 >>> 16, 2246822507);
+    h2 ^= Math.imul(h1 ^ h1 >>> 13, 3266489909);
+    return 4294967296 * (2097151 & h2) + (h1 >>> 0);
+  };
+
   // frontend/pages/Review.jsx
   var Container2 = dt.div`
     background-color: #222;
@@ -26957,13 +26972,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     min-height: 100vh;
     padding: 2em;
 `;
-  var GameContainer = dt.div`
+  var CardContainer = dt.div`
   height: fit-content;
-  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: space-around;
 `;
@@ -26980,21 +26995,42 @@
     transform: scale(1.05);
   }
 `;
+  var ReviewBox = dt.div`
+  width: 100;
+  max-height: 300px;
+  border-radius: 10px;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 3px;
+  background: #353535;
+  color: #fff;
+  padding: 12px;
+  text-overflow: clip;
+`;
   var ReviewGame = () => {
     const [loading, setLoading] = (0, import_react5.useState)(true);
     const [games, setGames] = (0, import_react5.useState)({});
     (0, import_react5.useEffect)(() => {
-      const fetchReview = async () => {
+      const fetchReview2 = async () => {
         const data = await fetch("api/review");
         const response = await data.json();
         setGames(response);
         setLoading(false);
       };
-      fetchReview();
+      fetchReview2();
     }, []);
-    return /* @__PURE__ */ import_react5.default.createElement(Container2, null, loading ? /* @__PURE__ */ import_react5.default.createElement(Loader, null) : /* @__PURE__ */ import_react5.default.createElement(GameContainer, null, games.reviews.map((game) => {
-      return /* @__PURE__ */ import_react5.default.createElement(GameCard, { src: game.img_url });
-    })));
+    const fetchReview = async () => {
+      setLoading(true);
+      const data = await fetch("api/review");
+      const response = await data.json();
+      setGames(response);
+      setLoading(false);
+    };
+    const getTargetReview = () => {
+      const target = games.reviews.find((game) => cyrb53(game.appId) === games.target);
+      return target.review;
+    };
+    return /* @__PURE__ */ import_react5.default.createElement(Container2, null, loading ? /* @__PURE__ */ import_react5.default.createElement(Loader, null) : /* @__PURE__ */ import_react5.default.createElement(import_react5.default.Fragment, null, /* @__PURE__ */ import_react5.default.createElement(CardContainer, null, games.reviews.map((game) => {
+      return /* @__PURE__ */ import_react5.default.createElement(GameCard, { onClick: fetchReview, src: game.img_url });
+    })), /* @__PURE__ */ import_react5.default.createElement(ReviewBox, { className: "roboto-bold" }, getTargetReview())));
   };
 
   // frontend/Root.jsx
