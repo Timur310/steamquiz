@@ -1084,7 +1084,7 @@
             }
             return dispatcher.useContext(Context);
           }
-          function useState3(initialState) {
+          function useState4(initialState) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useState(initialState);
           }
@@ -1096,7 +1096,7 @@
             var dispatcher = resolveDispatcher();
             return dispatcher.useRef(initialValue);
           }
-          function useEffect3(create, deps) {
+          function useEffect4(create, deps) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useEffect(create, deps);
           }
@@ -1879,7 +1879,7 @@
           exports.useContext = useContext3;
           exports.useDebugValue = useDebugValue;
           exports.useDeferredValue = useDeferredValue;
-          exports.useEffect = useEffect3;
+          exports.useEffect = useEffect4;
           exports.useId = useId;
           exports.useImperativeHandle = useImperativeHandle;
           exports.useInsertionEffect = useInsertionEffect;
@@ -1887,7 +1887,7 @@
           exports.useMemo = useMemo3;
           exports.useReducer = useReducer;
           exports.useRef = useRef3;
-          exports.useState = useState3;
+          exports.useState = useState4;
           exports.useSyncExternalStore = useSyncExternalStore;
           exports.useTransition = useTransition;
           exports.version = ReactVersion;
@@ -2383,9 +2383,9 @@
           if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
           }
-          var React6 = require_react();
+          var React9 = require_react();
           var Scheduler = require_scheduler();
-          var ReactSharedInternals = React6.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var ReactSharedInternals = React9.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           var suppressWarning = false;
           function setSuppressWarning(newSuppressWarning) {
             {
@@ -3990,7 +3990,7 @@
             {
               if (props.value == null) {
                 if (typeof props.children === "object" && props.children !== null) {
-                  React6.Children.forEach(props.children, function(child) {
+                  React9.Children.forEach(props.children, function(child) {
                     if (child == null) {
                       return;
                     }
@@ -23561,7 +23561,7 @@
   });
 
   // frontend/App.jsx
-  var import_react4 = __toESM(require_react());
+  var import_react7 = __toESM(require_react());
   var import_client = __toESM(require_client());
 
   // node_modules/react-router-dom/dist/index.js
@@ -25492,10 +25492,10 @@
   }
 
   // frontend/Root.jsx
-  var import_react3 = __toESM(require_react());
+  var import_react6 = __toESM(require_react());
 
-  // frontend/components/Index.jsx
-  var import_react2 = __toESM(require_react());
+  // frontend/pages/Index.jsx
+  var import_react3 = __toESM(require_react());
 
   // node_modules/tslib/tslib.es6.mjs
   var __assign = function() {
@@ -26734,6 +26734,12 @@
     }
     return import_react.default.memo(l2);
   }
+  function mt(t) {
+    for (var n = [], o2 = 1; o2 < arguments.length; o2++) n[o2 - 1] = arguments[o2];
+    "undefined" != typeof navigator && "ReactNative" === navigator.product && console.warn("`keyframes` cannot be used on ReactNative, only on the web. To do animation in ReactNative please use Animated.");
+    var r2 = ae(lt.apply(void 0, __spreadArray([t], n, false))), s2 = $(r2);
+    return new We(s2, r2);
+  }
   var vt = function() {
     function e() {
       var e2 = this;
@@ -26767,17 +26773,228 @@
   var St = "__sc-".concat(f, "__");
   "undefined" != typeof window && (window[St] || (window[St] = 0), 1 === window[St] && console.warn("It looks like there are several instances of 'styled-components' initialized in this application. This may cause dynamic styles to not render properly, errors during the rehydration process, a missing theme prop, and makes your application bigger without good reason.\n\nSee https://s-c.sh/2BAXzed for more info."), window[St] += 1);
 
-  // frontend/components/Index.jsx
-  var Container = dt.div`
-    background-color: #D5C5C6;
+  // frontend/components/ButtonCard.jsx
+  var import_react2 = __toESM(require_react());
+  var Card = dt.div`
+    width: 100%;
+    max-width: 290px;
+    height: fit-content;
+    min-height: 70px;
+    background: #353535;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    backdrop-filter: blur(10px);
+    transition: 0.2s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    &:hover {
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 16px;
+        transform: scale(1.05);
+    }
+`;
+  var TextBox = dt.div`
+    width: calc(100% - 90px);
+    margin-left: 10px;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    justify-content: space-evenly;
+    color: white;
+    .p {
+        font-size: 12px;
+        font-weight: lighter;
+    }
+`;
+  var TextContent = dt.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .span {
+        font-size: 10px;
+    }
+    .h1 {
+        font-size: 16px;
+        font-weight: bold;
+    }
+`;
+  var IconImage = dt.div`
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#171a21, #2a475e);
+`;
+  var ButtonCard = (props) => {
+    const { title, Badge, description, onClicked } = props;
+    return /* @__PURE__ */ import_react2.default.createElement(Card, { onClick: onClicked }, /* @__PURE__ */ import_react2.default.createElement(IconImage, null, /* @__PURE__ */ import_react2.default.createElement("svg", { width: "32px", height: "32px", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, /* @__PURE__ */ import_react2.default.createElement("g", { id: "SVGRepo_bgCarrier", strokeWidth: "0" }), /* @__PURE__ */ import_react2.default.createElement("g", { id: "SVGRepo_tracerCarrier", strokeLinecap: "round", strokeLinejoin: "round" }), /* @__PURE__ */ import_react2.default.createElement("g", { id: "SVGRepo_iconCarrier" }, " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M5.5 15.5C5.5 14.5572 5.5 14.0858 5.79289 13.7929C6.08579 13.5 6.55719 13.5 7.5 13.5H8.5C9.44281 13.5 9.91421 13.5 10.2071 13.7929C10.5 14.0858 10.5 14.5572 10.5 15.5V16.5C10.5 17.4428 10.5 17.9142 10.2071 18.2071C9.91421 18.5 9.44281 18.5 8.5 18.5C7.08579 18.5 6.37868 18.5 5.93934 18.0607", stroke: "#fff", strokeWidth: "1.5", strokeLinecap: "round" }), " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M5.5 8.5C5.5 7.08579 5.5 6.37868 5.93934 5.93934C6.37868 5.5 7.08579 5.5 8.5 5.5C9.44281 5.5 9.91421 5.5 10.2071 5.79289C10.5 6.08579 10.5 6.55719 10.5 7.5V8.5C10.5 9.44281 10.5 9.91421 10.2071 10.2071C9.91421 10.5 9.44281 10.5 8.5 10.5H7.5C6.55719 10.5 6.08579 10.5 5.79289 10.2071C5.5 9.91421 5.5 9.44281 5.5 8.5Z", stroke: "#fff", strokeWidth: "1.5" }), " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M13.5 15.5C13.5 14.5572 13.5 14.0858 13.7929 13.7929C14.0858 13.5 14.5572 13.5 15.5 13.5H16.5C17.4428 13.5 17.9142 13.5 18.2071 13.7929C18.5 14.0858 18.5 14.5572 18.5 15.5C18.5 16.9142 18.5 17.6213 18.0607 18.0607C17.6213 18.5 16.9142 18.5 15.5 18.5C14.5572 18.5 14.0858 18.5 13.7929 18.2071C13.5 17.9142 13.5 17.4428 13.5 16.5V15.5Z", stroke: "#fff", strokeWidth: "1.5" }), " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M18.5 8.5C18.5 9.44281 18.5 9.91421 18.2071 10.2071C17.9142 10.5 17.4428 10.5 16.5 10.5H15.5C14.5572 10.5 14.0858 10.5 13.7929 10.2071C13.5 9.91421 13.5 9.44281 13.5 8.5V7.5C13.5 6.55719 13.5 6.08579 13.7929 5.79289C14.0858 5.5 14.5572 5.5 15.5 5.5C16.9142 5.5 17.6213 5.5 18.0607 5.93934", stroke: "#fff", strokeWidth: "1.5", strokeLinecap: "round" }), " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M22 14C22 14.3492 22 14.6822 21.9991 15M14 22C17.7712 22 19.6569 22 20.8284 20.8284C21.4816 20.1752 21.7706 19.3001 21.8985 18", stroke: "#fff", strokeWidth: "1.5", strokeLinecap: "round" }), " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M10 22C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14", stroke: "#fff", strokeWidth: "1.5", strokeLinecap: "round" }), " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M10 2C6.22876 2 4.34315 2 3.17157 3.17157C2.51839 3.82475 2.22937 4.69989 2.10149 6M2 10C2 9.65081 2 9.31779 2.00093 9", stroke: "#fff", strokeWidth: "1.5", strokeLinecap: "round" }), " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M14 2C17.7712 2 19.6569 2 20.8284 3.17157C22 4.34315 22 6.22876 22 10", stroke: "#fff", strokeWidth: "1.5", strokeLinecap: "round" }), " "))), /* @__PURE__ */ import_react2.default.createElement(TextBox, null, /* @__PURE__ */ import_react2.default.createElement(TextContent, null, /* @__PURE__ */ import_react2.default.createElement("p", { className: "h1 roboto-bold" }, title ?? ""), Badge && /* @__PURE__ */ import_react2.default.createElement(Badge, null)), /* @__PURE__ */ import_react2.default.createElement("p", { className: "p roboto-thin" }, description ?? "")));
+  };
+
+  // frontend/pages/Index.jsx
+  var Container = dt.div`
+    background-color: #222;
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     min-height: 100vh;
     padding: 0.5em;
 `;
   var Index = () => {
-    return /* @__PURE__ */ import_react2.default.createElement(Container, null, "INDEX");
+    const navigate = useNavigate();
+    return /* @__PURE__ */ import_react3.default.createElement(Container, null, /* @__PURE__ */ import_react3.default.createElement(
+      ButtonCard,
+      {
+        title: "Basic Review Game",
+        description: "Guess the game from reviews",
+        onClicked: () => navigate("/review")
+      }
+    ));
+  };
+
+  // frontend/pages/Review.jsx
+  var import_react5 = __toESM(require_react());
+
+  // frontend/components/Loader.jsx
+  var import_react4 = __toESM(require_react());
+  var Card2 = dt.div`
+    padding: 1rem 2rem;
+`;
+  var LoaderKeyframes = mt`
+  10% {
+    -webkit-transform: translateY(-102%);
+    transform: translateY(-102%);
+  }
+  20% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  30% {
+    -webkit-transform: translateY(-202%);
+    transform: translateY(-202%);
+  }
+  40% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+  50% {
+    -webkit-transform: translateY(-302%);
+    transform: translateY(-302%);
+  }
+  60% {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+  70% {
+    -webkit-transform: translateY(-402%);
+    transform: translateY(-402%);
+  }
+  80% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
+  90% {
+    -webkit-transform: translateY(-502%);
+    transform: translateY(-502%);
+  }
+  100% {
+    -webkit-transform: translateY(-500%);
+    transform: translateY(-500%);
+  }
+`;
+  var LoaderContainer = dt.div`
+  color: rgb(124, 124, 124);
+  font-weight: 500;
+  font-size: 25px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 40px;
+  padding: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+`;
+  var Words = dt.div`
+    overflow: hidden;
+    position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color) 90%
+    );
+    z-index: 20;
+}
+`;
+  var Word = dt.span`
+    display: block;
+    height: 100%;
+    padding-left: 6px;
+    color: #5D3FD3;
+    animation: ${LoaderKeyframes} 6s infinite;
+`;
+  var Loader = () => {
+    return /* @__PURE__ */ import_react4.default.createElement(Card2, null, /* @__PURE__ */ import_react4.default.createElement(LoaderContainer, { className: "roboto-regular" }, /* @__PURE__ */ import_react4.default.createElement("p", null, "loading"), /* @__PURE__ */ import_react4.default.createElement(Words, null, /* @__PURE__ */ import_react4.default.createElement(Word, null, "Overwhelmingly Positive"), /* @__PURE__ */ import_react4.default.createElement(Word, null, "Very Positive"), /* @__PURE__ */ import_react4.default.createElement(Word, null, "Positive"), /* @__PURE__ */ import_react4.default.createElement(Word, null, "Mostly Positive"), /* @__PURE__ */ import_react4.default.createElement(Word, null, "Mixed"), /* @__PURE__ */ import_react4.default.createElement(Word, null, "Mostly Negative"))));
+  };
+
+  // frontend/pages/Review.jsx
+  var Container2 = dt.div`
+    background-color: #222;
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2em;
+`;
+  var GameContainer = dt.div`
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+`;
+  var GameCard = dt.img`
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 16px;
+    transform: scale(1.05);
+  }
+`;
+  var ReviewGame = () => {
+    const [loading, setLoading] = (0, import_react5.useState)(true);
+    const [games, setGames] = (0, import_react5.useState)({});
+    (0, import_react5.useEffect)(() => {
+      const fetchReview = async () => {
+        const data = await fetch("api/review");
+        const response = await data.json();
+        setGames(response);
+        setLoading(false);
+      };
+      fetchReview();
+    }, []);
+    return /* @__PURE__ */ import_react5.default.createElement(Container2, null, loading ? /* @__PURE__ */ import_react5.default.createElement(Loader, null) : /* @__PURE__ */ import_react5.default.createElement(GameContainer, null, games.reviews.map((game) => {
+      return /* @__PURE__ */ import_react5.default.createElement(GameCard, { src: game.img_url });
+    })));
   };
 
   // frontend/Root.jsx
@@ -26805,15 +27022,86 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
 `;
   var Root = () => {
-    return /* @__PURE__ */ import_react3.default.createElement("div", null, /* @__PURE__ */ import_react3.default.createElement(GlobalStyle, null), /* @__PURE__ */ import_react3.default.createElement(Routes, null, /* @__PURE__ */ import_react3.default.createElement(Route, { path: "/", element: /* @__PURE__ */ import_react3.default.createElement(Index, null) })));
+    return /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement(GlobalStyle, null), /* @__PURE__ */ import_react6.default.createElement(Routes, null, /* @__PURE__ */ import_react6.default.createElement(Route, { path: "/", element: /* @__PURE__ */ import_react6.default.createElement(Index, null) }), /* @__PURE__ */ import_react6.default.createElement(Route, { path: "/review", element: /* @__PURE__ */ import_react6.default.createElement(ReviewGame, null) })));
   };
 
   // frontend/App.jsx
   var root = import_client.default.createRoot(document.getElementById("root"));
   root.render(
-    /* @__PURE__ */ import_react4.default.createElement(import_react4.default.StrictMode, null, /* @__PURE__ */ import_react4.default.createElement(BrowserRouter, null, /* @__PURE__ */ import_react4.default.createElement(Root, null)))
+    /* @__PURE__ */ import_react7.default.createElement(import_react7.default.StrictMode, null, /* @__PURE__ */ import_react7.default.createElement(BrowserRouter, null, /* @__PURE__ */ import_react7.default.createElement(Root, null)))
   );
 })();
 /*! Bundled license information:

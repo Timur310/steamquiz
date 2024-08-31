@@ -43097,7 +43097,7 @@ var cyrb53 = (str, seed = 0) => {
 app.get("/", function(request, reply) {
   reply.sendFile("index.html");
 });
-app.get("/review", async function handler(request, reply) {
+app.get("/api/review", async function handler(request, reply) {
   const gamesObject = [];
   while (gamesObject.length != 3) {
     id = apps_default[Math.floor(Math.random() * apps_default.length)];

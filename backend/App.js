@@ -29,7 +29,7 @@ app.get('/', function (request, reply) {
 })
 
 // for the basic single game 3 review
-app.get('/review', async function handler(request, reply) {
+app.get('/api/review', async function handler(request, reply) {
 	const gamesObject = []
 	while (gamesObject.length != 3) {
 		id = appIds[(Math.floor(Math.random() * appIds.length))]
