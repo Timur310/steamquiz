@@ -1,7 +1,13 @@
 import Fastify from 'fastify'
-import appIds from "./apps.json" with {type: "json"};
+import appIds from "../apps.json" with {type: "json"};
+const path = require('node:path')
 
 const app = Fastify({ logger: true })
+
+app.register(require('@fastify/static'), {
+	root: path.join(__dirname, 'public'),
+	prefix: '/public/', // optional: default '/'
+})
 
 const cyrb53 = (str, seed = 0) => {
 	let h1 = 0xdeadbeef ^ seed, h2 = 0x41c6ce57 ^ seed;
@@ -18,10 +24,9 @@ const cyrb53 = (str, seed = 0) => {
 	return 4294967296 * (2097151 & h2) + (h1 >>> 0);
 };
 
-app.get('/', async function handler(request, reply) {
-	return { hello: 'world' }
+app.get('/', function (request, reply) {
+	reply.sendFile('index.html')
 })
-
 
 // for the basic single game 3 review
 app.get('/review', async function handler(request, reply) {
