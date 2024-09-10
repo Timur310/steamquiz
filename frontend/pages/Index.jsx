@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { ButtonCard } from "../components/ButtonCard";
+import { Badge } from "../components/Badge";
 
 const Container = styled.div`
     background-color: #222;
@@ -13,6 +14,7 @@ const Container = styled.div`
     justify-content: center;
     min-height: 100vh;
     padding: 0.5em;
+    gap: 16px;
 `
 
 export const Index = () => {
@@ -22,9 +24,16 @@ export const Index = () => {
   return (
     <Container>
       <ButtonCard
-        title="Basic Review Game"
-        description="Guess the game from reviews"
+        title="Journalist"
+        description="Guess the game from a review"
         onClicked={() => navigate("/review")}
+      />
+      <ButtonCard
+        title="can it run Crysis?"
+        description="Guess which game matches the pc requirement"
+        onClicked={() => navigate("/requirement")}
+        badge={<Badge text="Hard" />}
+        
       />
     </Container>
   )

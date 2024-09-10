@@ -60,7 +60,7 @@ const IconImage = styled.div`
 `
 
 export const ButtonCard = (props) => {
-    const { title, Badge, description, onClicked } = props
+    const { title, badge, description, onClicked } = props
     return (
         <Card onClick={onClicked}>
             <IconImage>
@@ -69,7 +69,7 @@ export const ButtonCard = (props) => {
             <TextBox>
                 <TextContent>
                     <p className="h1 roboto-bold">{title ?? ""}</p>
-                    {Badge && <Badge />}
+                    {badge}
                     {/* <span className="span roboto-regular">12 min ago</span> */}
                 </TextContent>
                 <p className="p roboto-thin">{description ?? ""}</p>

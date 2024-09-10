@@ -27,7 +27,7 @@
 
   // node_modules/react/cjs/react.development.js
   var require_react_development = __commonJS({
-    "node_modules/react/cjs/react.development.js"(exports, module) {
+    "node_modules/react/cjs/react.development.js"(exports, module2) {
       "use strict";
       if (true) {
         (function() {
@@ -471,7 +471,7 @@
               }
             }
           }
-          var ReactElement = function(type, key, ref, self, source, owner, props) {
+          var ReactElement = function(type, key, ref, self2, source, owner, props) {
             var element = {
               // This tag allows us to uniquely identify this as a React Element
               $$typeof: REACT_ELEMENT_TYPE,
@@ -495,7 +495,7 @@
                 configurable: false,
                 enumerable: false,
                 writable: false,
-                value: self
+                value: self2
               });
               Object.defineProperty(element, "_source", {
                 configurable: false,
@@ -515,7 +515,7 @@
             var props = {};
             var key = null;
             var ref = null;
-            var self = null;
+            var self2 = null;
             var source = null;
             if (config != null) {
               if (hasValidRef(config)) {
@@ -530,7 +530,7 @@
                 }
                 key = "" + config.key;
               }
-              self = config.__self === void 0 ? null : config.__self;
+              self2 = config.__self === void 0 ? null : config.__self;
               source = config.__source === void 0 ? null : config.__source;
               for (propName in config) {
                 if (hasOwnProperty.call(config, propName) && !RESERVED_PROPS.hasOwnProperty(propName)) {
@@ -572,7 +572,7 @@
                 }
               }
             }
-            return ReactElement(type, key, ref, self, source, ReactCurrentOwner.current, props);
+            return ReactElement(type, key, ref, self2, source, ReactCurrentOwner.current, props);
           }
           function cloneAndReplaceKey(oldElement, newKey) {
             var newElement = ReactElement(oldElement.type, newKey, oldElement.ref, oldElement._self, oldElement._source, oldElement._owner, oldElement.props);
@@ -586,7 +586,7 @@
             var props = assign2({}, element.props);
             var key = element.key;
             var ref = element.ref;
-            var self = element._self;
+            var self2 = element._self;
             var source = element._source;
             var owner = element._owner;
             if (config != null) {
@@ -624,7 +624,7 @@
               }
               props.children = childArray;
             }
-            return ReactElement(element.type, key, ref, self, source, owner, props);
+            return ReactElement(element.type, key, ref, self2, source, owner, props);
           }
           function isValidElement2(object) {
             return typeof object === "object" && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
@@ -1084,7 +1084,7 @@
             }
             return dispatcher.useContext(Context);
           }
-          function useState4(initialState) {
+          function useState5(initialState) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useState(initialState);
           }
@@ -1096,29 +1096,29 @@
             var dispatcher = resolveDispatcher();
             return dispatcher.useRef(initialValue);
           }
-          function useEffect4(create, deps) {
+          function useEffect5(create2, deps) {
             var dispatcher = resolveDispatcher();
-            return dispatcher.useEffect(create, deps);
+            return dispatcher.useEffect(create2, deps);
           }
-          function useInsertionEffect(create, deps) {
+          function useInsertionEffect(create2, deps) {
             var dispatcher = resolveDispatcher();
-            return dispatcher.useInsertionEffect(create, deps);
+            return dispatcher.useInsertionEffect(create2, deps);
           }
-          function useLayoutEffect3(create, deps) {
+          function useLayoutEffect3(create2, deps) {
             var dispatcher = resolveDispatcher();
-            return dispatcher.useLayoutEffect(create, deps);
+            return dispatcher.useLayoutEffect(create2, deps);
           }
           function useCallback3(callback, deps) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useCallback(callback, deps);
           }
-          function useMemo3(create, deps) {
+          function useMemo3(create2, deps) {
             var dispatcher = resolveDispatcher();
-            return dispatcher.useMemo(create, deps);
+            return dispatcher.useMemo(create2, deps);
           }
-          function useImperativeHandle(ref, create, deps) {
+          function useImperativeHandle(ref, create2, deps) {
             var dispatcher = resolveDispatcher();
-            return dispatcher.useImperativeHandle(ref, create, deps);
+            return dispatcher.useImperativeHandle(ref, create2, deps);
           }
           function useDebugValue(value, formatterFn) {
             {
@@ -1683,8 +1683,8 @@
             if (enqueueTaskImpl === null) {
               try {
                 var requireString = ("require" + Math.random()).slice(0, 7);
-                var nodeRequire = module && module[requireString];
-                enqueueTaskImpl = nodeRequire.call(module, "timers").setImmediate;
+                var nodeRequire = module2 && module2[requireString];
+                enqueueTaskImpl = nodeRequire.call(module2, "timers").setImmediate;
               } catch (_err) {
                 enqueueTaskImpl = function(callback) {
                   {
@@ -1879,7 +1879,7 @@
           exports.useContext = useContext3;
           exports.useDebugValue = useDebugValue;
           exports.useDeferredValue = useDeferredValue;
-          exports.useEffect = useEffect4;
+          exports.useEffect = useEffect5;
           exports.useId = useId;
           exports.useImperativeHandle = useImperativeHandle;
           exports.useInsertionEffect = useInsertionEffect;
@@ -1887,7 +1887,7 @@
           exports.useMemo = useMemo3;
           exports.useReducer = useReducer;
           exports.useRef = useRef3;
-          exports.useState = useState4;
+          exports.useState = useState5;
           exports.useSyncExternalStore = useSyncExternalStore;
           exports.useTransition = useTransition;
           exports.version = ReactVersion;
@@ -1901,12 +1901,12 @@
 
   // node_modules/react/index.js
   var require_react = __commonJS({
-    "node_modules/react/index.js"(exports, module) {
+    "node_modules/react/index.js"(exports, module2) {
       "use strict";
       if (false) {
-        module.exports = null;
+        module2.exports = null;
       } else {
-        module.exports = require_react_development();
+        module2.exports = require_react_development();
       }
     }
   });
@@ -2363,12 +2363,12 @@
 
   // node_modules/scheduler/index.js
   var require_scheduler = __commonJS({
-    "node_modules/scheduler/index.js"(exports, module) {
+    "node_modules/scheduler/index.js"(exports, module2) {
       "use strict";
       if (false) {
-        module.exports = null;
+        module2.exports = null;
       } else {
-        module.exports = require_scheduler_development();
+        module2.exports = require_scheduler_development();
       }
     }
   });
@@ -2383,9 +2383,9 @@
           if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
           }
-          var React9 = require_react();
+          var React11 = require_react();
           var Scheduler = require_scheduler();
-          var ReactSharedInternals = React9.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var ReactSharedInternals = React11.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           var suppressWarning = false;
           function setSuppressWarning(newSuppressWarning) {
             {
@@ -3990,7 +3990,7 @@
             {
               if (props.value == null) {
                 if (typeof props.children === "object" && props.children !== null) {
-                  React9.Children.forEach(props.children, function(child) {
+                  React11.Children.forEach(props.children, function(child) {
                     if (child == null) {
                       return;
                     }
@@ -13929,10 +13929,10 @@
           function rerenderState(initialState) {
             return rerenderReducer(basicStateReducer);
           }
-          function pushEffect(tag, create, destroy, deps) {
+          function pushEffect(tag, create2, destroy, deps) {
             var effect = {
               tag,
-              create,
+              create: create2,
               destroy,
               deps,
               // Circular
@@ -13970,13 +13970,13 @@
             var hook = updateWorkInProgressHook();
             return hook.memoizedState;
           }
-          function mountEffectImpl(fiberFlags, hookFlags, create, deps) {
+          function mountEffectImpl(fiberFlags, hookFlags, create2, deps) {
             var hook = mountWorkInProgressHook();
             var nextDeps = deps === void 0 ? null : deps;
             currentlyRenderingFiber$1.flags |= fiberFlags;
-            hook.memoizedState = pushEffect(HasEffect | hookFlags, create, void 0, nextDeps);
+            hook.memoizedState = pushEffect(HasEffect | hookFlags, create2, void 0, nextDeps);
           }
-          function updateEffectImpl(fiberFlags, hookFlags, create, deps) {
+          function updateEffectImpl(fiberFlags, hookFlags, create2, deps) {
             var hook = updateWorkInProgressHook();
             var nextDeps = deps === void 0 ? null : deps;
             var destroy = void 0;
@@ -13986,31 +13986,31 @@
               if (nextDeps !== null) {
                 var prevDeps = prevEffect.deps;
                 if (areHookInputsEqual(nextDeps, prevDeps)) {
-                  hook.memoizedState = pushEffect(hookFlags, create, destroy, nextDeps);
+                  hook.memoizedState = pushEffect(hookFlags, create2, destroy, nextDeps);
                   return;
                 }
               }
             }
             currentlyRenderingFiber$1.flags |= fiberFlags;
-            hook.memoizedState = pushEffect(HasEffect | hookFlags, create, destroy, nextDeps);
+            hook.memoizedState = pushEffect(HasEffect | hookFlags, create2, destroy, nextDeps);
           }
-          function mountEffect(create, deps) {
+          function mountEffect(create2, deps) {
             if ((currentlyRenderingFiber$1.mode & StrictEffectsMode) !== NoMode) {
-              return mountEffectImpl(MountPassiveDev | Passive | PassiveStatic, Passive$1, create, deps);
+              return mountEffectImpl(MountPassiveDev | Passive | PassiveStatic, Passive$1, create2, deps);
             } else {
-              return mountEffectImpl(Passive | PassiveStatic, Passive$1, create, deps);
+              return mountEffectImpl(Passive | PassiveStatic, Passive$1, create2, deps);
             }
           }
-          function updateEffect(create, deps) {
-            return updateEffectImpl(Passive, Passive$1, create, deps);
+          function updateEffect(create2, deps) {
+            return updateEffectImpl(Passive, Passive$1, create2, deps);
           }
-          function mountInsertionEffect(create, deps) {
-            return mountEffectImpl(Update, Insertion, create, deps);
+          function mountInsertionEffect(create2, deps) {
+            return mountEffectImpl(Update, Insertion, create2, deps);
           }
-          function updateInsertionEffect(create, deps) {
-            return updateEffectImpl(Update, Insertion, create, deps);
+          function updateInsertionEffect(create2, deps) {
+            return updateEffectImpl(Update, Insertion, create2, deps);
           }
-          function mountLayoutEffect(create, deps) {
+          function mountLayoutEffect(create2, deps) {
             var fiberFlags = Update;
             {
               fiberFlags |= LayoutStatic;
@@ -14018,15 +14018,15 @@
             if ((currentlyRenderingFiber$1.mode & StrictEffectsMode) !== NoMode) {
               fiberFlags |= MountLayoutDev;
             }
-            return mountEffectImpl(fiberFlags, Layout, create, deps);
+            return mountEffectImpl(fiberFlags, Layout, create2, deps);
           }
-          function updateLayoutEffect(create, deps) {
-            return updateEffectImpl(Update, Layout, create, deps);
+          function updateLayoutEffect(create2, deps) {
+            return updateEffectImpl(Update, Layout, create2, deps);
           }
-          function imperativeHandleEffect(create, ref) {
+          function imperativeHandleEffect(create2, ref) {
             if (typeof ref === "function") {
               var refCallback = ref;
-              var _inst = create();
+              var _inst = create2();
               refCallback(_inst);
               return function() {
                 refCallback(null);
@@ -14038,17 +14038,17 @@
                   error("Expected useImperativeHandle() first argument to either be a ref callback or React.createRef() object. Instead received: %s.", "an object with keys {" + Object.keys(refObject).join(", ") + "}");
                 }
               }
-              var _inst2 = create();
+              var _inst2 = create2();
               refObject.current = _inst2;
               return function() {
                 refObject.current = null;
               };
             }
           }
-          function mountImperativeHandle(ref, create, deps) {
+          function mountImperativeHandle(ref, create2, deps) {
             {
-              if (typeof create !== "function") {
-                error("Expected useImperativeHandle() second argument to be a function that creates a handle. Instead received: %s.", create !== null ? typeof create : "null");
+              if (typeof create2 !== "function") {
+                error("Expected useImperativeHandle() second argument to be a function that creates a handle. Instead received: %s.", create2 !== null ? typeof create2 : "null");
               }
             }
             var effectDeps = deps !== null && deps !== void 0 ? deps.concat([ref]) : null;
@@ -14059,16 +14059,16 @@
             if ((currentlyRenderingFiber$1.mode & StrictEffectsMode) !== NoMode) {
               fiberFlags |= MountLayoutDev;
             }
-            return mountEffectImpl(fiberFlags, Layout, imperativeHandleEffect.bind(null, create, ref), effectDeps);
+            return mountEffectImpl(fiberFlags, Layout, imperativeHandleEffect.bind(null, create2, ref), effectDeps);
           }
-          function updateImperativeHandle(ref, create, deps) {
+          function updateImperativeHandle(ref, create2, deps) {
             {
-              if (typeof create !== "function") {
-                error("Expected useImperativeHandle() second argument to be a function that creates a handle. Instead received: %s.", create !== null ? typeof create : "null");
+              if (typeof create2 !== "function") {
+                error("Expected useImperativeHandle() second argument to be a function that creates a handle. Instead received: %s.", create2 !== null ? typeof create2 : "null");
               }
             }
             var effectDeps = deps !== null && deps !== void 0 ? deps.concat([ref]) : null;
-            return updateEffectImpl(Update, Layout, imperativeHandleEffect.bind(null, create, ref), effectDeps);
+            return updateEffectImpl(Update, Layout, imperativeHandleEffect.bind(null, create2, ref), effectDeps);
           }
           function mountDebugValue(value, formatterFn) {
           }
@@ -14390,38 +14390,38 @@
                 mountHookTypesDev();
                 return readContext(context);
               },
-              useEffect: function(create, deps) {
+              useEffect: function(create2, deps) {
                 currentHookNameInDev = "useEffect";
                 mountHookTypesDev();
                 checkDepsAreArrayDev(deps);
-                return mountEffect(create, deps);
+                return mountEffect(create2, deps);
               },
-              useImperativeHandle: function(ref, create, deps) {
+              useImperativeHandle: function(ref, create2, deps) {
                 currentHookNameInDev = "useImperativeHandle";
                 mountHookTypesDev();
                 checkDepsAreArrayDev(deps);
-                return mountImperativeHandle(ref, create, deps);
+                return mountImperativeHandle(ref, create2, deps);
               },
-              useInsertionEffect: function(create, deps) {
+              useInsertionEffect: function(create2, deps) {
                 currentHookNameInDev = "useInsertionEffect";
                 mountHookTypesDev();
                 checkDepsAreArrayDev(deps);
-                return mountInsertionEffect(create, deps);
+                return mountInsertionEffect(create2, deps);
               },
-              useLayoutEffect: function(create, deps) {
+              useLayoutEffect: function(create2, deps) {
                 currentHookNameInDev = "useLayoutEffect";
                 mountHookTypesDev();
                 checkDepsAreArrayDev(deps);
-                return mountLayoutEffect(create, deps);
+                return mountLayoutEffect(create2, deps);
               },
-              useMemo: function(create, deps) {
+              useMemo: function(create2, deps) {
                 currentHookNameInDev = "useMemo";
                 mountHookTypesDev();
                 checkDepsAreArrayDev(deps);
                 var prevDispatcher = ReactCurrentDispatcher$1.current;
                 ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnMountInDEV;
                 try {
-                  return mountMemo(create, deps);
+                  return mountMemo(create2, deps);
                 } finally {
                   ReactCurrentDispatcher$1.current = prevDispatcher;
                 }
@@ -14499,33 +14499,33 @@
                 updateHookTypesDev();
                 return readContext(context);
               },
-              useEffect: function(create, deps) {
+              useEffect: function(create2, deps) {
                 currentHookNameInDev = "useEffect";
                 updateHookTypesDev();
-                return mountEffect(create, deps);
+                return mountEffect(create2, deps);
               },
-              useImperativeHandle: function(ref, create, deps) {
+              useImperativeHandle: function(ref, create2, deps) {
                 currentHookNameInDev = "useImperativeHandle";
                 updateHookTypesDev();
-                return mountImperativeHandle(ref, create, deps);
+                return mountImperativeHandle(ref, create2, deps);
               },
-              useInsertionEffect: function(create, deps) {
+              useInsertionEffect: function(create2, deps) {
                 currentHookNameInDev = "useInsertionEffect";
                 updateHookTypesDev();
-                return mountInsertionEffect(create, deps);
+                return mountInsertionEffect(create2, deps);
               },
-              useLayoutEffect: function(create, deps) {
+              useLayoutEffect: function(create2, deps) {
                 currentHookNameInDev = "useLayoutEffect";
                 updateHookTypesDev();
-                return mountLayoutEffect(create, deps);
+                return mountLayoutEffect(create2, deps);
               },
-              useMemo: function(create, deps) {
+              useMemo: function(create2, deps) {
                 currentHookNameInDev = "useMemo";
                 updateHookTypesDev();
                 var prevDispatcher = ReactCurrentDispatcher$1.current;
                 ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnMountInDEV;
                 try {
-                  return mountMemo(create, deps);
+                  return mountMemo(create2, deps);
                 } finally {
                   ReactCurrentDispatcher$1.current = prevDispatcher;
                 }
@@ -14603,33 +14603,33 @@
                 updateHookTypesDev();
                 return readContext(context);
               },
-              useEffect: function(create, deps) {
+              useEffect: function(create2, deps) {
                 currentHookNameInDev = "useEffect";
                 updateHookTypesDev();
-                return updateEffect(create, deps);
+                return updateEffect(create2, deps);
               },
-              useImperativeHandle: function(ref, create, deps) {
+              useImperativeHandle: function(ref, create2, deps) {
                 currentHookNameInDev = "useImperativeHandle";
                 updateHookTypesDev();
-                return updateImperativeHandle(ref, create, deps);
+                return updateImperativeHandle(ref, create2, deps);
               },
-              useInsertionEffect: function(create, deps) {
+              useInsertionEffect: function(create2, deps) {
                 currentHookNameInDev = "useInsertionEffect";
                 updateHookTypesDev();
-                return updateInsertionEffect(create, deps);
+                return updateInsertionEffect(create2, deps);
               },
-              useLayoutEffect: function(create, deps) {
+              useLayoutEffect: function(create2, deps) {
                 currentHookNameInDev = "useLayoutEffect";
                 updateHookTypesDev();
-                return updateLayoutEffect(create, deps);
+                return updateLayoutEffect(create2, deps);
               },
-              useMemo: function(create, deps) {
+              useMemo: function(create2, deps) {
                 currentHookNameInDev = "useMemo";
                 updateHookTypesDev();
                 var prevDispatcher = ReactCurrentDispatcher$1.current;
                 ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnUpdateInDEV;
                 try {
-                  return updateMemo(create, deps);
+                  return updateMemo(create2, deps);
                 } finally {
                   ReactCurrentDispatcher$1.current = prevDispatcher;
                 }
@@ -14707,33 +14707,33 @@
                 updateHookTypesDev();
                 return readContext(context);
               },
-              useEffect: function(create, deps) {
+              useEffect: function(create2, deps) {
                 currentHookNameInDev = "useEffect";
                 updateHookTypesDev();
-                return updateEffect(create, deps);
+                return updateEffect(create2, deps);
               },
-              useImperativeHandle: function(ref, create, deps) {
+              useImperativeHandle: function(ref, create2, deps) {
                 currentHookNameInDev = "useImperativeHandle";
                 updateHookTypesDev();
-                return updateImperativeHandle(ref, create, deps);
+                return updateImperativeHandle(ref, create2, deps);
               },
-              useInsertionEffect: function(create, deps) {
+              useInsertionEffect: function(create2, deps) {
                 currentHookNameInDev = "useInsertionEffect";
                 updateHookTypesDev();
-                return updateInsertionEffect(create, deps);
+                return updateInsertionEffect(create2, deps);
               },
-              useLayoutEffect: function(create, deps) {
+              useLayoutEffect: function(create2, deps) {
                 currentHookNameInDev = "useLayoutEffect";
                 updateHookTypesDev();
-                return updateLayoutEffect(create, deps);
+                return updateLayoutEffect(create2, deps);
               },
-              useMemo: function(create, deps) {
+              useMemo: function(create2, deps) {
                 currentHookNameInDev = "useMemo";
                 updateHookTypesDev();
                 var prevDispatcher = ReactCurrentDispatcher$1.current;
                 ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnRerenderInDEV;
                 try {
-                  return updateMemo(create, deps);
+                  return updateMemo(create2, deps);
                 } finally {
                   ReactCurrentDispatcher$1.current = prevDispatcher;
                 }
@@ -14814,38 +14814,38 @@
                 mountHookTypesDev();
                 return readContext(context);
               },
-              useEffect: function(create, deps) {
+              useEffect: function(create2, deps) {
                 currentHookNameInDev = "useEffect";
                 warnInvalidHookAccess();
                 mountHookTypesDev();
-                return mountEffect(create, deps);
+                return mountEffect(create2, deps);
               },
-              useImperativeHandle: function(ref, create, deps) {
+              useImperativeHandle: function(ref, create2, deps) {
                 currentHookNameInDev = "useImperativeHandle";
                 warnInvalidHookAccess();
                 mountHookTypesDev();
-                return mountImperativeHandle(ref, create, deps);
+                return mountImperativeHandle(ref, create2, deps);
               },
-              useInsertionEffect: function(create, deps) {
+              useInsertionEffect: function(create2, deps) {
                 currentHookNameInDev = "useInsertionEffect";
                 warnInvalidHookAccess();
                 mountHookTypesDev();
-                return mountInsertionEffect(create, deps);
+                return mountInsertionEffect(create2, deps);
               },
-              useLayoutEffect: function(create, deps) {
+              useLayoutEffect: function(create2, deps) {
                 currentHookNameInDev = "useLayoutEffect";
                 warnInvalidHookAccess();
                 mountHookTypesDev();
-                return mountLayoutEffect(create, deps);
+                return mountLayoutEffect(create2, deps);
               },
-              useMemo: function(create, deps) {
+              useMemo: function(create2, deps) {
                 currentHookNameInDev = "useMemo";
                 warnInvalidHookAccess();
                 mountHookTypesDev();
                 var prevDispatcher = ReactCurrentDispatcher$1.current;
                 ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnMountInDEV;
                 try {
-                  return mountMemo(create, deps);
+                  return mountMemo(create2, deps);
                 } finally {
                   ReactCurrentDispatcher$1.current = prevDispatcher;
                 }
@@ -14935,38 +14935,38 @@
                 updateHookTypesDev();
                 return readContext(context);
               },
-              useEffect: function(create, deps) {
+              useEffect: function(create2, deps) {
                 currentHookNameInDev = "useEffect";
                 warnInvalidHookAccess();
                 updateHookTypesDev();
-                return updateEffect(create, deps);
+                return updateEffect(create2, deps);
               },
-              useImperativeHandle: function(ref, create, deps) {
+              useImperativeHandle: function(ref, create2, deps) {
                 currentHookNameInDev = "useImperativeHandle";
                 warnInvalidHookAccess();
                 updateHookTypesDev();
-                return updateImperativeHandle(ref, create, deps);
+                return updateImperativeHandle(ref, create2, deps);
               },
-              useInsertionEffect: function(create, deps) {
+              useInsertionEffect: function(create2, deps) {
                 currentHookNameInDev = "useInsertionEffect";
                 warnInvalidHookAccess();
                 updateHookTypesDev();
-                return updateInsertionEffect(create, deps);
+                return updateInsertionEffect(create2, deps);
               },
-              useLayoutEffect: function(create, deps) {
+              useLayoutEffect: function(create2, deps) {
                 currentHookNameInDev = "useLayoutEffect";
                 warnInvalidHookAccess();
                 updateHookTypesDev();
-                return updateLayoutEffect(create, deps);
+                return updateLayoutEffect(create2, deps);
               },
-              useMemo: function(create, deps) {
+              useMemo: function(create2, deps) {
                 currentHookNameInDev = "useMemo";
                 warnInvalidHookAccess();
                 updateHookTypesDev();
                 var prevDispatcher = ReactCurrentDispatcher$1.current;
                 ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnUpdateInDEV;
                 try {
-                  return updateMemo(create, deps);
+                  return updateMemo(create2, deps);
                 } finally {
                   ReactCurrentDispatcher$1.current = prevDispatcher;
                 }
@@ -15056,38 +15056,38 @@
                 updateHookTypesDev();
                 return readContext(context);
               },
-              useEffect: function(create, deps) {
+              useEffect: function(create2, deps) {
                 currentHookNameInDev = "useEffect";
                 warnInvalidHookAccess();
                 updateHookTypesDev();
-                return updateEffect(create, deps);
+                return updateEffect(create2, deps);
               },
-              useImperativeHandle: function(ref, create, deps) {
+              useImperativeHandle: function(ref, create2, deps) {
                 currentHookNameInDev = "useImperativeHandle";
                 warnInvalidHookAccess();
                 updateHookTypesDev();
-                return updateImperativeHandle(ref, create, deps);
+                return updateImperativeHandle(ref, create2, deps);
               },
-              useInsertionEffect: function(create, deps) {
+              useInsertionEffect: function(create2, deps) {
                 currentHookNameInDev = "useInsertionEffect";
                 warnInvalidHookAccess();
                 updateHookTypesDev();
-                return updateInsertionEffect(create, deps);
+                return updateInsertionEffect(create2, deps);
               },
-              useLayoutEffect: function(create, deps) {
+              useLayoutEffect: function(create2, deps) {
                 currentHookNameInDev = "useLayoutEffect";
                 warnInvalidHookAccess();
                 updateHookTypesDev();
-                return updateLayoutEffect(create, deps);
+                return updateLayoutEffect(create2, deps);
               },
-              useMemo: function(create, deps) {
+              useMemo: function(create2, deps) {
                 currentHookNameInDev = "useMemo";
                 warnInvalidHookAccess();
                 updateHookTypesDev();
                 var prevDispatcher = ReactCurrentDispatcher$1.current;
                 ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnUpdateInDEV;
                 try {
-                  return updateMemo(create, deps);
+                  return updateMemo(create2, deps);
                 } finally {
                   ReactCurrentDispatcher$1.current = prevDispatcher;
                 }
@@ -18812,13 +18812,13 @@
                       markComponentLayoutEffectMountStarted(finishedWork);
                     }
                   }
-                  var create = effect.create;
+                  var create2 = effect.create;
                   {
                     if ((flags & Insertion) !== NoFlags$1) {
                       setIsRunningInsertionEffect(true);
                     }
                   }
-                  effect.destroy = create();
+                  effect.destroy = create2();
                   {
                     if ((flags & Insertion) !== NoFlags$1) {
                       setIsRunningInsertionEffect(false);
@@ -23481,13 +23481,13 @@
 
   // node_modules/react-dom/index.js
   var require_react_dom = __commonJS({
-    "node_modules/react-dom/index.js"(exports, module) {
+    "node_modules/react-dom/index.js"(exports, module2) {
       "use strict";
       if (false) {
         checkDCE();
-        module.exports = null;
+        module2.exports = null;
       } else {
-        module.exports = require_react_dom_development();
+        module2.exports = require_react_dom_development();
       }
     }
   });
@@ -23525,8 +23525,8 @@
 
   // node_modules/shallowequal/index.js
   var require_shallowequal = __commonJS({
-    "node_modules/shallowequal/index.js"(exports, module) {
-      module.exports = function shallowEqual(objA, objB, compare, compareContext) {
+    "node_modules/shallowequal/index.js"(exports, module2) {
+      module2.exports = function shallowEqual(objA, objB, compare, compareContext) {
         var ret = compare ? compare.call(compareContext, objA, objB) : void 0;
         if (ret !== void 0) {
           return !!ret;
@@ -23560,8 +23560,27 @@
     }
   });
 
+  // node_modules/random-unicode-emoji/src/random-unicode-emoji.js
+  var require_random_unicode_emoji = __commonJS({
+    "node_modules/random-unicode-emoji/src/random-unicode-emoji.js"(exports, module2) {
+      var emojis = ["\u231A", "\u23E9", "\u23EA", "\u23EB", "\u23F0", "\u23F3", "\u25FD", "\u2614", "\u2648", "\u2649", "\u264A", "\u264B", "\u264C", "\u264D", "\u264E", "\u264F", "\u2650", "\u2651", "\u2652", "\u267F", "\u2693", "\u26A1", "\u26AA", "\u26BD", "\u26C4", "\u26CE", "\u26D4", "\u26EA", "\u26F2", "\u26F5", "\u26FA", "\u26FD", "\u2705", "\u270A", "\u2728", "\u274C", "\u274E", "\u2753", "\u2754", "\u2757", "\u2795", "\u2796", "\u27B0", "\u27BF", "\u2B1B", "\u2B50", "\u2B55", "\u{1F004}", "\u{1F0CF}", "\u{1F18E}", "\u{1F191}", "\u{1F192}", "\u{1F193}", "\u{1F194}", "\u{1F195}", "\u{1F196}", "\u{1F197}", "\u{1F198}", "\u{1F199}", "\u{1F201}", "\u{1F21A}", "\u{1F22F}", "\u{1F232}", "\u{1F233}", "\u{1F234}", "\u{1F235}", "\u{1F238}", "\u{1F239}", "\u{1F250}", "\u{1F300}", "\u{1F301}", "\u{1F302}", "\u{1F303}", "\u{1F304}", "\u{1F305}", "\u{1F306}", "\u{1F307}", "\u{1F308}", "\u{1F309}", "\u{1F30A}", "\u{1F30B}", "\u{1F30D}", "\u{1F30F}", "\u{1F310}", "\u{1F311}", "\u{1F312}", "\u{1F313}", "\u{1F314}", "\u{1F316}", "\u{1F317}", "\u{1F319}", "\u{1F31A}", "\u{1F31B}", "\u{1F31C}", "\u{1F31D}", "\u{1F31F}", "\u{1F32D}", "\u{1F32E}", "\u{1F330}", "\u{1F332}", "\u{1F334}", "\u{1F337}", "\u{1F338}", "\u{1F339}", "\u{1F33A}", "\u{1F33B}", "\u{1F33C}", "\u{1F33D}", "\u{1F33E}", "\u{1F33F}", "\u{1F340}", "\u{1F341}", "\u{1F342}", "\u{1F343}", "\u{1F344}", "\u{1F345}", "\u{1F346}", "\u{1F347}", "\u{1F348}", "\u{1F349}", "\u{1F34B}", "\u{1F34C}", "\u{1F34D}", "\u{1F34E}", "\u{1F350}", "\u{1F351}", "\u{1F352}", "\u{1F353}", "\u{1F354}", "\u{1F355}", "\u{1F356}", "\u{1F357}", "\u{1F358}", "\u{1F359}", "\u{1F35A}", "\u{1F35B}", "\u{1F35C}", "\u{1F35D}", "\u{1F35E}", "\u{1F35F}", "\u{1F360}", "\u{1F361}", "\u{1F362}", "\u{1F363}", "\u{1F364}", "\u{1F365}", "\u{1F366}", "\u{1F367}", "\u{1F368}", "\u{1F369}", "\u{1F36A}", "\u{1F36B}", "\u{1F36C}", "\u{1F36D}", "\u{1F36E}", "\u{1F36F}", "\u{1F370}", "\u{1F371}", "\u{1F372}", "\u{1F373}", "\u{1F374}", "\u{1F375}", "\u{1F376}", "\u{1F377}", "\u{1F378}", "\u{1F379}", "\u{1F37A}", "\u{1F37C}", "\u{1F37E}", "\u{1F380}", "\u{1F381}", "\u{1F382}", "\u{1F383}", "\u{1F384}", "\u{1F385}", "\u{1F386}", "\u{1F387}", "\u{1F388}", "\u{1F389}", "\u{1F38A}", "\u{1F38B}", "\u{1F38C}", "\u{1F38D}", "\u{1F38E}", "\u{1F38F}", "\u{1F390}", "\u{1F391}", "\u{1F392}", "\u{1F3A0}", "\u{1F3A1}", "\u{1F3A2}", "\u{1F3A3}", "\u{1F3A4}", "\u{1F3A5}", "\u{1F3A6}", "\u{1F3A7}", "\u{1F3A8}", "\u{1F3A9}", "\u{1F3AA}", "\u{1F3AB}", "\u{1F3AC}", "\u{1F3AD}", "\u{1F3AE}", "\u{1F3AF}", "\u{1F3B0}", "\u{1F3B1}", "\u{1F3B2}", "\u{1F3B3}", "\u{1F3B4}", "\u{1F3B5}", "\u{1F3B6}", "\u{1F3B7}", "\u{1F3B8}", "\u{1F3B9}", "\u{1F3BA}", "\u{1F3BB}", "\u{1F3BC}", "\u{1F3BD}", "\u{1F3BE}", "\u{1F3BF}", "\u{1F3C0}", "\u{1F3C1}", "\u{1F3C2}", "\u{1F3C3}", "\u{1F3C5}", "\u{1F3C6}", "\u{1F3C7}", "\u{1F3C8}", "\u{1F3C9}", "\u{1F3CA}", "\u{1F3CF}", "\u{1F3D0}", "\u{1F3D1}", "\u{1F3D2}", "\u{1F3E0}", "\u{1F3E1}", "\u{1F3E2}", "\u{1F3E4}", "\u{1F3E5}", "\u{1F3E6}", "\u{1F3E7}", "\u{1F3E8}", "\u{1F3E9}", "\u{1F3EA}", "\u{1F3EB}", "\u{1F3EC}", "\u{1F3ED}", "\u{1F3EE}", "\u{1F3EF}", "\u{1F3F4}", "\u{1F3F8}", "\u{1F3F9}", "\u{1F3FA}", "\u{1F3FB}", "\u{1F3FC}", "\u{1F3FD}", "\u{1F3FE}", "\u{1F3FF}", "\u{1F400}", "\u{1F401}", "\u{1F402}", "\u{1F403}", "\u{1F404}", "\u{1F405}", "\u{1F406}", "\u{1F408}", "\u{1F409}", "\u{1F40A}", "\u{1F40C}", "\u{1F40D}", "\u{1F40F}", "\u{1F411}", "\u{1F413}", "\u{1F414}", "\u{1F415}", "\u{1F416}", "\u{1F417}", "\u{1F418}", "\u{1F419}", "\u{1F41A}", "\u{1F41B}", "\u{1F41C}", "\u{1F41D}", "\u{1F41E}", "\u{1F41F}", "\u{1F420}", "\u{1F421}", "\u{1F422}", "\u{1F423}", "\u{1F424}", "\u{1F425}", "\u{1F426}", "\u{1F427}", "\u{1F428}", "\u{1F42A}", "\u{1F42B}", "\u{1F42C}", "\u{1F42D}", "\u{1F42E}", "\u{1F42F}", "\u{1F430}", "\u{1F431}", "\u{1F432}", "\u{1F433}", "\u{1F434}", "\u{1F435}", "\u{1F436}", "\u{1F437}", "\u{1F438}", "\u{1F439}", "\u{1F43A}", "\u{1F43B}", "\u{1F43C}", "\u{1F43D}", "\u{1F440}", "\u{1F442}", "\u{1F443}", "\u{1F444}", "\u{1F445}", "\u{1F446}", "\u{1F447}", "\u{1F448}", "\u{1F449}", "\u{1F44A}", "\u{1F44B}", "\u{1F44C}", "\u{1F44D}", "\u{1F44E}", "\u{1F44F}", "\u{1F450}", "\u{1F451}", "\u{1F452}", "\u{1F453}", "\u{1F454}", "\u{1F455}", "\u{1F456}", "\u{1F457}", "\u{1F458}", "\u{1F459}", "\u{1F45A}", "\u{1F45B}", "\u{1F45C}", "\u{1F45D}", "\u{1F45E}", "\u{1F45F}", "\u{1F460}", "\u{1F461}", "\u{1F462}", "\u{1F463}", "\u{1F465}", "\u{1F466}", "\u{1F467}", "\u{1F468}", "\u{1F469}", "\u{1F46A}", "\u{1F46C}", "\u{1F46E}", "\u{1F46F}", "\u{1F470}", "\u{1F471}", "\u{1F472}", "\u{1F473}", "\u{1F474}", "\u{1F475}", "\u{1F476}", "\u{1F477}", "\u{1F478}", "\u{1F479}", "\u{1F47A}", "\u{1F47B}", "\u{1F47C}", "\u{1F47D}", "\u{1F47E}", "\u{1F47F}", "\u{1F480}", "\u{1F481}", "\u{1F482}", "\u{1F483}", "\u{1F484}", "\u{1F485}", "\u{1F486}", "\u{1F487}", "\u{1F488}", "\u{1F489}", "\u{1F48A}", "\u{1F48B}", "\u{1F48C}", "\u{1F48D}", "\u{1F48E}", "\u{1F48F}", "\u{1F490}", "\u{1F491}", "\u{1F492}", "\u{1F493}", "\u{1F494}", "\u{1F495}", "\u{1F496}", "\u{1F497}", "\u{1F498}", "\u{1F499}", "\u{1F49A}", "\u{1F49B}", "\u{1F49C}", "\u{1F49D}", "\u{1F49E}", "\u{1F49F}", "\u{1F4A0}", "\u{1F4A1}", "\u{1F4A2}", "\u{1F4A3}", "\u{1F4A4}", "\u{1F4A5}", "\u{1F4A6}", "\u{1F4A7}", "\u{1F4A8}", "\u{1F4A9}", "\u{1F4AA}", "\u{1F4AB}", "\u{1F4AD}", "\u{1F4AE}", "\u{1F4AF}", "\u{1F4B0}", "\u{1F4B1}", "\u{1F4B2}", "\u{1F4B3}", "\u{1F4B4}", "\u{1F4B6}", "\u{1F4B8}", "\u{1F4B9}", "\u{1F4BA}", "\u{1F4BB}", "\u{1F4BC}", "\u{1F4BD}", "\u{1F4BE}", "\u{1F4BF}", "\u{1F4C0}", "\u{1F4C1}", "\u{1F4C2}", "\u{1F4C3}", "\u{1F4C4}", "\u{1F4C5}", "\u{1F4C6}", "\u{1F4C7}", "\u{1F4C8}", "\u{1F4C9}", "\u{1F4CA}", "\u{1F4CB}", "\u{1F4CC}", "\u{1F4CD}", "\u{1F4CE}", "\u{1F4CF}", "\u{1F4D0}", "\u{1F4D1}", "\u{1F4D2}", "\u{1F4D3}", "\u{1F4D4}", "\u{1F4D5}", "\u{1F4D6}", "\u{1F4D7}", "\u{1F4D8}", "\u{1F4D9}", "\u{1F4DA}", "\u{1F4DB}", "\u{1F4DC}", "\u{1F4DD}", "\u{1F4DE}", "\u{1F4DF}", "\u{1F4E0}", "\u{1F4E1}", "\u{1F4E2}", "\u{1F4E3}", "\u{1F4E4}", "\u{1F4E5}", "\u{1F4E6}", "\u{1F4E7}", "\u{1F4E8}", "\u{1F4E9}", "\u{1F4EA}", "\u{1F4EC}", "\u{1F4EE}", "\u{1F4EF}", "\u{1F4F0}", "\u{1F4F1}", "\u{1F4F2}", "\u{1F4F3}", "\u{1F4F5}", "\u{1F4F6}", "\u{1F4F8}", "\u{1F4F9}", "\u{1F4FA}", "\u{1F4FB}", "\u{1F4FF}", "\u{1F500}", "\u{1F501}", "\u{1F503}", "\u{1F504}", "\u{1F505}", "\u{1F506}", "\u{1F508}", "\u{1F509}", "\u{1F50A}", "\u{1F50B}", "\u{1F50C}", "\u{1F50D}", "\u{1F50E}", "\u{1F50F}", "\u{1F510}", "\u{1F511}", "\u{1F512}", "\u{1F513}", "\u{1F515}", "\u{1F516}", "\u{1F517}", "\u{1F518}", "\u{1F519}", "\u{1F51A}", "\u{1F51B}", "\u{1F51C}", "\u{1F51D}", "\u{1F51E}", "\u{1F51F}", "\u{1F520}", "\u{1F521}", "\u{1F522}", "\u{1F523}", "\u{1F524}", "\u{1F525}", "\u{1F526}", "\u{1F527}", "\u{1F528}", "\u{1F529}", "\u{1F52A}", "\u{1F52C}", "\u{1F52E}", "\u{1F52F}", "\u{1F530}", "\u{1F531}", "\u{1F532}", "\u{1F533}", "\u{1F534}", "\u{1F535}", "\u{1F536}", "\u{1F537}", "\u{1F538}", "\u{1F539}", "\u{1F53A}", "\u{1F53B}", "\u{1F53C}", "\u{1F54B}", "\u{1F54C}", "\u{1F54D}", "\u{1F550}", "\u{1F551}", "\u{1F552}", "\u{1F553}", "\u{1F554}", "\u{1F555}", "\u{1F556}", "\u{1F557}", "\u{1F558}", "\u{1F559}", "\u{1F55A}", "\u{1F55C}", "\u{1F55D}", "\u{1F55E}", "\u{1F55F}", "\u{1F560}", "\u{1F561}", "\u{1F562}", "\u{1F563}", "\u{1F564}", "\u{1F565}", "\u{1F566}", "\u{1F57A}", "\u{1F595}", "\u{1F5A4}", "\u{1F5FB}", "\u{1F5FC}", "\u{1F5FD}", "\u{1F5FE}", "\u{1F600}", "\u{1F601}", "\u{1F602}", "\u{1F603}", "\u{1F604}", "\u{1F605}", "\u{1F607}", "\u{1F609}", "\u{1F60A}", "\u{1F60B}", "\u{1F60C}", "\u{1F60E}", "\u{1F60F}", "\u{1F610}", "\u{1F611}", "\u{1F612}", "\u{1F613}", "\u{1F615}", "\u{1F616}", "\u{1F617}", "\u{1F618}", "\u{1F619}", "\u{1F61A}", "\u{1F61B}", "\u{1F61C}", "\u{1F61D}", "\u{1F61F}", "\u{1F620}", "\u{1F621}", "\u{1F622}", "\u{1F623}", "\u{1F624}", "\u{1F626}", "\u{1F628}", "\u{1F629}", "\u{1F62A}", "\u{1F62C}", "\u{1F62D}", "\u{1F62E}", "\u{1F630}", "\u{1F631}", "\u{1F632}", "\u{1F634}", "\u{1F635}", "\u{1F636}", "\u{1F637}", "\u{1F638}", "\u{1F639}", "\u{1F63A}", "\u{1F63B}", "\u{1F63C}", "\u{1F63D}", "\u{1F63E}", "\u{1F63F}", "\u{1F641}", "\u{1F642}", "\u{1F643}", "\u{1F645}", "\u{1F646}", "\u{1F647}", "\u{1F648}", "\u{1F649}", "\u{1F64A}", "\u{1F64B}", "\u{1F64C}", "\u{1F64D}", "\u{1F64E}", "\u{1F680}", "\u{1F681}", "\u{1F683}", "\u{1F684}", "\u{1F686}", "\u{1F687}", "\u{1F688}", "\u{1F689}", "\u{1F68A}", "\u{1F68C}", "\u{1F68D}", "\u{1F68E}", "\u{1F68F}", "\u{1F690}", "\u{1F691}", "\u{1F692}", "\u{1F694}", "\u{1F695}", "\u{1F696}", "\u{1F697}", "\u{1F698}", "\u{1F699}", "\u{1F69B}", "\u{1F69C}", "\u{1F69D}", "\u{1F69E}", "\u{1F69F}", "\u{1F6A0}", "\u{1F6A2}", "\u{1F6A3}", "\u{1F6A4}", "\u{1F6A6}", "\u{1F6A7}", "\u{1F6A8}", "\u{1F6A9}", "\u{1F6AA}", "\u{1F6AB}", "\u{1F6AC}", "\u{1F6AE}", "\u{1F6AF}", "\u{1F6B0}", "\u{1F6B2}", "\u{1F6B3}", "\u{1F6B4}", "\u{1F6B6}", "\u{1F6B7}", "\u{1F6B9}", "\u{1F6BA}", "\u{1F6BB}", "\u{1F6BC}", "\u{1F6BD}", "\u{1F6BF}", "\u{1F6C0}", "\u{1F6C1}", "\u{1F6C2}", "\u{1F6C3}", "\u{1F6C4}", "\u{1F6CC}", "\u{1F6D0}", "\u{1F6D1}", "\u{1F6D5}", "\u{1F6D6}", "\u{1F6DC}", "\u{1F6DD}", "\u{1F6DE}", "\u{1F6EB}", "\u{1F6F4}", "\u{1F6F5}", "\u{1F6F7}", "\u{1F6F9}", "\u{1F6FA}", "\u{1F6FB}", "\u{1F7E0}", "\u{1F7E1}", "\u{1F7E2}", "\u{1F7E3}", "\u{1F7E4}", "\u{1F7E5}", "\u{1F7E6}", "\u{1F7E7}", "\u{1F7E8}", "\u{1F7E9}", "\u{1F7EA}", "\u{1F7F0}", "\u{1F90C}", "\u{1F90D}", "\u{1F90E}", "\u{1F910}", "\u{1F911}", "\u{1F912}", "\u{1F913}", "\u{1F914}", "\u{1F915}", "\u{1F916}", "\u{1F917}", "\u{1F919}", "\u{1F91A}", "\u{1F91B}", "\u{1F91C}", "\u{1F91D}", "\u{1F91F}", "\u{1F920}", "\u{1F921}", "\u{1F922}", "\u{1F923}", "\u{1F924}", "\u{1F925}", "\u{1F926}", "\u{1F928}", "\u{1F929}", "\u{1F92A}", "\u{1F92B}", "\u{1F92C}", "\u{1F92D}", "\u{1F92E}", "\u{1F930}", "\u{1F931}", "\u{1F933}", "\u{1F934}", "\u{1F935}", "\u{1F936}", "\u{1F937}", "\u{1F938}", "\u{1F939}", "\u{1F93C}", "\u{1F93D}", "\u{1F93F}", "\u{1F940}", "\u{1F941}", "\u{1F942}", "\u{1F943}", "\u{1F944}", "\u{1F947}", "\u{1F948}", "\u{1F949}", "\u{1F94A}", "\u{1F94C}", "\u{1F94D}", "\u{1F94E}", "\u{1F950}", "\u{1F951}", "\u{1F952}", "\u{1F953}", "\u{1F954}", "\u{1F955}", "\u{1F956}", "\u{1F957}", "\u{1F958}", "\u{1F959}", "\u{1F95A}", "\u{1F95B}", "\u{1F95C}", "\u{1F95D}", "\u{1F95F}", "\u{1F960}", "\u{1F961}", "\u{1F962}", "\u{1F963}", "\u{1F964}", "\u{1F965}", "\u{1F966}", "\u{1F967}", "\u{1F968}", "\u{1F969}", "\u{1F96A}", "\u{1F96C}", "\u{1F96D}", "\u{1F96E}", "\u{1F96F}", "\u{1F971}", "\u{1F972}", "\u{1F973}", "\u{1F974}", "\u{1F975}", "\u{1F977}", "\u{1F979}", "\u{1F97A}", "\u{1F97B}", "\u{1F97C}", "\u{1F97D}", "\u{1F97E}", "\u{1F980}", "\u{1F981}", "\u{1F982}", "\u{1F983}", "\u{1F985}", "\u{1F986}", "\u{1F987}", "\u{1F988}", "\u{1F989}", "\u{1F98A}", "\u{1F98B}", "\u{1F98C}", "\u{1F98D}", "\u{1F98E}", "\u{1F98F}", "\u{1F990}", "\u{1F992}", "\u{1F993}", "\u{1F994}", "\u{1F995}", "\u{1F996}", "\u{1F998}", "\u{1F999}", "\u{1F99A}", "\u{1F99B}", "\u{1F99C}", "\u{1F99D}", "\u{1F99E}", "\u{1F99F}", "\u{1F9A0}", "\u{1F9A1}", "\u{1F9A3}", "\u{1F9A5}", "\u{1F9A6}", "\u{1F9A7}", "\u{1F9A8}", "\u{1F9A9}", "\u{1F9AB}", "\u{1F9AC}", "\u{1F9AE}", "\u{1F9B0}", "\u{1F9B1}", "\u{1F9B2}", "\u{1F9B3}", "\u{1F9B4}", "\u{1F9B5}", "\u{1F9B6}", "\u{1F9B7}", "\u{1F9B8}", "\u{1F9BA}", "\u{1F9BB}", "\u{1F9BC}", "\u{1F9BD}", "\u{1F9BE}", "\u{1F9C0}", "\u{1F9C1}", "\u{1F9C3}", "\u{1F9C4}", "\u{1F9C5}", "\u{1F9C6}", "\u{1F9C7}", "\u{1F9C8}", "\u{1F9C9}", "\u{1F9CB}", "\u{1F9CC}", "\u{1F9CD}", "\u{1F9CE}", "\u{1F9D0}", "\u{1F9D1}", "\u{1F9D2}", "\u{1F9D3}", "\u{1F9D4}", "\u{1F9D5}", "\u{1F9D6}", "\u{1F9D7}", "\u{1F9D8}", "\u{1F9D9}", "\u{1F9DA}", "\u{1F9DB}", "\u{1F9DC}", "\u{1F9DD}", "\u{1F9DE}", "\u{1F9DF}", "\u{1F9E0}", "\u{1F9E1}", "\u{1F9E2}", "\u{1F9E3}", "\u{1F9E4}", "\u{1F9E5}", "\u{1F9E7}", "\u{1F9E8}", "\u{1F9E9}", "\u{1F9EA}", "\u{1F9EB}", "\u{1F9EC}", "\u{1F9ED}", "\u{1F9EE}", "\u{1F9EF}", "\u{1F9F0}", "\u{1F9F1}", "\u{1F9F2}", "\u{1F9F3}", "\u{1F9F4}", "\u{1F9F5}", "\u{1F9F6}", "\u{1F9F7}", "\u{1F9F8}", "\u{1F9F9}", "\u{1F9FA}", "\u{1F9FB}", "\u{1F9FC}", "\u{1F9FD}", "\u{1F9FE}", "\u{1FA70}", "\u{1FA71}", "\u{1FA72}", "\u{1FA74}", "\u{1FA75}", "\u{1FA76}", "\u{1FA78}", "\u{1FA79}", "\u{1FA7B}", "\u{1FA80}", "\u{1FA81}", "\u{1FA83}", "\u{1FA84}", "\u{1FA85}", "\u{1FA87}", "\u{1FA90}", "\u{1FA91}", "\u{1FA92}", "\u{1FA93}", "\u{1FA94}", "\u{1FA96}", "\u{1FA97}", "\u{1FA98}", "\u{1FA99}", "\u{1FA9A}", "\u{1FA9B}", "\u{1FA9C}", "\u{1FA9D}", "\u{1FA9E}", "\u{1FA9F}", "\u{1FAA0}", "\u{1FAA1}", "\u{1FAA2}", "\u{1FAA3}", "\u{1FAA4}", "\u{1FAA5}", "\u{1FAA6}", "\u{1FAA7}", "\u{1FAA9}", "\u{1FAAA}", "\u{1FAAB}", "\u{1FAAD}", "\u{1FAAE}", "\u{1FAB0}", "\u{1FAB1}", "\u{1FAB2}", "\u{1FAB3}", "\u{1FAB4}", "\u{1FAB5}", "\u{1FAB7}", "\u{1FAB8}", "\u{1FAB9}", "\u{1FABB}", "\u{1FABC}", "\u{1FABF}", "\u{1FAC0}", "\u{1FAC1}", "\u{1FAC3}", "\u{1FAC4}", "\u{1FACE}", "\u{1FAD0}", "\u{1FAD1}", "\u{1FAD2}", "\u{1FAD3}", "\u{1FAD4}", "\u{1FAD5}", "\u{1FAD7}", "\u{1FAD8}", "\u{1FADA}", "\u{1FAE0}", "\u{1FAE1}", "\u{1FAE2}", "\u{1FAE3}", "\u{1FAE4}", "\u{1FAE5}", "\u{1FAE6}", "\u{1FAE8}", "\u{1FAF0}", "\u{1FAF1}", "\u{1FAF2}", "\u{1FAF3}", "\u{1FAF4}", "\u{1FAF5}", "\u{1FAF7}", "\xA9\uFE0F", "\xAE\uFE0F", "\u203C\uFE0F", "\u2049\uFE0F", "\u2122\uFE0F", "\u2139\uFE0F", "\u2194\uFE0F", "\u2195\uFE0F", "\u2196\uFE0F", "\u2197\uFE0F", "\u2198\uFE0F", "\u2199\uFE0F", "\u21A9\uFE0F", "\u21AA\uFE0F", "\u2328\uFE0F", "\u23CF\uFE0F", "\u23ED\uFE0F", "\u23EE\uFE0F", "\u23EF\uFE0F", "\u23F1\uFE0F", "\u23F2\uFE0F", "\u23F8\uFE0F", "\u23F9\uFE0F", "\u23FA\uFE0F", "\u24C2\uFE0F", "\u25AA\uFE0F", "\u25AB\uFE0F", "\u25B6\uFE0F", "\u25C0\uFE0F", "\u25FB\uFE0F", "\u25FC\uFE0F", "\u2600\uFE0F", "\u2601\uFE0F", "\u2602\uFE0F", "\u2603\uFE0F", "\u2604\uFE0F", "\u260E\uFE0F", "\u2611\uFE0F", "\u2618\uFE0F", "\u261D\uFE0F", "\u2620\uFE0F", "\u2622\uFE0F", "\u2623\uFE0F", "\u2626\uFE0F", "\u262A\uFE0F", "\u262E\uFE0F", "\u262F\uFE0F", "\u2638\uFE0F", "\u2639\uFE0F", "\u263A\uFE0F", "\u2640\uFE0F", "\u2642\uFE0F", "\u265F\uFE0F", "\u2660\uFE0F", "\u2663\uFE0F", "\u2665\uFE0F", "\u2666\uFE0F", "\u2668\uFE0F", "\u267B\uFE0F", "\u267E\uFE0F", "\u2692\uFE0F", "\u2694\uFE0F", "\u2695\uFE0F", "\u2696\uFE0F", "\u2697\uFE0F", "\u2699\uFE0F", "\u269B\uFE0F", "\u269C\uFE0F", "\u26A0\uFE0F", "\u26A7\uFE0F", "\u26B0\uFE0F", "\u26B1\uFE0F", "\u26C8\uFE0F", "\u26CF\uFE0F", "\u26D1\uFE0F", "\u26D3\uFE0F", "\u26E9\uFE0F", "\u26F0\uFE0F", "\u26F1\uFE0F", "\u26F4\uFE0F", "\u26F7\uFE0F", "\u26F8\uFE0F", "\u26F9\uFE0F", "\u2702\uFE0F", "\u2708\uFE0F", "\u2709\uFE0F", "\u270C\uFE0F", "\u270D\uFE0F", "\u270F\uFE0F", "\u2712\uFE0F", "\u2714\uFE0F", "\u2716\uFE0F", "\u271D\uFE0F", "\u2721\uFE0F", "\u2733\uFE0F", "\u2734\uFE0F", "\u2744\uFE0F", "\u2747\uFE0F", "\u2763\uFE0F", "\u2764\uFE0F", "\u27A1\uFE0F", "\u2934\uFE0F", "\u2935\uFE0F", "\u2B05\uFE0F", "\u2B06\uFE0F", "\u2B07\uFE0F", "\u3030\uFE0F", "\u303D\uFE0F", "\u3297\uFE0F", "\u3299\uFE0F", "\u{1F170}\uFE0F", "\u{1F171}\uFE0F", "\u{1F17E}\uFE0F", "\u{1F17F}\uFE0F", "\u{1F202}\uFE0F", "\u{1F237}\uFE0F", "\u{1F321}\uFE0F", "\u{1F324}\uFE0F", "\u{1F325}\uFE0F", "\u{1F326}\uFE0F", "\u{1F327}\uFE0F", "\u{1F328}\uFE0F", "\u{1F329}\uFE0F", "\u{1F32A}\uFE0F", "\u{1F32B}\uFE0F", "\u{1F32C}\uFE0F", "\u{1F336}\uFE0F", "\u{1F37D}\uFE0F", "\u{1F396}\uFE0F", "\u{1F397}\uFE0F", "\u{1F399}\uFE0F", "\u{1F39A}\uFE0F", "\u{1F39B}\uFE0F", "\u{1F39E}\uFE0F", "\u{1F39F}\uFE0F", "\u{1F3CB}\uFE0F", "\u{1F3CC}\uFE0F", "\u{1F3CD}\uFE0F", "\u{1F3CE}\uFE0F", "\u{1F3D4}\uFE0F", "\u{1F3D5}\uFE0F", "\u{1F3D6}\uFE0F", "\u{1F3D7}\uFE0F", "\u{1F3D8}\uFE0F", "\u{1F3D9}\uFE0F", "\u{1F3DA}\uFE0F", "\u{1F3DB}\uFE0F", "\u{1F3DC}\uFE0F", "\u{1F3DD}\uFE0F", "\u{1F3DE}\uFE0F", "\u{1F3DF}\uFE0F", "\u{1F3F3}\uFE0F", "\u{1F3F5}\uFE0F", "\u{1F3F7}\uFE0F", "\u{1F43F}\uFE0F", "\u{1F441}\uFE0F", "\u{1F4FD}\uFE0F", "\u{1F549}\uFE0F", "\u{1F54A}\uFE0F", "\u{1F56F}\uFE0F", "\u{1F570}\uFE0F", "\u{1F573}\uFE0F", "\u{1F574}\uFE0F", "\u{1F575}\uFE0F", "\u{1F576}\uFE0F", "\u{1F577}\uFE0F", "\u{1F578}\uFE0F", "\u{1F579}\uFE0F", "\u{1F587}\uFE0F", "\u{1F58A}\uFE0F", "\u{1F58B}\uFE0F", "\u{1F58C}\uFE0F", "\u{1F58D}\uFE0F", "\u{1F590}\uFE0F", "\u{1F5A5}\uFE0F", "\u{1F5A8}\uFE0F", "\u{1F5B1}\uFE0F", "\u{1F5B2}\uFE0F", "\u{1F5BC}\uFE0F", "\u{1F5C2}\uFE0F", "\u{1F5C3}\uFE0F", "\u{1F5C4}\uFE0F", "\u{1F5D1}\uFE0F", "\u{1F5D2}\uFE0F", "\u{1F5D3}\uFE0F", "\u{1F5DC}\uFE0F", "\u{1F5DD}\uFE0F", "\u{1F5DE}\uFE0F", "\u{1F5E1}\uFE0F", "\u{1F5E3}\uFE0F", "\u{1F5E8}\uFE0F", "\u{1F5EF}\uFE0F", "\u{1F5F3}\uFE0F", "\u{1F5FA}\uFE0F", "\u{1F6CB}\uFE0F", "\u{1F6CD}\uFE0F", "\u{1F6CE}\uFE0F", "\u{1F6CF}\uFE0F", "\u{1F6E0}\uFE0F", "\u{1F6E1}\uFE0F", "\u{1F6E2}\uFE0F", "\u{1F6E3}\uFE0F", "\u{1F6E4}\uFE0F", "\u{1F6E5}\uFE0F", "\u{1F6E9}\uFE0F", "\u{1F6F0}\uFE0F", "\u{1F6F3}\uFE0F", "#\uFE0F\u20E3", "*\uFE0F\u20E3", "0\uFE0F\u20E3", "1\uFE0F\u20E3", "2\uFE0F\u20E3", "3\uFE0F\u20E3", "4\uFE0F\u20E3", "5\uFE0F\u20E3", "6\uFE0F\u20E3", "7\uFE0F\u20E3", "8\uFE0F\u20E3", "9\uFE0F\u20E3", "\u{1F1E6}\u{1F1E8}", "\u{1F1E6}\u{1F1E9}", "\u{1F1E6}\u{1F1EA}", "\u{1F1E6}\u{1F1EB}", "\u{1F1E6}\u{1F1EC}", "\u{1F1E6}\u{1F1EE}", "\u{1F1E6}\u{1F1F1}", "\u{1F1E6}\u{1F1F2}", "\u{1F1E6}\u{1F1F4}", "\u{1F1E6}\u{1F1F6}", "\u{1F1E6}\u{1F1F7}", "\u{1F1E6}\u{1F1F8}", "\u{1F1E6}\u{1F1F9}", "\u{1F1E6}\u{1F1FA}", "\u{1F1E6}\u{1F1FC}", "\u{1F1E6}\u{1F1FD}", "\u{1F1E6}\u{1F1FF}", "\u{1F1E7}\u{1F1E6}", "\u{1F1E7}\u{1F1E7}", "\u{1F1E7}\u{1F1E9}", "\u{1F1E7}\u{1F1EA}", "\u{1F1E7}\u{1F1EB}", "\u{1F1E7}\u{1F1EC}", "\u{1F1E7}\u{1F1ED}", "\u{1F1E7}\u{1F1EE}", "\u{1F1E7}\u{1F1EF}", "\u{1F1E7}\u{1F1F1}", "\u{1F1E7}\u{1F1F2}", "\u{1F1E7}\u{1F1F3}", "\u{1F1E7}\u{1F1F4}", "\u{1F1E7}\u{1F1F6}", "\u{1F1E7}\u{1F1F7}", "\u{1F1E7}\u{1F1F8}", "\u{1F1E7}\u{1F1F9}", "\u{1F1E7}\u{1F1FB}", "\u{1F1E7}\u{1F1FC}", "\u{1F1E7}\u{1F1FE}", "\u{1F1E7}\u{1F1FF}", "\u{1F1E8}\u{1F1E6}", "\u{1F1E8}\u{1F1E8}", "\u{1F1E8}\u{1F1E9}", "\u{1F1E8}\u{1F1EB}", "\u{1F1E8}\u{1F1EC}", "\u{1F1E8}\u{1F1ED}", "\u{1F1E8}\u{1F1EE}", "\u{1F1E8}\u{1F1F0}", "\u{1F1E8}\u{1F1F1}", "\u{1F1E8}\u{1F1F2}", "\u{1F1E8}\u{1F1F3}", "\u{1F1E8}\u{1F1F4}", "\u{1F1E8}\u{1F1F5}", "\u{1F1E8}\u{1F1F7}", "\u{1F1E8}\u{1F1FA}", "\u{1F1E8}\u{1F1FB}", "\u{1F1E8}\u{1F1FC}", "\u{1F1E8}\u{1F1FD}", "\u{1F1E8}\u{1F1FE}", "\u{1F1E8}\u{1F1FF}", "\u{1F1E9}\u{1F1EA}", "\u{1F1E9}\u{1F1EC}", "\u{1F1E9}\u{1F1EF}", "\u{1F1E9}\u{1F1F0}", "\u{1F1E9}\u{1F1F2}", "\u{1F1E9}\u{1F1F4}", "\u{1F1E9}\u{1F1FF}", "\u{1F1EA}\u{1F1E6}", "\u{1F1EA}\u{1F1E8}", "\u{1F1EA}\u{1F1EA}", "\u{1F1EA}\u{1F1EC}", "\u{1F1EA}\u{1F1ED}", "\u{1F1EA}\u{1F1F7}", "\u{1F1EA}\u{1F1F8}", "\u{1F1EA}\u{1F1F9}", "\u{1F1EA}\u{1F1FA}", "\u{1F1EB}\u{1F1EE}", "\u{1F1EB}\u{1F1EF}", "\u{1F1EB}\u{1F1F0}", "\u{1F1EB}\u{1F1F2}", "\u{1F1EB}\u{1F1F4}", "\u{1F1EB}\u{1F1F7}", "\u{1F1EC}\u{1F1E6}", "\u{1F1EC}\u{1F1E7}", "\u{1F1EC}\u{1F1E9}", "\u{1F1EC}\u{1F1EA}", "\u{1F1EC}\u{1F1EB}", "\u{1F1EC}\u{1F1EC}", "\u{1F1EC}\u{1F1ED}", "\u{1F1EC}\u{1F1EE}", "\u{1F1EC}\u{1F1F1}", "\u{1F1EC}\u{1F1F2}", "\u{1F1EC}\u{1F1F3}", "\u{1F1EC}\u{1F1F5}", "\u{1F1EC}\u{1F1F6}", "\u{1F1EC}\u{1F1F7}", "\u{1F1EC}\u{1F1F8}", "\u{1F1EC}\u{1F1F9}", "\u{1F1EC}\u{1F1FA}", "\u{1F1EC}\u{1F1FC}", "\u{1F1EC}\u{1F1FE}", "\u{1F1ED}\u{1F1F0}", "\u{1F1ED}\u{1F1F2}", "\u{1F1ED}\u{1F1F3}", "\u{1F1ED}\u{1F1F7}", "\u{1F1ED}\u{1F1F9}", "\u{1F1ED}\u{1F1FA}", "\u{1F1EE}\u{1F1E8}", "\u{1F1EE}\u{1F1E9}", "\u{1F1EE}\u{1F1EA}", "\u{1F1EE}\u{1F1F1}", "\u{1F1EE}\u{1F1F2}", "\u{1F1EE}\u{1F1F3}", "\u{1F1EE}\u{1F1F4}", "\u{1F1EE}\u{1F1F6}", "\u{1F1EE}\u{1F1F7}", "\u{1F1EE}\u{1F1F8}", "\u{1F1EE}\u{1F1F9}", "\u{1F1EF}\u{1F1EA}", "\u{1F1EF}\u{1F1F2}", "\u{1F1EF}\u{1F1F4}", "\u{1F1EF}\u{1F1F5}", "\u{1F1F0}\u{1F1EA}", "\u{1F1F0}\u{1F1EC}", "\u{1F1F0}\u{1F1ED}", "\u{1F1F0}\u{1F1EE}", "\u{1F1F0}\u{1F1F2}", "\u{1F1F0}\u{1F1F3}", "\u{1F1F0}\u{1F1F5}", "\u{1F1F0}\u{1F1F7}", "\u{1F1F0}\u{1F1FC}", "\u{1F1F0}\u{1F1FE}", "\u{1F1F0}\u{1F1FF}", "\u{1F1F1}\u{1F1E6}", "\u{1F1F1}\u{1F1E7}", "\u{1F1F1}\u{1F1E8}", "\u{1F1F1}\u{1F1EE}", "\u{1F1F1}\u{1F1F0}", "\u{1F1F1}\u{1F1F7}", "\u{1F1F1}\u{1F1F8}", "\u{1F1F1}\u{1F1F9}", "\u{1F1F1}\u{1F1FA}", "\u{1F1F1}\u{1F1FB}", "\u{1F1F1}\u{1F1FE}", "\u{1F1F2}\u{1F1E6}", "\u{1F1F2}\u{1F1E8}", "\u{1F1F2}\u{1F1E9}", "\u{1F1F2}\u{1F1EA}", "\u{1F1F2}\u{1F1EB}", "\u{1F1F2}\u{1F1EC}", "\u{1F1F2}\u{1F1ED}", "\u{1F1F2}\u{1F1F0}", "\u{1F1F2}\u{1F1F1}", "\u{1F1F2}\u{1F1F2}", "\u{1F1F2}\u{1F1F3}", "\u{1F1F2}\u{1F1F4}", "\u{1F1F2}\u{1F1F5}", "\u{1F1F2}\u{1F1F6}", "\u{1F1F2}\u{1F1F7}", "\u{1F1F2}\u{1F1F8}", "\u{1F1F2}\u{1F1F9}", "\u{1F1F2}\u{1F1FA}", "\u{1F1F2}\u{1F1FB}", "\u{1F1F2}\u{1F1FC}", "\u{1F1F2}\u{1F1FD}", "\u{1F1F2}\u{1F1FE}", "\u{1F1F2}\u{1F1FF}", "\u{1F1F3}\u{1F1E6}", "\u{1F1F3}\u{1F1E8}", "\u{1F1F3}\u{1F1EA}", "\u{1F1F3}\u{1F1EB}", "\u{1F1F3}\u{1F1EC}", "\u{1F1F3}\u{1F1EE}", "\u{1F1F3}\u{1F1F1}", "\u{1F1F3}\u{1F1F4}", "\u{1F1F3}\u{1F1F5}", "\u{1F1F3}\u{1F1F7}", "\u{1F1F3}\u{1F1FA}", "\u{1F1F3}\u{1F1FF}", "\u{1F1F4}\u{1F1F2}", "\u{1F1F5}\u{1F1E6}", "\u{1F1F5}\u{1F1EA}", "\u{1F1F5}\u{1F1EB}", "\u{1F1F5}\u{1F1EC}", "\u{1F1F5}\u{1F1ED}", "\u{1F1F5}\u{1F1F0}", "\u{1F1F5}\u{1F1F1}", "\u{1F1F5}\u{1F1F2}", "\u{1F1F5}\u{1F1F3}", "\u{1F1F5}\u{1F1F7}", "\u{1F1F5}\u{1F1F8}", "\u{1F1F5}\u{1F1F9}", "\u{1F1F5}\u{1F1FC}", "\u{1F1F5}\u{1F1FE}", "\u{1F1F6}\u{1F1E6}", "\u{1F1F7}\u{1F1EA}", "\u{1F1F7}\u{1F1F4}", "\u{1F1F7}\u{1F1F8}", "\u{1F1F7}\u{1F1FA}", "\u{1F1F7}\u{1F1FC}", "\u{1F1F8}\u{1F1E6}", "\u{1F1F8}\u{1F1E7}", "\u{1F1F8}\u{1F1E8}", "\u{1F1F8}\u{1F1E9}", "\u{1F1F8}\u{1F1EA}", "\u{1F1F8}\u{1F1EC}", "\u{1F1F8}\u{1F1ED}", "\u{1F1F8}\u{1F1EE}", "\u{1F1F8}\u{1F1EF}", "\u{1F1F8}\u{1F1F0}", "\u{1F1F8}\u{1F1F1}", "\u{1F1F8}\u{1F1F2}", "\u{1F1F8}\u{1F1F3}", "\u{1F1F8}\u{1F1F4}", "\u{1F1F8}\u{1F1F7}", "\u{1F1F8}\u{1F1F8}", "\u{1F1F8}\u{1F1F9}", "\u{1F1F8}\u{1F1FB}", "\u{1F1F8}\u{1F1FD}", "\u{1F1F8}\u{1F1FE}", "\u{1F1F8}\u{1F1FF}", "\u{1F1F9}\u{1F1E6}", "\u{1F1F9}\u{1F1E8}", "\u{1F1F9}\u{1F1E9}", "\u{1F1F9}\u{1F1EB}", "\u{1F1F9}\u{1F1EC}", "\u{1F1F9}\u{1F1ED}", "\u{1F1F9}\u{1F1EF}", "\u{1F1F9}\u{1F1F0}", "\u{1F1F9}\u{1F1F1}", "\u{1F1F9}\u{1F1F2}", "\u{1F1F9}\u{1F1F3}", "\u{1F1F9}\u{1F1F4}", "\u{1F1F9}\u{1F1F7}", "\u{1F1F9}\u{1F1F9}", "\u{1F1F9}\u{1F1FB}", "\u{1F1F9}\u{1F1FC}", "\u{1F1F9}\u{1F1FF}", "\u{1F1FA}\u{1F1E6}", "\u{1F1FA}\u{1F1EC}", "\u{1F1FA}\u{1F1F2}", "\u{1F1FA}\u{1F1F3}", "\u{1F1FA}\u{1F1F8}", "\u{1F1FA}\u{1F1FE}", "\u{1F1FA}\u{1F1FF}", "\u{1F1FB}\u{1F1E6}", "\u{1F1FB}\u{1F1E8}", "\u{1F1FB}\u{1F1EA}", "\u{1F1FB}\u{1F1EC}", "\u{1F1FB}\u{1F1EE}", "\u{1F1FB}\u{1F1F3}", "\u{1F1FB}\u{1F1FA}", "\u{1F1FC}\u{1F1EB}", "\u{1F1FC}\u{1F1F8}", "\u{1F1FD}\u{1F1F0}", "\u{1F1FE}\u{1F1EA}", "\u{1F1FE}\u{1F1F9}", "\u{1F1FF}\u{1F1E6}", "\u{1F1FF}\u{1F1F2}", "\u{1F1FF}\u{1F1FC}", "\u{1F3F4}\u{E0067}\u{E0062}\u{E0065}\u{E006E}\u{E0067}\u{E007F}", "\u{1F3F4}\u{E0067}\u{E0062}\u{E0073}\u{E0063}\u{E0074}\u{E007F}", "\u{1F3F4}\u{E0067}\u{E0062}\u{E0077}\u{E006C}\u{E0073}\u{E007F}", "\u261D\u{1F3FB}", "\u261D\u{1F3FC}", "\u261D\u{1F3FD}", "\u261D\u{1F3FE}", "\u261D\u{1F3FF}", "\u26F9\u{1F3FB}", "\u26F9\u{1F3FC}", "\u26F9\u{1F3FD}", "\u26F9\u{1F3FE}", "\u26F9\u{1F3FF}", "\u270A\u{1F3FB}", "\u270A\u{1F3FC}", "\u270A\u{1F3FD}", "\u270A\u{1F3FE}", "\u270A\u{1F3FF}", "\u270B\u{1F3FB}", "\u270B\u{1F3FC}", "\u270B\u{1F3FD}", "\u270B\u{1F3FE}", "\u270B\u{1F3FF}", "\u270C\u{1F3FB}", "\u270C\u{1F3FC}", "\u270C\u{1F3FD}", "\u270C\u{1F3FE}", "\u270C\u{1F3FF}", "\u270D\u{1F3FB}", "\u270D\u{1F3FC}", "\u270D\u{1F3FD}", "\u270D\u{1F3FE}", "\u270D\u{1F3FF}", "\u{1F385}\u{1F3FB}", "\u{1F385}\u{1F3FC}", "\u{1F385}\u{1F3FD}", "\u{1F385}\u{1F3FE}", "\u{1F385}\u{1F3FF}", "\u{1F3C2}\u{1F3FB}", "\u{1F3C2}\u{1F3FC}", "\u{1F3C2}\u{1F3FD}", "\u{1F3C2}\u{1F3FE}", "\u{1F3C2}\u{1F3FF}", "\u{1F3C3}\u{1F3FB}", "\u{1F3C3}\u{1F3FC}", "\u{1F3C3}\u{1F3FD}", "\u{1F3C3}\u{1F3FE}", "\u{1F3C3}\u{1F3FF}", "\u{1F3C4}\u{1F3FB}", "\u{1F3C4}\u{1F3FC}", "\u{1F3C4}\u{1F3FD}", "\u{1F3C4}\u{1F3FE}", "\u{1F3C4}\u{1F3FF}", "\u{1F3C7}\u{1F3FB}", "\u{1F3C7}\u{1F3FC}", "\u{1F3C7}\u{1F3FD}", "\u{1F3C7}\u{1F3FE}", "\u{1F3C7}\u{1F3FF}", "\u{1F3CA}\u{1F3FB}", "\u{1F3CA}\u{1F3FC}", "\u{1F3CA}\u{1F3FD}", "\u{1F3CA}\u{1F3FE}", "\u{1F3CA}\u{1F3FF}", "\u{1F3CB}\u{1F3FB}", "\u{1F3CB}\u{1F3FC}", "\u{1F3CB}\u{1F3FD}", "\u{1F3CB}\u{1F3FE}", "\u{1F3CB}\u{1F3FF}", "\u{1F3CC}\u{1F3FB}", "\u{1F3CC}\u{1F3FC}", "\u{1F3CC}\u{1F3FD}", "\u{1F3CC}\u{1F3FE}", "\u{1F3CC}\u{1F3FF}", "\u{1F442}\u{1F3FB}", "\u{1F442}\u{1F3FC}", "\u{1F442}\u{1F3FD}", "\u{1F442}\u{1F3FE}", "\u{1F442}\u{1F3FF}", "\u{1F443}\u{1F3FB}", "\u{1F443}\u{1F3FC}", "\u{1F443}\u{1F3FD}", "\u{1F443}\u{1F3FE}", "\u{1F443}\u{1F3FF}", "\u{1F446}\u{1F3FB}", "\u{1F446}\u{1F3FC}", "\u{1F446}\u{1F3FD}", "\u{1F446}\u{1F3FE}", "\u{1F446}\u{1F3FF}", "\u{1F447}\u{1F3FB}", "\u{1F447}\u{1F3FC}", "\u{1F447}\u{1F3FD}", "\u{1F447}\u{1F3FE}", "\u{1F447}\u{1F3FF}", "\u{1F448}\u{1F3FB}", "\u{1F448}\u{1F3FC}", "\u{1F448}\u{1F3FD}", "\u{1F448}\u{1F3FE}", "\u{1F448}\u{1F3FF}", "\u{1F449}\u{1F3FB}", "\u{1F449}\u{1F3FC}", "\u{1F449}\u{1F3FD}", "\u{1F449}\u{1F3FE}", "\u{1F449}\u{1F3FF}", "\u{1F44A}\u{1F3FB}", "\u{1F44A}\u{1F3FC}", "\u{1F44A}\u{1F3FD}", "\u{1F44A}\u{1F3FE}", "\u{1F44A}\u{1F3FF}", "\u{1F44B}\u{1F3FB}", "\u{1F44B}\u{1F3FC}", "\u{1F44B}\u{1F3FD}", "\u{1F44B}\u{1F3FE}", "\u{1F44B}\u{1F3FF}", "\u{1F44C}\u{1F3FB}", "\u{1F44C}\u{1F3FC}", "\u{1F44C}\u{1F3FD}", "\u{1F44C}\u{1F3FE}", "\u{1F44C}\u{1F3FF}", "\u{1F44D}\u{1F3FB}", "\u{1F44D}\u{1F3FC}", "\u{1F44D}\u{1F3FD}", "\u{1F44D}\u{1F3FE}", "\u{1F44D}\u{1F3FF}", "\u{1F44E}\u{1F3FB}", "\u{1F44E}\u{1F3FC}", "\u{1F44E}\u{1F3FD}", "\u{1F44E}\u{1F3FE}", "\u{1F44E}\u{1F3FF}", "\u{1F44F}\u{1F3FB}", "\u{1F44F}\u{1F3FC}", "\u{1F44F}\u{1F3FD}", "\u{1F44F}\u{1F3FE}", "\u{1F44F}\u{1F3FF}", "\u{1F450}\u{1F3FB}", "\u{1F450}\u{1F3FC}", "\u{1F450}\u{1F3FD}", "\u{1F450}\u{1F3FE}", "\u{1F450}\u{1F3FF}", "\u{1F466}\u{1F3FB}", "\u{1F466}\u{1F3FC}", "\u{1F466}\u{1F3FD}", "\u{1F466}\u{1F3FE}", "\u{1F466}\u{1F3FF}", "\u{1F467}\u{1F3FB}", "\u{1F467}\u{1F3FC}", "\u{1F467}\u{1F3FD}", "\u{1F467}\u{1F3FE}", "\u{1F467}\u{1F3FF}", "\u{1F468}\u{1F3FB}", "\u{1F468}\u{1F3FC}", "\u{1F468}\u{1F3FD}", "\u{1F468}\u{1F3FE}", "\u{1F468}\u{1F3FF}", "\u{1F469}\u{1F3FB}", "\u{1F469}\u{1F3FC}", "\u{1F469}\u{1F3FD}", "\u{1F469}\u{1F3FE}", "\u{1F469}\u{1F3FF}", "\u{1F46B}\u{1F3FB}", "\u{1F46B}\u{1F3FC}", "\u{1F46B}\u{1F3FD}", "\u{1F46B}\u{1F3FE}", "\u{1F46B}\u{1F3FF}", "\u{1F46C}\u{1F3FB}", "\u{1F46C}\u{1F3FC}", "\u{1F46C}\u{1F3FD}", "\u{1F46C}\u{1F3FE}", "\u{1F46C}\u{1F3FF}", "\u{1F46D}\u{1F3FB}", "\u{1F46D}\u{1F3FC}", "\u{1F46D}\u{1F3FD}", "\u{1F46D}\u{1F3FE}", "\u{1F46D}\u{1F3FF}", "\u{1F46E}\u{1F3FB}", "\u{1F46E}\u{1F3FC}", "\u{1F46E}\u{1F3FD}", "\u{1F46E}\u{1F3FE}", "\u{1F46E}\u{1F3FF}", "\u{1F470}\u{1F3FB}", "\u{1F470}\u{1F3FC}", "\u{1F470}\u{1F3FD}", "\u{1F470}\u{1F3FE}", "\u{1F470}\u{1F3FF}", "\u{1F471}\u{1F3FB}", "\u{1F471}\u{1F3FC}", "\u{1F471}\u{1F3FD}", "\u{1F471}\u{1F3FE}", "\u{1F471}\u{1F3FF}", "\u{1F472}\u{1F3FB}", "\u{1F472}\u{1F3FC}", "\u{1F472}\u{1F3FD}", "\u{1F472}\u{1F3FE}", "\u{1F472}\u{1F3FF}", "\u{1F473}\u{1F3FB}", "\u{1F473}\u{1F3FC}", "\u{1F473}\u{1F3FD}", "\u{1F473}\u{1F3FE}", "\u{1F473}\u{1F3FF}", "\u{1F474}\u{1F3FB}", "\u{1F474}\u{1F3FC}", "\u{1F474}\u{1F3FD}", "\u{1F474}\u{1F3FE}", "\u{1F474}\u{1F3FF}", "\u{1F475}\u{1F3FB}", "\u{1F475}\u{1F3FC}", "\u{1F475}\u{1F3FD}", "\u{1F475}\u{1F3FE}", "\u{1F475}\u{1F3FF}", "\u{1F476}\u{1F3FB}", "\u{1F476}\u{1F3FC}", "\u{1F476}\u{1F3FD}", "\u{1F476}\u{1F3FE}", "\u{1F476}\u{1F3FF}", "\u{1F477}\u{1F3FB}", "\u{1F477}\u{1F3FC}", "\u{1F477}\u{1F3FD}", "\u{1F477}\u{1F3FE}", "\u{1F477}\u{1F3FF}", "\u{1F478}\u{1F3FB}", "\u{1F478}\u{1F3FC}", "\u{1F478}\u{1F3FD}", "\u{1F478}\u{1F3FE}", "\u{1F478}\u{1F3FF}", "\u{1F47C}\u{1F3FB}", "\u{1F47C}\u{1F3FC}", "\u{1F47C}\u{1F3FD}", "\u{1F47C}\u{1F3FE}", "\u{1F47C}\u{1F3FF}", "\u{1F481}\u{1F3FB}", "\u{1F481}\u{1F3FC}", "\u{1F481}\u{1F3FD}", "\u{1F481}\u{1F3FE}", "\u{1F481}\u{1F3FF}", "\u{1F482}\u{1F3FB}", "\u{1F482}\u{1F3FC}", "\u{1F482}\u{1F3FD}", "\u{1F482}\u{1F3FE}", "\u{1F482}\u{1F3FF}", "\u{1F483}\u{1F3FB}", "\u{1F483}\u{1F3FC}", "\u{1F483}\u{1F3FD}", "\u{1F483}\u{1F3FE}", "\u{1F483}\u{1F3FF}", "\u{1F485}\u{1F3FB}", "\u{1F485}\u{1F3FC}", "\u{1F485}\u{1F3FD}", "\u{1F485}\u{1F3FE}", "\u{1F485}\u{1F3FF}", "\u{1F486}\u{1F3FB}", "\u{1F486}\u{1F3FC}", "\u{1F486}\u{1F3FD}", "\u{1F486}\u{1F3FE}", "\u{1F486}\u{1F3FF}", "\u{1F487}\u{1F3FB}", "\u{1F487}\u{1F3FC}", "\u{1F487}\u{1F3FD}", "\u{1F487}\u{1F3FE}", "\u{1F487}\u{1F3FF}", "\u{1F48F}\u{1F3FB}", "\u{1F48F}\u{1F3FC}", "\u{1F48F}\u{1F3FD}", "\u{1F48F}\u{1F3FE}", "\u{1F48F}\u{1F3FF}", "\u{1F491}\u{1F3FB}", "\u{1F491}\u{1F3FC}", "\u{1F491}\u{1F3FD}", "\u{1F491}\u{1F3FE}", "\u{1F491}\u{1F3FF}", "\u{1F4AA}\u{1F3FB}", "\u{1F4AA}\u{1F3FC}", "\u{1F4AA}\u{1F3FD}", "\u{1F4AA}\u{1F3FE}", "\u{1F4AA}\u{1F3FF}", "\u{1F574}\u{1F3FB}", "\u{1F574}\u{1F3FC}", "\u{1F574}\u{1F3FD}", "\u{1F574}\u{1F3FE}", "\u{1F574}\u{1F3FF}", "\u{1F575}\u{1F3FB}", "\u{1F575}\u{1F3FC}", "\u{1F575}\u{1F3FD}", "\u{1F575}\u{1F3FE}", "\u{1F575}\u{1F3FF}", "\u{1F57A}\u{1F3FB}", "\u{1F57A}\u{1F3FC}", "\u{1F57A}\u{1F3FD}", "\u{1F57A}\u{1F3FE}", "\u{1F57A}\u{1F3FF}", "\u{1F590}\u{1F3FB}", "\u{1F590}\u{1F3FC}", "\u{1F590}\u{1F3FD}", "\u{1F590}\u{1F3FE}", "\u{1F590}\u{1F3FF}", "\u{1F595}\u{1F3FB}", "\u{1F595}\u{1F3FC}", "\u{1F595}\u{1F3FD}", "\u{1F595}\u{1F3FE}", "\u{1F595}\u{1F3FF}", "\u{1F596}\u{1F3FB}", "\u{1F596}\u{1F3FC}", "\u{1F596}\u{1F3FD}", "\u{1F596}\u{1F3FE}", "\u{1F596}\u{1F3FF}", "\u{1F645}\u{1F3FB}", "\u{1F645}\u{1F3FC}", "\u{1F645}\u{1F3FD}", "\u{1F645}\u{1F3FE}", "\u{1F645}\u{1F3FF}", "\u{1F646}\u{1F3FB}", "\u{1F646}\u{1F3FC}", "\u{1F646}\u{1F3FD}", "\u{1F646}\u{1F3FE}", "\u{1F646}\u{1F3FF}", "\u{1F647}\u{1F3FB}", "\u{1F647}\u{1F3FC}", "\u{1F647}\u{1F3FD}", "\u{1F647}\u{1F3FE}", "\u{1F647}\u{1F3FF}", "\u{1F64B}\u{1F3FB}", "\u{1F64B}\u{1F3FC}", "\u{1F64B}\u{1F3FD}", "\u{1F64B}\u{1F3FE}", "\u{1F64B}\u{1F3FF}", "\u{1F64C}\u{1F3FB}", "\u{1F64C}\u{1F3FC}", "\u{1F64C}\u{1F3FD}", "\u{1F64C}\u{1F3FE}", "\u{1F64C}\u{1F3FF}", "\u{1F64D}\u{1F3FB}", "\u{1F64D}\u{1F3FC}", "\u{1F64D}\u{1F3FD}", "\u{1F64D}\u{1F3FE}", "\u{1F64D}\u{1F3FF}", "\u{1F64E}\u{1F3FB}", "\u{1F64E}\u{1F3FC}", "\u{1F64E}\u{1F3FD}", "\u{1F64E}\u{1F3FE}", "\u{1F64E}\u{1F3FF}", "\u{1F64F}\u{1F3FB}", "\u{1F64F}\u{1F3FC}", "\u{1F64F}\u{1F3FD}", "\u{1F64F}\u{1F3FE}", "\u{1F64F}\u{1F3FF}", "\u{1F6A3}\u{1F3FB}", "\u{1F6A3}\u{1F3FC}", "\u{1F6A3}\u{1F3FD}", "\u{1F6A3}\u{1F3FE}", "\u{1F6A3}\u{1F3FF}", "\u{1F6B4}\u{1F3FB}", "\u{1F6B4}\u{1F3FC}", "\u{1F6B4}\u{1F3FD}", "\u{1F6B4}\u{1F3FE}", "\u{1F6B4}\u{1F3FF}", "\u{1F6B5}\u{1F3FB}", "\u{1F6B5}\u{1F3FC}", "\u{1F6B5}\u{1F3FD}", "\u{1F6B5}\u{1F3FE}", "\u{1F6B5}\u{1F3FF}", "\u{1F6B6}\u{1F3FB}", "\u{1F6B6}\u{1F3FC}", "\u{1F6B6}\u{1F3FD}", "\u{1F6B6}\u{1F3FE}", "\u{1F6B6}\u{1F3FF}", "\u{1F6C0}\u{1F3FB}", "\u{1F6C0}\u{1F3FC}", "\u{1F6C0}\u{1F3FD}", "\u{1F6C0}\u{1F3FE}", "\u{1F6C0}\u{1F3FF}", "\u{1F6CC}\u{1F3FB}", "\u{1F6CC}\u{1F3FC}", "\u{1F6CC}\u{1F3FD}", "\u{1F6CC}\u{1F3FE}", "\u{1F6CC}\u{1F3FF}", "\u{1F90C}\u{1F3FB}", "\u{1F90C}\u{1F3FC}", "\u{1F90C}\u{1F3FD}", "\u{1F90C}\u{1F3FE}", "\u{1F90C}\u{1F3FF}", "\u{1F90F}\u{1F3FB}", "\u{1F90F}\u{1F3FC}", "\u{1F90F}\u{1F3FD}", "\u{1F90F}\u{1F3FE}", "\u{1F90F}\u{1F3FF}", "\u{1F918}\u{1F3FB}", "\u{1F918}\u{1F3FC}", "\u{1F918}\u{1F3FD}", "\u{1F918}\u{1F3FE}", "\u{1F918}\u{1F3FF}", "\u{1F919}\u{1F3FB}", "\u{1F919}\u{1F3FC}", "\u{1F919}\u{1F3FD}", "\u{1F919}\u{1F3FE}", "\u{1F919}\u{1F3FF}", "\u{1F91A}\u{1F3FB}", "\u{1F91A}\u{1F3FC}", "\u{1F91A}\u{1F3FD}", "\u{1F91A}\u{1F3FE}", "\u{1F91A}\u{1F3FF}", "\u{1F91B}\u{1F3FB}", "\u{1F91B}\u{1F3FC}", "\u{1F91B}\u{1F3FD}", "\u{1F91B}\u{1F3FE}", "\u{1F91B}\u{1F3FF}", "\u{1F91C}\u{1F3FB}", "\u{1F91C}\u{1F3FC}", "\u{1F91C}\u{1F3FD}", "\u{1F91C}\u{1F3FE}", "\u{1F91C}\u{1F3FF}", "\u{1F91D}\u{1F3FB}", "\u{1F91D}\u{1F3FC}", "\u{1F91D}\u{1F3FD}", "\u{1F91D}\u{1F3FE}", "\u{1F91D}\u{1F3FF}", "\u{1F91E}\u{1F3FB}", "\u{1F91E}\u{1F3FC}", "\u{1F91E}\u{1F3FD}", "\u{1F91E}\u{1F3FE}", "\u{1F91E}\u{1F3FF}", "\u{1F91F}\u{1F3FB}", "\u{1F91F}\u{1F3FC}", "\u{1F91F}\u{1F3FD}", "\u{1F91F}\u{1F3FE}", "\u{1F91F}\u{1F3FF}", "\u{1F926}\u{1F3FB}", "\u{1F926}\u{1F3FC}", "\u{1F926}\u{1F3FD}", "\u{1F926}\u{1F3FE}", "\u{1F926}\u{1F3FF}", "\u{1F930}\u{1F3FB}", "\u{1F930}\u{1F3FC}", "\u{1F930}\u{1F3FD}", "\u{1F930}\u{1F3FE}", "\u{1F930}\u{1F3FF}", "\u{1F931}\u{1F3FB}", "\u{1F931}\u{1F3FC}", "\u{1F931}\u{1F3FD}", "\u{1F931}\u{1F3FE}", "\u{1F931}\u{1F3FF}", "\u{1F932}\u{1F3FB}", "\u{1F932}\u{1F3FC}", "\u{1F932}\u{1F3FD}", "\u{1F932}\u{1F3FE}", "\u{1F932}\u{1F3FF}", "\u{1F933}\u{1F3FB}", "\u{1F933}\u{1F3FC}", "\u{1F933}\u{1F3FD}", "\u{1F933}\u{1F3FE}", "\u{1F933}\u{1F3FF}", "\u{1F934}\u{1F3FB}", "\u{1F934}\u{1F3FC}", "\u{1F934}\u{1F3FD}", "\u{1F934}\u{1F3FE}", "\u{1F934}\u{1F3FF}", "\u{1F935}\u{1F3FB}", "\u{1F935}\u{1F3FC}", "\u{1F935}\u{1F3FD}", "\u{1F935}\u{1F3FE}", "\u{1F935}\u{1F3FF}", "\u{1F936}\u{1F3FB}", "\u{1F936}\u{1F3FC}", "\u{1F936}\u{1F3FD}", "\u{1F936}\u{1F3FE}", "\u{1F936}\u{1F3FF}", "\u{1F937}\u{1F3FB}", "\u{1F937}\u{1F3FC}", "\u{1F937}\u{1F3FD}", "\u{1F937}\u{1F3FE}", "\u{1F937}\u{1F3FF}", "\u{1F938}\u{1F3FB}", "\u{1F938}\u{1F3FC}", "\u{1F938}\u{1F3FD}", "\u{1F938}\u{1F3FE}", "\u{1F938}\u{1F3FF}", "\u{1F939}\u{1F3FB}", "\u{1F939}\u{1F3FC}", "\u{1F939}\u{1F3FD}", "\u{1F939}\u{1F3FE}", "\u{1F939}\u{1F3FF}", "\u{1F93D}\u{1F3FB}", "\u{1F93D}\u{1F3FC}", "\u{1F93D}\u{1F3FD}", "\u{1F93D}\u{1F3FE}", "\u{1F93D}\u{1F3FF}", "\u{1F93E}\u{1F3FB}", "\u{1F93E}\u{1F3FC}", "\u{1F93E}\u{1F3FD}", "\u{1F93E}\u{1F3FE}", "\u{1F93E}\u{1F3FF}", "\u{1F977}\u{1F3FB}", "\u{1F977}\u{1F3FC}", "\u{1F977}\u{1F3FD}", "\u{1F977}\u{1F3FE}", "\u{1F977}\u{1F3FF}", "\u{1F9B5}\u{1F3FB}", "\u{1F9B5}\u{1F3FC}", "\u{1F9B5}\u{1F3FD}", "\u{1F9B5}\u{1F3FE}", "\u{1F9B5}\u{1F3FF}", "\u{1F9B6}\u{1F3FB}", "\u{1F9B6}\u{1F3FC}", "\u{1F9B6}\u{1F3FD}", "\u{1F9B6}\u{1F3FE}", "\u{1F9B6}\u{1F3FF}", "\u{1F9B8}\u{1F3FB}", "\u{1F9B8}\u{1F3FC}", "\u{1F9B8}\u{1F3FD}", "\u{1F9B8}\u{1F3FE}", "\u{1F9B8}\u{1F3FF}", "\u{1F9B9}\u{1F3FB}", "\u{1F9B9}\u{1F3FC}", "\u{1F9B9}\u{1F3FD}", "\u{1F9B9}\u{1F3FE}", "\u{1F9B9}\u{1F3FF}", "\u{1F9BB}\u{1F3FB}", "\u{1F9BB}\u{1F3FC}", "\u{1F9BB}\u{1F3FD}", "\u{1F9BB}\u{1F3FE}", "\u{1F9BB}\u{1F3FF}", "\u{1F9CD}\u{1F3FB}", "\u{1F9CD}\u{1F3FC}", "\u{1F9CD}\u{1F3FD}", "\u{1F9CD}\u{1F3FE}", "\u{1F9CD}\u{1F3FF}", "\u{1F9CE}\u{1F3FB}", "\u{1F9CE}\u{1F3FC}", "\u{1F9CE}\u{1F3FD}", "\u{1F9CE}\u{1F3FE}", "\u{1F9CE}\u{1F3FF}", "\u{1F9CF}\u{1F3FB}", "\u{1F9CF}\u{1F3FC}", "\u{1F9CF}\u{1F3FD}", "\u{1F9CF}\u{1F3FE}", "\u{1F9CF}\u{1F3FF}", "\u{1F9D1}\u{1F3FB}", "\u{1F9D1}\u{1F3FC}", "\u{1F9D1}\u{1F3FD}", "\u{1F9D1}\u{1F3FE}", "\u{1F9D1}\u{1F3FF}", "\u{1F9D2}\u{1F3FB}", "\u{1F9D2}\u{1F3FC}", "\u{1F9D2}\u{1F3FD}", "\u{1F9D2}\u{1F3FE}", "\u{1F9D2}\u{1F3FF}", "\u{1F9D3}\u{1F3FB}", "\u{1F9D3}\u{1F3FC}", "\u{1F9D3}\u{1F3FD}", "\u{1F9D3}\u{1F3FE}", "\u{1F9D3}\u{1F3FF}", "\u{1F9D4}\u{1F3FB}", "\u{1F9D4}\u{1F3FC}", "\u{1F9D4}\u{1F3FD}", "\u{1F9D4}\u{1F3FE}", "\u{1F9D4}\u{1F3FF}", "\u{1F9D5}\u{1F3FB}", "\u{1F9D5}\u{1F3FC}", "\u{1F9D5}\u{1F3FD}", "\u{1F9D5}\u{1F3FE}", "\u{1F9D5}\u{1F3FF}", "\u{1F9D6}\u{1F3FB}", "\u{1F9D6}\u{1F3FC}", "\u{1F9D6}\u{1F3FD}", "\u{1F9D6}\u{1F3FE}", "\u{1F9D6}\u{1F3FF}", "\u{1F9D7}\u{1F3FB}", "\u{1F9D7}\u{1F3FC}", "\u{1F9D7}\u{1F3FD}", "\u{1F9D7}\u{1F3FE}", "\u{1F9D7}\u{1F3FF}", "\u{1F9D8}\u{1F3FB}", "\u{1F9D8}\u{1F3FC}", "\u{1F9D8}\u{1F3FD}", "\u{1F9D8}\u{1F3FE}", "\u{1F9D8}\u{1F3FF}", "\u{1F9D9}\u{1F3FB}", "\u{1F9D9}\u{1F3FC}", "\u{1F9D9}\u{1F3FD}", "\u{1F9D9}\u{1F3FE}", "\u{1F9D9}\u{1F3FF}", "\u{1F9DA}\u{1F3FB}", "\u{1F9DA}\u{1F3FC}", "\u{1F9DA}\u{1F3FD}", "\u{1F9DA}\u{1F3FE}", "\u{1F9DA}\u{1F3FF}", "\u{1F9DB}\u{1F3FB}", "\u{1F9DB}\u{1F3FC}", "\u{1F9DB}\u{1F3FD}", "\u{1F9DB}\u{1F3FE}", "\u{1F9DB}\u{1F3FF}", "\u{1F9DC}\u{1F3FB}", "\u{1F9DC}\u{1F3FC}", "\u{1F9DC}\u{1F3FD}", "\u{1F9DC}\u{1F3FE}", "\u{1F9DC}\u{1F3FF}", "\u{1F9DD}\u{1F3FB}", "\u{1F9DD}\u{1F3FC}", "\u{1F9DD}\u{1F3FD}", "\u{1F9DD}\u{1F3FE}", "\u{1F9DD}\u{1F3FF}", "\u{1FAC3}\u{1F3FB}", "\u{1FAC3}\u{1F3FC}", "\u{1FAC3}\u{1F3FD}", "\u{1FAC3}\u{1F3FE}", "\u{1FAC3}\u{1F3FF}", "\u{1FAC4}\u{1F3FB}", "\u{1FAC4}\u{1F3FC}", "\u{1FAC4}\u{1F3FD}", "\u{1FAC4}\u{1F3FE}", "\u{1FAC4}\u{1F3FF}", "\u{1FAC5}\u{1F3FB}", "\u{1FAC5}\u{1F3FC}", "\u{1FAC5}\u{1F3FD}", "\u{1FAC5}\u{1F3FE}", "\u{1FAC5}\u{1F3FF}", "\u{1FAF0}\u{1F3FB}", "\u{1FAF0}\u{1F3FC}", "\u{1FAF0}\u{1F3FD}", "\u{1FAF0}\u{1F3FE}", "\u{1FAF0}\u{1F3FF}", "\u{1FAF1}\u{1F3FB}", "\u{1FAF1}\u{1F3FC}", "\u{1FAF1}\u{1F3FD}", "\u{1FAF1}\u{1F3FE}", "\u{1FAF1}\u{1F3FF}", "\u{1FAF2}\u{1F3FB}", "\u{1FAF2}\u{1F3FC}", "\u{1FAF2}\u{1F3FD}", "\u{1FAF2}\u{1F3FE}", "\u{1FAF2}\u{1F3FF}", "\u{1FAF3}\u{1F3FB}", "\u{1FAF3}\u{1F3FC}", "\u{1FAF3}\u{1F3FD}", "\u{1FAF3}\u{1F3FE}", "\u{1FAF3}\u{1F3FF}", "\u{1FAF4}\u{1F3FB}", "\u{1FAF4}\u{1F3FC}", "\u{1FAF4}\u{1F3FD}", "\u{1FAF4}\u{1F3FE}", "\u{1FAF4}\u{1F3FF}", "\u{1FAF5}\u{1F3FB}", "\u{1FAF5}\u{1F3FC}", "\u{1FAF5}\u{1F3FD}", "\u{1FAF5}\u{1F3FE}", "\u{1FAF5}\u{1F3FF}", "\u{1FAF6}\u{1F3FB}", "\u{1FAF6}\u{1F3FC}", "\u{1FAF6}\u{1F3FD}", "\u{1FAF6}\u{1F3FE}", "\u{1FAF6}\u{1F3FF}", "\u{1FAF7}\u{1F3FB}", "\u{1FAF7}\u{1F3FC}", "\u{1FAF7}\u{1F3FD}", "\u{1FAF7}\u{1F3FE}", "\u{1FAF7}\u{1F3FF}", "\u{1FAF8}\u{1F3FB}", "\u{1FAF8}\u{1F3FC}", "\u{1FAF8}\u{1F3FD}", "\u{1FAF8}\u{1F3FE}", "\u{1FAF8}\u{1F3FF}", "\u{1F468}\u200D\u2764\uFE0F\u200D\u{1F468}", "\u{1F468}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}", "\u{1F468}\u200D\u{1F466}", "\u{1F468}\u200D\u{1F466}\u200D\u{1F466}", "\u{1F468}\u200D\u{1F467}", "\u{1F468}\u200D\u{1F467}\u200D\u{1F466}", "\u{1F468}\u200D\u{1F467}\u200D\u{1F467}", "\u{1F468}\u200D\u{1F468}\u200D\u{1F466}", "\u{1F468}\u200D\u{1F468}\u200D\u{1F466}\u200D\u{1F466}", "\u{1F468}\u200D\u{1F468}\u200D\u{1F467}", "\u{1F468}\u200D\u{1F468}\u200D\u{1F467}\u200D\u{1F466}", "\u{1F468}\u200D\u{1F468}\u200D\u{1F467}\u200D\u{1F467}", "\u{1F468}\u200D\u{1F469}\u200D\u{1F466}", "\u{1F468}\u200D\u{1F469}\u200D\u{1F466}\u200D\u{1F466}", "\u{1F468}\u200D\u{1F469}\u200D\u{1F467}", "\u{1F468}\u200D\u{1F469}\u200D\u{1F467}\u200D\u{1F466}", "\u{1F468}\u200D\u{1F469}\u200D\u{1F467}\u200D\u{1F467}", "\u{1F468}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FB}", "\u{1F468}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FC}", "\u{1F468}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FD}", "\u{1F468}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FE}", "\u{1F468}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FF}", "\u{1F468}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FB}", "\u{1F468}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FC}", "\u{1F468}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FD}", "\u{1F468}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FE}", "\u{1F468}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FF}", "\u{1F468}\u{1F3FB}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FC}", "\u{1F468}\u{1F3FB}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FD}", "\u{1F468}\u{1F3FB}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FE}", "\u{1F468}\u{1F3FB}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FF}", "\u{1F468}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FB}", "\u{1F468}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FC}", "\u{1F468}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FD}", "\u{1F468}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FE}", "\u{1F468}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FF}", "\u{1F468}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FB}", "\u{1F468}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FC}", "\u{1F468}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FD}", "\u{1F468}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FE}", "\u{1F468}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FF}", "\u{1F468}\u{1F3FC}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FB}", "\u{1F468}\u{1F3FC}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FD}", "\u{1F468}\u{1F3FC}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FE}", "\u{1F468}\u{1F3FC}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FF}", "\u{1F468}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FB}", "\u{1F468}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FC}", "\u{1F468}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FD}", "\u{1F468}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FE}", "\u{1F468}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FF}", "\u{1F468}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FB}", "\u{1F468}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FC}", "\u{1F468}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FD}", "\u{1F468}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FE}", "\u{1F468}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FF}", "\u{1F468}\u{1F3FD}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FB}", "\u{1F468}\u{1F3FD}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FC}", "\u{1F468}\u{1F3FD}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FE}", "\u{1F468}\u{1F3FD}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FF}", "\u{1F468}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FB}", "\u{1F468}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FC}", "\u{1F468}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FD}", "\u{1F468}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FE}", "\u{1F468}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FF}", "\u{1F468}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FB}", "\u{1F468}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FC}", "\u{1F468}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FD}", "\u{1F468}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FE}", "\u{1F468}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FF}", "\u{1F468}\u{1F3FE}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FB}", "\u{1F468}\u{1F3FE}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FC}", "\u{1F468}\u{1F3FE}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FD}", "\u{1F468}\u{1F3FE}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FF}", "\u{1F468}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FB}", "\u{1F468}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FC}", "\u{1F468}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FD}", "\u{1F468}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FE}", "\u{1F468}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FF}", "\u{1F468}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FB}", "\u{1F468}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FC}", "\u{1F468}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FD}", "\u{1F468}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FE}", "\u{1F468}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FF}", "\u{1F468}\u{1F3FF}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FB}", "\u{1F468}\u{1F3FF}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FC}", "\u{1F468}\u{1F3FF}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FD}", "\u{1F468}\u{1F3FF}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FE}", "\u{1F469}\u200D\u2764\uFE0F\u200D\u{1F468}", "\u{1F469}\u200D\u2764\uFE0F\u200D\u{1F469}", "\u{1F469}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}", "\u{1F469}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}", "\u{1F469}\u200D\u{1F466}", "\u{1F469}\u200D\u{1F466}\u200D\u{1F466}", "\u{1F469}\u200D\u{1F467}", "\u{1F469}\u200D\u{1F467}\u200D\u{1F466}", "\u{1F469}\u200D\u{1F467}\u200D\u{1F467}", "\u{1F469}\u200D\u{1F469}\u200D\u{1F466}", "\u{1F469}\u200D\u{1F469}\u200D\u{1F466}\u200D\u{1F466}", "\u{1F469}\u200D\u{1F469}\u200D\u{1F467}", "\u{1F469}\u200D\u{1F469}\u200D\u{1F467}\u200D\u{1F466}", "\u{1F469}\u200D\u{1F469}\u200D\u{1F467}\u200D\u{1F467}", "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FB}", "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FC}", "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FD}", "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FE}", "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FF}", "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FB}", "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FC}", "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FD}", "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FE}", "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FF}", "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FB}", "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FC}", "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FD}", "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FE}", "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FF}", "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FB}", "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FC}", "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FD}", "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FE}", "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FF}", "\u{1F469}\u{1F3FB}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FC}", "\u{1F469}\u{1F3FB}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FD}", "\u{1F469}\u{1F3FB}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FE}", "\u{1F469}\u{1F3FB}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FF}", "\u{1F469}\u{1F3FB}\u200D\u{1F91D}\u200D\u{1F469}\u{1F3FC}", "\u{1F469}\u{1F3FB}\u200D\u{1F91D}\u200D\u{1F469}\u{1F3FD}", "\u{1F469}\u{1F3FB}\u200D\u{1F91D}\u200D\u{1F469}\u{1F3FE}", "\u{1F469}\u{1F3FB}\u200D\u{1F91D}\u200D\u{1F469}\u{1F3FF}", "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FB}", "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FC}", "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FD}", "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FE}", "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FF}", "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FB}", "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FC}", "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FD}", "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FE}", "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FF}", "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FB}", "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FC}", "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FD}", "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FE}", "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FF}", "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FB}", "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FC}", "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FD}", "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FE}", "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FF}", "\u{1F469}\u{1F3FC}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FB}", "\u{1F469}\u{1F3FC}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FD}", "\u{1F469}\u{1F3FC}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FE}", "\u{1F469}\u{1F3FC}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FF}", "\u{1F469}\u{1F3FC}\u200D\u{1F91D}\u200D\u{1F469}\u{1F3FB}", "\u{1F469}\u{1F3FC}\u200D\u{1F91D}\u200D\u{1F469}\u{1F3FD}", "\u{1F469}\u{1F3FC}\u200D\u{1F91D}\u200D\u{1F469}\u{1F3FE}", "\u{1F469}\u{1F3FC}\u200D\u{1F91D}\u200D\u{1F469}\u{1F3FF}", "\u{1F469}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FB}", "\u{1F469}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FC}", "\u{1F469}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FD}", "\u{1F469}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FE}", "\u{1F469}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FF}", "\u{1F469}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FB}", "\u{1F469}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FC}", "\u{1F469}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FD}", "\u{1F469}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FE}", "\u{1F469}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FF}", "\u{1F469}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FB}", "\u{1F469}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FC}", "\u{1F469}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FD}", "\u{1F469}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FE}", "\u{1F469}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FF}", "\u{1F469}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FB}", "\u{1F469}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FC}", "\u{1F469}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FD}", "\u{1F469}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FE}", "\u{1F469}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FF}", "\u{1F469}\u{1F3FD}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FB}", "\u{1F469}\u{1F3FD}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FC}", "\u{1F469}\u{1F3FD}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FE}", "\u{1F469}\u{1F3FD}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FF}", "\u{1F469}\u{1F3FD}\u200D\u{1F91D}\u200D\u{1F469}\u{1F3FB}", "\u{1F469}\u{1F3FD}\u200D\u{1F91D}\u200D\u{1F469}\u{1F3FC}", "\u{1F469}\u{1F3FD}\u200D\u{1F91D}\u200D\u{1F469}\u{1F3FE}", "\u{1F469}\u{1F3FD}\u200D\u{1F91D}\u200D\u{1F469}\u{1F3FF}", "\u{1F469}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FB}", "\u{1F469}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FC}", "\u{1F469}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FD}", "\u{1F469}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FE}", "\u{1F469}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FF}", "\u{1F469}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FB}", "\u{1F469}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FC}", "\u{1F469}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FD}", "\u{1F469}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FE}", "\u{1F469}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FF}", "\u{1F469}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FB}", "\u{1F469}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FC}", "\u{1F469}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FD}", "\u{1F469}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FE}", "\u{1F469}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FF}", "\u{1F469}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FB}", "\u{1F469}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FC}", "\u{1F469}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FD}", "\u{1F469}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FE}", "\u{1F469}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FF}", "\u{1F469}\u{1F3FE}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FB}", "\u{1F469}\u{1F3FE}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FC}", "\u{1F469}\u{1F3FE}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FD}", "\u{1F469}\u{1F3FE}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FF}", "\u{1F469}\u{1F3FE}\u200D\u{1F91D}\u200D\u{1F469}\u{1F3FB}", "\u{1F469}\u{1F3FE}\u200D\u{1F91D}\u200D\u{1F469}\u{1F3FC}", "\u{1F469}\u{1F3FE}\u200D\u{1F91D}\u200D\u{1F469}\u{1F3FD}", "\u{1F469}\u{1F3FE}\u200D\u{1F91D}\u200D\u{1F469}\u{1F3FF}", "\u{1F469}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FB}", "\u{1F469}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FC}", "\u{1F469}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FD}", "\u{1F469}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FE}", "\u{1F469}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FF}", "\u{1F469}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FB}", "\u{1F469}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FC}", "\u{1F469}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FD}", "\u{1F469}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FE}", "\u{1F469}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FF}", "\u{1F469}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FB}", "\u{1F469}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FC}", "\u{1F469}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FD}", "\u{1F469}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FE}", "\u{1F469}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FF}", "\u{1F469}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FB}", "\u{1F469}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FC}", "\u{1F469}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FD}", "\u{1F469}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FE}", "\u{1F469}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FF}", "\u{1F469}\u{1F3FF}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FB}", "\u{1F469}\u{1F3FF}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FC}", "\u{1F469}\u{1F3FF}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FD}", "\u{1F469}\u{1F3FF}\u200D\u{1F91D}\u200D\u{1F468}\u{1F3FE}", "\u{1F469}\u{1F3FF}\u200D\u{1F91D}\u200D\u{1F469}\u{1F3FB}", "\u{1F469}\u{1F3FF}\u200D\u{1F91D}\u200D\u{1F469}\u{1F3FC}", "\u{1F469}\u{1F3FF}\u200D\u{1F91D}\u200D\u{1F469}\u{1F3FD}", "\u{1F469}\u{1F3FF}\u200D\u{1F91D}\u200D\u{1F469}\u{1F3FE}", "\u{1F9D1}\u200D\u{1F91D}\u200D\u{1F9D1}", "\u{1F9D1}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FC}", "\u{1F9D1}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FD}", "\u{1F9D1}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FE}", "\u{1F9D1}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FF}", "\u{1F9D1}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FC}", "\u{1F9D1}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FD}", "\u{1F9D1}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FE}", "\u{1F9D1}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FF}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F384}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FB}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FC}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FD}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FE}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FF}", "\u{1F9D1}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FB}", "\u{1F9D1}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FD}", "\u{1F9D1}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FE}", "\u{1F9D1}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FF}", "\u{1F9D1}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FB}", "\u{1F9D1}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FD}", "\u{1F9D1}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FE}", "\u{1F9D1}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FF}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F384}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FB}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FC}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FD}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FE}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FF}", "\u{1F9D1}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FB}", "\u{1F9D1}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FC}", "\u{1F9D1}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FE}", "\u{1F9D1}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FF}", "\u{1F9D1}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FB}", "\u{1F9D1}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FC}", "\u{1F9D1}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FE}", "\u{1F9D1}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FF}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F384}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FB}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FC}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FD}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FE}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FF}", "\u{1F9D1}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FB}", "\u{1F9D1}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FC}", "\u{1F9D1}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FD}", "\u{1F9D1}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FF}", "\u{1F9D1}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FB}", "\u{1F9D1}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FC}", "\u{1F9D1}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FD}", "\u{1F9D1}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FF}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F384}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FB}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FC}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FD}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FE}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FF}", "\u{1F9D1}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FB}", "\u{1F9D1}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FC}", "\u{1F9D1}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FD}", "\u{1F9D1}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FE}", "\u{1F9D1}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FB}", "\u{1F9D1}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FC}", "\u{1F9D1}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FD}", "\u{1F9D1}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F9D1}\u{1F3FE}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F384}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FB}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FC}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FD}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FE}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F91D}\u200D\u{1F9D1}\u{1F3FF}", "\u{1FAF1}\u{1F3FB}\u200D\u{1FAF2}\u{1F3FC}", "\u{1FAF1}\u{1F3FB}\u200D\u{1FAF2}\u{1F3FD}", "\u{1FAF1}\u{1F3FB}\u200D\u{1FAF2}\u{1F3FE}", "\u{1FAF1}\u{1F3FB}\u200D\u{1FAF2}\u{1F3FF}", "\u{1FAF1}\u{1F3FC}\u200D\u{1FAF2}\u{1F3FB}", "\u{1FAF1}\u{1F3FC}\u200D\u{1FAF2}\u{1F3FD}", "\u{1FAF1}\u{1F3FC}\u200D\u{1FAF2}\u{1F3FE}", "\u{1FAF1}\u{1F3FC}\u200D\u{1FAF2}\u{1F3FF}", "\u{1FAF1}\u{1F3FD}\u200D\u{1FAF2}\u{1F3FB}", "\u{1FAF1}\u{1F3FD}\u200D\u{1FAF2}\u{1F3FC}", "\u{1FAF1}\u{1F3FD}\u200D\u{1FAF2}\u{1F3FE}", "\u{1FAF1}\u{1F3FD}\u200D\u{1FAF2}\u{1F3FF}", "\u{1FAF1}\u{1F3FE}\u200D\u{1FAF2}\u{1F3FB}", "\u{1FAF1}\u{1F3FE}\u200D\u{1FAF2}\u{1F3FC}", "\u{1FAF1}\u{1F3FE}\u200D\u{1FAF2}\u{1F3FD}", "\u{1FAF1}\u{1F3FE}\u200D\u{1FAF2}\u{1F3FF}", "\u{1FAF1}\u{1F3FF}\u200D\u{1FAF2}\u{1F3FB}", "\u{1FAF1}\u{1F3FF}\u200D\u{1FAF2}\u{1F3FC}", "\u{1FAF1}\u{1F3FF}\u200D\u{1FAF2}\u{1F3FD}", "\u{1FAF1}\u{1F3FF}\u200D\u{1FAF2}\u{1F3FE}", "\u{1F468}\u200D\u2695\uFE0F", "\u{1F468}\u200D\u2696\uFE0F", "\u{1F468}\u200D\u2708\uFE0F", "\u{1F468}\u200D\u{1F33E}", "\u{1F468}\u200D\u{1F373}", "\u{1F468}\u200D\u{1F37C}", "\u{1F468}\u200D\u{1F393}", "\u{1F468}\u200D\u{1F3A4}", "\u{1F468}\u200D\u{1F3A8}", "\u{1F468}\u200D\u{1F3EB}", "\u{1F468}\u200D\u{1F3ED}", "\u{1F468}\u200D\u{1F4BB}", "\u{1F468}\u200D\u{1F4BC}", "\u{1F468}\u200D\u{1F527}", "\u{1F468}\u200D\u{1F52C}", "\u{1F468}\u200D\u{1F680}", "\u{1F468}\u200D\u{1F692}", "\u{1F468}\u200D\u{1F9AF}", "\u{1F468}\u200D\u{1F9BC}", "\u{1F468}\u200D\u{1F9BD}", "\u{1F468}\u{1F3FB}\u200D\u2695\uFE0F", "\u{1F468}\u{1F3FB}\u200D\u2696\uFE0F", "\u{1F468}\u{1F3FB}\u200D\u2708\uFE0F", "\u{1F468}\u{1F3FB}\u200D\u{1F33E}", "\u{1F468}\u{1F3FB}\u200D\u{1F373}", "\u{1F468}\u{1F3FB}\u200D\u{1F37C}", "\u{1F468}\u{1F3FB}\u200D\u{1F393}", "\u{1F468}\u{1F3FB}\u200D\u{1F3A4}", "\u{1F468}\u{1F3FB}\u200D\u{1F3A8}", "\u{1F468}\u{1F3FB}\u200D\u{1F3EB}", "\u{1F468}\u{1F3FB}\u200D\u{1F3ED}", "\u{1F468}\u{1F3FB}\u200D\u{1F4BB}", "\u{1F468}\u{1F3FB}\u200D\u{1F4BC}", "\u{1F468}\u{1F3FB}\u200D\u{1F527}", "\u{1F468}\u{1F3FB}\u200D\u{1F52C}", "\u{1F468}\u{1F3FB}\u200D\u{1F680}", "\u{1F468}\u{1F3FB}\u200D\u{1F692}", "\u{1F468}\u{1F3FB}\u200D\u{1F9AF}", "\u{1F468}\u{1F3FB}\u200D\u{1F9BC}", "\u{1F468}\u{1F3FB}\u200D\u{1F9BD}", "\u{1F468}\u{1F3FC}\u200D\u2695\uFE0F", "\u{1F468}\u{1F3FC}\u200D\u2696\uFE0F", "\u{1F468}\u{1F3FC}\u200D\u2708\uFE0F", "\u{1F468}\u{1F3FC}\u200D\u{1F33E}", "\u{1F468}\u{1F3FC}\u200D\u{1F373}", "\u{1F468}\u{1F3FC}\u200D\u{1F37C}", "\u{1F468}\u{1F3FC}\u200D\u{1F393}", "\u{1F468}\u{1F3FC}\u200D\u{1F3A4}", "\u{1F468}\u{1F3FC}\u200D\u{1F3A8}", "\u{1F468}\u{1F3FC}\u200D\u{1F3EB}", "\u{1F468}\u{1F3FC}\u200D\u{1F3ED}", "\u{1F468}\u{1F3FC}\u200D\u{1F4BB}", "\u{1F468}\u{1F3FC}\u200D\u{1F4BC}", "\u{1F468}\u{1F3FC}\u200D\u{1F527}", "\u{1F468}\u{1F3FC}\u200D\u{1F52C}", "\u{1F468}\u{1F3FC}\u200D\u{1F680}", "\u{1F468}\u{1F3FC}\u200D\u{1F692}", "\u{1F468}\u{1F3FC}\u200D\u{1F9AF}", "\u{1F468}\u{1F3FC}\u200D\u{1F9BC}", "\u{1F468}\u{1F3FC}\u200D\u{1F9BD}", "\u{1F468}\u{1F3FD}\u200D\u2695\uFE0F", "\u{1F468}\u{1F3FD}\u200D\u2696\uFE0F", "\u{1F468}\u{1F3FD}\u200D\u2708\uFE0F", "\u{1F468}\u{1F3FD}\u200D\u{1F33E}", "\u{1F468}\u{1F3FD}\u200D\u{1F373}", "\u{1F468}\u{1F3FD}\u200D\u{1F37C}", "\u{1F468}\u{1F3FD}\u200D\u{1F393}", "\u{1F468}\u{1F3FD}\u200D\u{1F3A4}", "\u{1F468}\u{1F3FD}\u200D\u{1F3A8}", "\u{1F468}\u{1F3FD}\u200D\u{1F3EB}", "\u{1F468}\u{1F3FD}\u200D\u{1F3ED}", "\u{1F468}\u{1F3FD}\u200D\u{1F4BB}", "\u{1F468}\u{1F3FD}\u200D\u{1F4BC}", "\u{1F468}\u{1F3FD}\u200D\u{1F527}", "\u{1F468}\u{1F3FD}\u200D\u{1F52C}", "\u{1F468}\u{1F3FD}\u200D\u{1F680}", "\u{1F468}\u{1F3FD}\u200D\u{1F692}", "\u{1F468}\u{1F3FD}\u200D\u{1F9AF}", "\u{1F468}\u{1F3FD}\u200D\u{1F9BC}", "\u{1F468}\u{1F3FD}\u200D\u{1F9BD}", "\u{1F468}\u{1F3FE}\u200D\u2695\uFE0F", "\u{1F468}\u{1F3FE}\u200D\u2696\uFE0F", "\u{1F468}\u{1F3FE}\u200D\u2708\uFE0F", "\u{1F468}\u{1F3FE}\u200D\u{1F33E}", "\u{1F468}\u{1F3FE}\u200D\u{1F373}", "\u{1F468}\u{1F3FE}\u200D\u{1F37C}", "\u{1F468}\u{1F3FE}\u200D\u{1F393}", "\u{1F468}\u{1F3FE}\u200D\u{1F3A4}", "\u{1F468}\u{1F3FE}\u200D\u{1F3A8}", "\u{1F468}\u{1F3FE}\u200D\u{1F3EB}", "\u{1F468}\u{1F3FE}\u200D\u{1F3ED}", "\u{1F468}\u{1F3FE}\u200D\u{1F4BB}", "\u{1F468}\u{1F3FE}\u200D\u{1F4BC}", "\u{1F468}\u{1F3FE}\u200D\u{1F527}", "\u{1F468}\u{1F3FE}\u200D\u{1F52C}", "\u{1F468}\u{1F3FE}\u200D\u{1F680}", "\u{1F468}\u{1F3FE}\u200D\u{1F692}", "\u{1F468}\u{1F3FE}\u200D\u{1F9AF}", "\u{1F468}\u{1F3FE}\u200D\u{1F9BC}", "\u{1F468}\u{1F3FE}\u200D\u{1F9BD}", "\u{1F468}\u{1F3FF}\u200D\u2695\uFE0F", "\u{1F468}\u{1F3FF}\u200D\u2696\uFE0F", "\u{1F468}\u{1F3FF}\u200D\u2708\uFE0F", "\u{1F468}\u{1F3FF}\u200D\u{1F33E}", "\u{1F468}\u{1F3FF}\u200D\u{1F373}", "\u{1F468}\u{1F3FF}\u200D\u{1F37C}", "\u{1F468}\u{1F3FF}\u200D\u{1F393}", "\u{1F468}\u{1F3FF}\u200D\u{1F3A4}", "\u{1F468}\u{1F3FF}\u200D\u{1F3A8}", "\u{1F468}\u{1F3FF}\u200D\u{1F3EB}", "\u{1F468}\u{1F3FF}\u200D\u{1F3ED}", "\u{1F468}\u{1F3FF}\u200D\u{1F4BB}", "\u{1F468}\u{1F3FF}\u200D\u{1F4BC}", "\u{1F468}\u{1F3FF}\u200D\u{1F527}", "\u{1F468}\u{1F3FF}\u200D\u{1F52C}", "\u{1F468}\u{1F3FF}\u200D\u{1F680}", "\u{1F468}\u{1F3FF}\u200D\u{1F692}", "\u{1F468}\u{1F3FF}\u200D\u{1F9AF}", "\u{1F468}\u{1F3FF}\u200D\u{1F9BC}", "\u{1F468}\u{1F3FF}\u200D\u{1F9BD}", "\u{1F469}\u200D\u2695\uFE0F", "\u{1F469}\u200D\u2696\uFE0F", "\u{1F469}\u200D\u2708\uFE0F", "\u{1F469}\u200D\u{1F33E}", "\u{1F469}\u200D\u{1F373}", "\u{1F469}\u200D\u{1F37C}", "\u{1F469}\u200D\u{1F393}", "\u{1F469}\u200D\u{1F3A4}", "\u{1F469}\u200D\u{1F3A8}", "\u{1F469}\u200D\u{1F3EB}", "\u{1F469}\u200D\u{1F3ED}", "\u{1F469}\u200D\u{1F4BB}", "\u{1F469}\u200D\u{1F4BC}", "\u{1F469}\u200D\u{1F527}", "\u{1F469}\u200D\u{1F52C}", "\u{1F469}\u200D\u{1F680}", "\u{1F469}\u200D\u{1F692}", "\u{1F469}\u200D\u{1F9AF}", "\u{1F469}\u200D\u{1F9BC}", "\u{1F469}\u200D\u{1F9BD}", "\u{1F469}\u{1F3FB}\u200D\u2695\uFE0F", "\u{1F469}\u{1F3FB}\u200D\u2696\uFE0F", "\u{1F469}\u{1F3FB}\u200D\u2708\uFE0F", "\u{1F469}\u{1F3FB}\u200D\u{1F33E}", "\u{1F469}\u{1F3FB}\u200D\u{1F373}", "\u{1F469}\u{1F3FB}\u200D\u{1F37C}", "\u{1F469}\u{1F3FB}\u200D\u{1F393}", "\u{1F469}\u{1F3FB}\u200D\u{1F3A4}", "\u{1F469}\u{1F3FB}\u200D\u{1F3A8}", "\u{1F469}\u{1F3FB}\u200D\u{1F3EB}", "\u{1F469}\u{1F3FB}\u200D\u{1F3ED}", "\u{1F469}\u{1F3FB}\u200D\u{1F4BB}", "\u{1F469}\u{1F3FB}\u200D\u{1F4BC}", "\u{1F469}\u{1F3FB}\u200D\u{1F527}", "\u{1F469}\u{1F3FB}\u200D\u{1F52C}", "\u{1F469}\u{1F3FB}\u200D\u{1F680}", "\u{1F469}\u{1F3FB}\u200D\u{1F692}", "\u{1F469}\u{1F3FB}\u200D\u{1F9AF}", "\u{1F469}\u{1F3FB}\u200D\u{1F9BC}", "\u{1F469}\u{1F3FB}\u200D\u{1F9BD}", "\u{1F469}\u{1F3FC}\u200D\u2695\uFE0F", "\u{1F469}\u{1F3FC}\u200D\u2696\uFE0F", "\u{1F469}\u{1F3FC}\u200D\u2708\uFE0F", "\u{1F469}\u{1F3FC}\u200D\u{1F33E}", "\u{1F469}\u{1F3FC}\u200D\u{1F373}", "\u{1F469}\u{1F3FC}\u200D\u{1F37C}", "\u{1F469}\u{1F3FC}\u200D\u{1F393}", "\u{1F469}\u{1F3FC}\u200D\u{1F3A4}", "\u{1F469}\u{1F3FC}\u200D\u{1F3A8}", "\u{1F469}\u{1F3FC}\u200D\u{1F3EB}", "\u{1F469}\u{1F3FC}\u200D\u{1F3ED}", "\u{1F469}\u{1F3FC}\u200D\u{1F4BB}", "\u{1F469}\u{1F3FC}\u200D\u{1F4BC}", "\u{1F469}\u{1F3FC}\u200D\u{1F527}", "\u{1F469}\u{1F3FC}\u200D\u{1F52C}", "\u{1F469}\u{1F3FC}\u200D\u{1F680}", "\u{1F469}\u{1F3FC}\u200D\u{1F692}", "\u{1F469}\u{1F3FC}\u200D\u{1F9AF}", "\u{1F469}\u{1F3FC}\u200D\u{1F9BC}", "\u{1F469}\u{1F3FC}\u200D\u{1F9BD}", "\u{1F469}\u{1F3FD}\u200D\u2695\uFE0F", "\u{1F469}\u{1F3FD}\u200D\u2696\uFE0F", "\u{1F469}\u{1F3FD}\u200D\u2708\uFE0F", "\u{1F469}\u{1F3FD}\u200D\u{1F33E}", "\u{1F469}\u{1F3FD}\u200D\u{1F373}", "\u{1F469}\u{1F3FD}\u200D\u{1F37C}", "\u{1F469}\u{1F3FD}\u200D\u{1F393}", "\u{1F469}\u{1F3FD}\u200D\u{1F3A4}", "\u{1F469}\u{1F3FD}\u200D\u{1F3A8}", "\u{1F469}\u{1F3FD}\u200D\u{1F3EB}", "\u{1F469}\u{1F3FD}\u200D\u{1F3ED}", "\u{1F469}\u{1F3FD}\u200D\u{1F4BB}", "\u{1F469}\u{1F3FD}\u200D\u{1F4BC}", "\u{1F469}\u{1F3FD}\u200D\u{1F527}", "\u{1F469}\u{1F3FD}\u200D\u{1F52C}", "\u{1F469}\u{1F3FD}\u200D\u{1F680}", "\u{1F469}\u{1F3FD}\u200D\u{1F692}", "\u{1F469}\u{1F3FD}\u200D\u{1F9AF}", "\u{1F469}\u{1F3FD}\u200D\u{1F9BC}", "\u{1F469}\u{1F3FD}\u200D\u{1F9BD}", "\u{1F469}\u{1F3FE}\u200D\u2695\uFE0F", "\u{1F469}\u{1F3FE}\u200D\u2696\uFE0F", "\u{1F469}\u{1F3FE}\u200D\u2708\uFE0F", "\u{1F469}\u{1F3FE}\u200D\u{1F33E}", "\u{1F469}\u{1F3FE}\u200D\u{1F373}", "\u{1F469}\u{1F3FE}\u200D\u{1F37C}", "\u{1F469}\u{1F3FE}\u200D\u{1F393}", "\u{1F469}\u{1F3FE}\u200D\u{1F3A4}", "\u{1F469}\u{1F3FE}\u200D\u{1F3A8}", "\u{1F469}\u{1F3FE}\u200D\u{1F3EB}", "\u{1F469}\u{1F3FE}\u200D\u{1F3ED}", "\u{1F469}\u{1F3FE}\u200D\u{1F4BB}", "\u{1F469}\u{1F3FE}\u200D\u{1F4BC}", "\u{1F469}\u{1F3FE}\u200D\u{1F527}", "\u{1F469}\u{1F3FE}\u200D\u{1F52C}", "\u{1F469}\u{1F3FE}\u200D\u{1F680}", "\u{1F469}\u{1F3FE}\u200D\u{1F692}", "\u{1F469}\u{1F3FE}\u200D\u{1F9AF}", "\u{1F469}\u{1F3FE}\u200D\u{1F9BC}", "\u{1F469}\u{1F3FE}\u200D\u{1F9BD}", "\u{1F469}\u{1F3FF}\u200D\u2695\uFE0F", "\u{1F469}\u{1F3FF}\u200D\u2696\uFE0F", "\u{1F469}\u{1F3FF}\u200D\u2708\uFE0F", "\u{1F469}\u{1F3FF}\u200D\u{1F33E}", "\u{1F469}\u{1F3FF}\u200D\u{1F373}", "\u{1F469}\u{1F3FF}\u200D\u{1F37C}", "\u{1F469}\u{1F3FF}\u200D\u{1F393}", "\u{1F469}\u{1F3FF}\u200D\u{1F3A4}", "\u{1F469}\u{1F3FF}\u200D\u{1F3A8}", "\u{1F469}\u{1F3FF}\u200D\u{1F3EB}", "\u{1F469}\u{1F3FF}\u200D\u{1F3ED}", "\u{1F469}\u{1F3FF}\u200D\u{1F4BB}", "\u{1F469}\u{1F3FF}\u200D\u{1F4BC}", "\u{1F469}\u{1F3FF}\u200D\u{1F527}", "\u{1F469}\u{1F3FF}\u200D\u{1F52C}", "\u{1F469}\u{1F3FF}\u200D\u{1F680}", "\u{1F469}\u{1F3FF}\u200D\u{1F692}", "\u{1F469}\u{1F3FF}\u200D\u{1F9AF}", "\u{1F469}\u{1F3FF}\u200D\u{1F9BC}", "\u{1F469}\u{1F3FF}\u200D\u{1F9BD}", "\u{1F9D1}\u200D\u2695\uFE0F", "\u{1F9D1}\u200D\u2696\uFE0F", "\u{1F9D1}\u200D\u2708\uFE0F", "\u{1F9D1}\u200D\u{1F33E}", "\u{1F9D1}\u200D\u{1F373}", "\u{1F9D1}\u200D\u{1F37C}", "\u{1F9D1}\u200D\u{1F393}", "\u{1F9D1}\u200D\u{1F3A4}", "\u{1F9D1}\u200D\u{1F3A8}", "\u{1F9D1}\u200D\u{1F3EB}", "\u{1F9D1}\u200D\u{1F3ED}", "\u{1F9D1}\u200D\u{1F4BB}", "\u{1F9D1}\u200D\u{1F4BC}", "\u{1F9D1}\u200D\u{1F527}", "\u{1F9D1}\u200D\u{1F52C}", "\u{1F9D1}\u200D\u{1F680}", "\u{1F9D1}\u200D\u{1F692}", "\u{1F9D1}\u200D\u{1F9AF}", "\u{1F9D1}\u200D\u{1F9BC}", "\u{1F9D1}\u200D\u{1F9BD}", "\u{1F9D1}\u{1F3FB}\u200D\u2695\uFE0F", "\u{1F9D1}\u{1F3FB}\u200D\u2696\uFE0F", "\u{1F9D1}\u{1F3FB}\u200D\u2708\uFE0F", "\u{1F9D1}\u{1F3FB}\u200D\u{1F33E}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F373}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F37C}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F393}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F3A4}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F3A8}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F3EB}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F3ED}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F4BB}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F4BC}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F527}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F52C}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F680}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F692}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F9AF}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F9BC}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F9BD}", "\u{1F9D1}\u{1F3FC}\u200D\u2695\uFE0F", "\u{1F9D1}\u{1F3FC}\u200D\u2696\uFE0F", "\u{1F9D1}\u{1F3FC}\u200D\u2708\uFE0F", "\u{1F9D1}\u{1F3FC}\u200D\u{1F33E}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F373}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F37C}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F393}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F3A4}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F3A8}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F3EB}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F3ED}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F4BB}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F4BC}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F527}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F52C}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F680}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F692}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F9AF}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F9BC}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F9BD}", "\u{1F9D1}\u{1F3FD}\u200D\u2695\uFE0F", "\u{1F9D1}\u{1F3FD}\u200D\u2696\uFE0F", "\u{1F9D1}\u{1F3FD}\u200D\u2708\uFE0F", "\u{1F9D1}\u{1F3FD}\u200D\u{1F33E}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F373}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F37C}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F393}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F3A4}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F3A8}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F3EB}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F3ED}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F4BB}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F4BC}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F527}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F52C}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F680}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F692}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F9AF}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F9BC}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F9BD}", "\u{1F9D1}\u{1F3FE}\u200D\u2695\uFE0F", "\u{1F9D1}\u{1F3FE}\u200D\u2696\uFE0F", "\u{1F9D1}\u{1F3FE}\u200D\u2708\uFE0F", "\u{1F9D1}\u{1F3FE}\u200D\u{1F33E}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F373}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F37C}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F393}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F3A4}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F3A8}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F3EB}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F3ED}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F4BB}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F4BC}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F527}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F52C}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F680}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F692}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F9AF}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F9BC}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F9BD}", "\u{1F9D1}\u{1F3FF}\u200D\u2695\uFE0F", "\u{1F9D1}\u{1F3FF}\u200D\u2696\uFE0F", "\u{1F9D1}\u{1F3FF}\u200D\u2708\uFE0F", "\u{1F9D1}\u{1F3FF}\u200D\u{1F33E}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F373}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F37C}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F393}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F3A4}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F3A8}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F3EB}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F3ED}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F4BB}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F4BC}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F527}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F52C}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F680}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F692}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F9AF}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F9BC}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F9BD}", "\u26F9\u{1F3FB}\u200D\u2640\uFE0F", "\u26F9\u{1F3FB}\u200D\u2642\uFE0F", "\u26F9\u{1F3FC}\u200D\u2640\uFE0F", "\u26F9\u{1F3FC}\u200D\u2642\uFE0F", "\u26F9\u{1F3FD}\u200D\u2640\uFE0F", "\u26F9\u{1F3FD}\u200D\u2642\uFE0F", "\u26F9\u{1F3FE}\u200D\u2640\uFE0F", "\u26F9\u{1F3FE}\u200D\u2642\uFE0F", "\u26F9\u{1F3FF}\u200D\u2640\uFE0F", "\u26F9\u{1F3FF}\u200D\u2642\uFE0F", "\u26F9\uFE0F\u200D\u2640\uFE0F", "\u26F9\uFE0F\u200D\u2642\uFE0F", "\u{1F3C3}\u200D\u2640\uFE0F", "\u{1F3C3}\u200D\u2642\uFE0F", "\u{1F3C3}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F3C3}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F3C3}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F3C3}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F3C3}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F3C3}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F3C3}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F3C3}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F3C3}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F3C3}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F3C4}\u200D\u2640\uFE0F", "\u{1F3C4}\u200D\u2642\uFE0F", "\u{1F3C4}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F3C4}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F3C4}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F3C4}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F3C4}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F3C4}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F3C4}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F3C4}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F3C4}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F3C4}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F3CA}\u200D\u2640\uFE0F", "\u{1F3CA}\u200D\u2642\uFE0F", "\u{1F3CA}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F3CA}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F3CA}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F3CA}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F3CA}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F3CA}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F3CA}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F3CA}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F3CA}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F3CA}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F3CB}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F3CB}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F3CB}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F3CB}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F3CB}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F3CB}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F3CB}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F3CB}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F3CB}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F3CB}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F3CB}\uFE0F\u200D\u2640\uFE0F", "\u{1F3CB}\uFE0F\u200D\u2642\uFE0F", "\u{1F3CC}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F3CC}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F3CC}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F3CC}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F3CC}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F3CC}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F3CC}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F3CC}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F3CC}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F3CC}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F3CC}\uFE0F\u200D\u2640\uFE0F", "\u{1F3CC}\uFE0F\u200D\u2642\uFE0F", "\u{1F46E}\u200D\u2640\uFE0F", "\u{1F46E}\u200D\u2642\uFE0F", "\u{1F46E}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F46E}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F46E}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F46E}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F46E}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F46E}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F46E}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F46E}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F46E}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F46E}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F46F}\u200D\u2640\uFE0F", "\u{1F46F}\u200D\u2642\uFE0F", "\u{1F470}\u200D\u2640\uFE0F", "\u{1F470}\u200D\u2642\uFE0F", "\u{1F470}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F470}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F470}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F470}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F470}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F470}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F470}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F470}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F470}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F470}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F471}\u200D\u2640\uFE0F", "\u{1F471}\u200D\u2642\uFE0F", "\u{1F471}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F471}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F471}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F471}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F471}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F471}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F471}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F471}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F471}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F471}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F473}\u200D\u2640\uFE0F", "\u{1F473}\u200D\u2642\uFE0F", "\u{1F473}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F473}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F473}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F473}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F473}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F473}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F473}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F473}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F473}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F473}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F477}\u200D\u2640\uFE0F", "\u{1F477}\u200D\u2642\uFE0F", "\u{1F477}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F477}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F477}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F477}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F477}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F477}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F477}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F477}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F477}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F477}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F481}\u200D\u2640\uFE0F", "\u{1F481}\u200D\u2642\uFE0F", "\u{1F481}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F481}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F481}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F481}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F481}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F481}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F481}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F481}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F481}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F481}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F482}\u200D\u2640\uFE0F", "\u{1F482}\u200D\u2642\uFE0F", "\u{1F482}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F482}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F482}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F482}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F482}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F482}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F482}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F482}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F482}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F482}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F486}\u200D\u2640\uFE0F", "\u{1F486}\u200D\u2642\uFE0F", "\u{1F486}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F486}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F486}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F486}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F486}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F486}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F486}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F486}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F486}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F486}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F487}\u200D\u2640\uFE0F", "\u{1F487}\u200D\u2642\uFE0F", "\u{1F487}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F487}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F487}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F487}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F487}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F487}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F487}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F487}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F487}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F487}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F575}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F575}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F575}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F575}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F575}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F575}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F575}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F575}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F575}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F575}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F575}\uFE0F\u200D\u2640\uFE0F", "\u{1F575}\uFE0F\u200D\u2642\uFE0F", "\u{1F645}\u200D\u2640\uFE0F", "\u{1F645}\u200D\u2642\uFE0F", "\u{1F645}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F645}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F645}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F645}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F645}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F645}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F645}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F645}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F645}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F645}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F646}\u200D\u2640\uFE0F", "\u{1F646}\u200D\u2642\uFE0F", "\u{1F646}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F646}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F646}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F646}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F646}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F646}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F646}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F646}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F646}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F646}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F647}\u200D\u2640\uFE0F", "\u{1F647}\u200D\u2642\uFE0F", "\u{1F647}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F647}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F647}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F647}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F647}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F647}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F647}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F647}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F647}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F647}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F64B}\u200D\u2640\uFE0F", "\u{1F64B}\u200D\u2642\uFE0F", "\u{1F64B}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F64B}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F64B}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F64B}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F64B}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F64B}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F64B}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F64B}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F64B}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F64B}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F64D}\u200D\u2640\uFE0F", "\u{1F64D}\u200D\u2642\uFE0F", "\u{1F64D}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F64D}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F64D}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F64D}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F64D}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F64D}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F64D}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F64D}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F64D}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F64D}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F64E}\u200D\u2640\uFE0F", "\u{1F64E}\u200D\u2642\uFE0F", "\u{1F64E}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F64E}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F64E}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F64E}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F64E}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F64E}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F64E}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F64E}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F64E}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F64E}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F6A3}\u200D\u2640\uFE0F", "\u{1F6A3}\u200D\u2642\uFE0F", "\u{1F6A3}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F6A3}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F6A3}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F6A3}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F6A3}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F6A3}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F6A3}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F6A3}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F6A3}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F6A3}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F6B4}\u200D\u2640\uFE0F", "\u{1F6B4}\u200D\u2642\uFE0F", "\u{1F6B4}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F6B4}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F6B4}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F6B4}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F6B4}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F6B4}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F6B4}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F6B4}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F6B4}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F6B4}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F6B5}\u200D\u2640\uFE0F", "\u{1F6B5}\u200D\u2642\uFE0F", "\u{1F6B5}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F6B5}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F6B5}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F6B5}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F6B5}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F6B5}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F6B5}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F6B5}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F6B5}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F6B5}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F6B6}\u200D\u2640\uFE0F", "\u{1F6B6}\u200D\u2642\uFE0F", "\u{1F6B6}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F6B6}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F6B6}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F6B6}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F6B6}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F6B6}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F6B6}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F6B6}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F6B6}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F6B6}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F926}\u200D\u2640\uFE0F", "\u{1F926}\u200D\u2642\uFE0F", "\u{1F926}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F926}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F926}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F926}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F926}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F926}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F926}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F926}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F926}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F926}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F935}\u200D\u2640\uFE0F", "\u{1F935}\u200D\u2642\uFE0F", "\u{1F935}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F935}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F935}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F935}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F935}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F935}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F935}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F935}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F935}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F935}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F937}\u200D\u2640\uFE0F", "\u{1F937}\u200D\u2642\uFE0F", "\u{1F937}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F937}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F937}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F937}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F937}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F937}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F937}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F937}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F937}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F937}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F938}\u200D\u2640\uFE0F", "\u{1F938}\u200D\u2642\uFE0F", "\u{1F938}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F938}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F938}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F938}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F938}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F938}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F938}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F938}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F938}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F938}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F939}\u200D\u2640\uFE0F", "\u{1F939}\u200D\u2642\uFE0F", "\u{1F939}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F939}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F939}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F939}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F939}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F939}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F939}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F939}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F939}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F939}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F93C}\u200D\u2640\uFE0F", "\u{1F93C}\u200D\u2642\uFE0F", "\u{1F93D}\u200D\u2640\uFE0F", "\u{1F93D}\u200D\u2642\uFE0F", "\u{1F93D}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F93D}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F93D}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F93D}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F93D}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F93D}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F93D}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F93D}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F93D}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F93D}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F93E}\u200D\u2640\uFE0F", "\u{1F93E}\u200D\u2642\uFE0F", "\u{1F93E}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F93E}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F93E}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F93E}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F93E}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F93E}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F93E}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F93E}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F93E}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F93E}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F9B8}\u200D\u2640\uFE0F", "\u{1F9B8}\u200D\u2642\uFE0F", "\u{1F9B8}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F9B8}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F9B8}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F9B8}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F9B8}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F9B8}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F9B8}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F9B8}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F9B8}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F9B8}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F9B9}\u200D\u2640\uFE0F", "\u{1F9B9}\u200D\u2642\uFE0F", "\u{1F9B9}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F9B9}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F9B9}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F9B9}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F9B9}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F9B9}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F9B9}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F9B9}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F9B9}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F9B9}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F9CD}\u200D\u2640\uFE0F", "\u{1F9CD}\u200D\u2642\uFE0F", "\u{1F9CD}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F9CD}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F9CD}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F9CD}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F9CD}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F9CD}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F9CD}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F9CD}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F9CD}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F9CD}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F9CE}\u200D\u2640\uFE0F", "\u{1F9CE}\u200D\u2642\uFE0F", "\u{1F9CE}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F9CE}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F9CE}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F9CE}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F9CE}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F9CE}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F9CE}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F9CE}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F9CE}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F9CE}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F9CF}\u200D\u2640\uFE0F", "\u{1F9CF}\u200D\u2642\uFE0F", "\u{1F9CF}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F9CF}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F9CF}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F9CF}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F9CF}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F9CF}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F9CF}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F9CF}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F9CF}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F9CF}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F9D4}\u200D\u2640\uFE0F", "\u{1F9D4}\u200D\u2642\uFE0F", "\u{1F9D4}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F9D4}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F9D4}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F9D4}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F9D4}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F9D4}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F9D4}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F9D4}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F9D4}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F9D4}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F9D6}\u200D\u2640\uFE0F", "\u{1F9D6}\u200D\u2642\uFE0F", "\u{1F9D6}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F9D6}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F9D6}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F9D6}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F9D6}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F9D6}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F9D6}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F9D6}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F9D6}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F9D6}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F9D7}\u200D\u2640\uFE0F", "\u{1F9D7}\u200D\u2642\uFE0F", "\u{1F9D7}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F9D7}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F9D7}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F9D7}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F9D7}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F9D7}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F9D7}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F9D7}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F9D7}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F9D7}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F9D8}\u200D\u2640\uFE0F", "\u{1F9D8}\u200D\u2642\uFE0F", "\u{1F9D8}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F9D8}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F9D8}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F9D8}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F9D8}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F9D8}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F9D8}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F9D8}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F9D8}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F9D8}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F9D9}\u200D\u2640\uFE0F", "\u{1F9D9}\u200D\u2642\uFE0F", "\u{1F9D9}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F9D9}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F9D9}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F9D9}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F9D9}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F9D9}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F9D9}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F9D9}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F9D9}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F9D9}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F9DA}\u200D\u2640\uFE0F", "\u{1F9DA}\u200D\u2642\uFE0F", "\u{1F9DA}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F9DA}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F9DA}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F9DA}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F9DA}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F9DA}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F9DA}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F9DA}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F9DA}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F9DA}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F9DB}\u200D\u2640\uFE0F", "\u{1F9DB}\u200D\u2642\uFE0F", "\u{1F9DB}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F9DB}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F9DB}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F9DB}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F9DB}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F9DB}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F9DB}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F9DB}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F9DB}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F9DB}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F9DC}\u200D\u2640\uFE0F", "\u{1F9DC}\u200D\u2642\uFE0F", "\u{1F9DC}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F9DC}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F9DC}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F9DC}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F9DC}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F9DC}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F9DC}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F9DC}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F9DC}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F9DC}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F9DD}\u200D\u2640\uFE0F", "\u{1F9DD}\u200D\u2642\uFE0F", "\u{1F9DD}\u{1F3FB}\u200D\u2640\uFE0F", "\u{1F9DD}\u{1F3FB}\u200D\u2642\uFE0F", "\u{1F9DD}\u{1F3FC}\u200D\u2640\uFE0F", "\u{1F9DD}\u{1F3FC}\u200D\u2642\uFE0F", "\u{1F9DD}\u{1F3FD}\u200D\u2640\uFE0F", "\u{1F9DD}\u{1F3FD}\u200D\u2642\uFE0F", "\u{1F9DD}\u{1F3FE}\u200D\u2640\uFE0F", "\u{1F9DD}\u{1F3FE}\u200D\u2642\uFE0F", "\u{1F9DD}\u{1F3FF}\u200D\u2640\uFE0F", "\u{1F9DD}\u{1F3FF}\u200D\u2642\uFE0F", "\u{1F9DE}\u200D\u2640\uFE0F", "\u{1F9DE}\u200D\u2642\uFE0F", "\u{1F9DF}\u200D\u2640\uFE0F", "\u{1F9DF}\u200D\u2642\uFE0F", "\u{1F468}\u200D\u{1F9B0}", "\u{1F468}\u200D\u{1F9B1}", "\u{1F468}\u200D\u{1F9B2}", "\u{1F468}\u200D\u{1F9B3}", "\u{1F468}\u{1F3FB}\u200D\u{1F9B0}", "\u{1F468}\u{1F3FB}\u200D\u{1F9B1}", "\u{1F468}\u{1F3FB}\u200D\u{1F9B2}", "\u{1F468}\u{1F3FB}\u200D\u{1F9B3}", "\u{1F468}\u{1F3FC}\u200D\u{1F9B0}", "\u{1F468}\u{1F3FC}\u200D\u{1F9B1}", "\u{1F468}\u{1F3FC}\u200D\u{1F9B2}", "\u{1F468}\u{1F3FC}\u200D\u{1F9B3}", "\u{1F468}\u{1F3FD}\u200D\u{1F9B0}", "\u{1F468}\u{1F3FD}\u200D\u{1F9B1}", "\u{1F468}\u{1F3FD}\u200D\u{1F9B2}", "\u{1F468}\u{1F3FD}\u200D\u{1F9B3}", "\u{1F468}\u{1F3FE}\u200D\u{1F9B0}", "\u{1F468}\u{1F3FE}\u200D\u{1F9B1}", "\u{1F468}\u{1F3FE}\u200D\u{1F9B2}", "\u{1F468}\u{1F3FE}\u200D\u{1F9B3}", "\u{1F468}\u{1F3FF}\u200D\u{1F9B0}", "\u{1F468}\u{1F3FF}\u200D\u{1F9B1}", "\u{1F468}\u{1F3FF}\u200D\u{1F9B2}", "\u{1F468}\u{1F3FF}\u200D\u{1F9B3}", "\u{1F469}\u200D\u{1F9B0}", "\u{1F469}\u200D\u{1F9B1}", "\u{1F469}\u200D\u{1F9B2}", "\u{1F469}\u200D\u{1F9B3}", "\u{1F469}\u{1F3FB}\u200D\u{1F9B0}", "\u{1F469}\u{1F3FB}\u200D\u{1F9B1}", "\u{1F469}\u{1F3FB}\u200D\u{1F9B2}", "\u{1F469}\u{1F3FB}\u200D\u{1F9B3}", "\u{1F469}\u{1F3FC}\u200D\u{1F9B0}", "\u{1F469}\u{1F3FC}\u200D\u{1F9B1}", "\u{1F469}\u{1F3FC}\u200D\u{1F9B2}", "\u{1F469}\u{1F3FC}\u200D\u{1F9B3}", "\u{1F469}\u{1F3FD}\u200D\u{1F9B0}", "\u{1F469}\u{1F3FD}\u200D\u{1F9B1}", "\u{1F469}\u{1F3FD}\u200D\u{1F9B2}", "\u{1F469}\u{1F3FD}\u200D\u{1F9B3}", "\u{1F469}\u{1F3FE}\u200D\u{1F9B0}", "\u{1F469}\u{1F3FE}\u200D\u{1F9B1}", "\u{1F469}\u{1F3FE}\u200D\u{1F9B2}", "\u{1F469}\u{1F3FE}\u200D\u{1F9B3}", "\u{1F469}\u{1F3FF}\u200D\u{1F9B0}", "\u{1F469}\u{1F3FF}\u200D\u{1F9B1}", "\u{1F469}\u{1F3FF}\u200D\u{1F9B2}", "\u{1F469}\u{1F3FF}\u200D\u{1F9B3}", "\u{1F9D1}\u200D\u{1F9B0}", "\u{1F9D1}\u200D\u{1F9B1}", "\u{1F9D1}\u200D\u{1F9B2}", "\u{1F9D1}\u200D\u{1F9B3}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F9B0}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F9B1}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F9B2}", "\u{1F9D1}\u{1F3FB}\u200D\u{1F9B3}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F9B0}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F9B1}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F9B2}", "\u{1F9D1}\u{1F3FC}\u200D\u{1F9B3}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F9B0}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F9B1}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F9B2}", "\u{1F9D1}\u{1F3FD}\u200D\u{1F9B3}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F9B0}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F9B1}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F9B2}", "\u{1F9D1}\u{1F3FE}\u200D\u{1F9B3}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F9B0}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F9B1}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F9B2}", "\u{1F9D1}\u{1F3FF}\u200D\u{1F9B3}", "\u2764\uFE0F\u200D\u{1F525}", "\u2764\uFE0F\u200D\u{1FA79}", "\u{1F3F3}\uFE0F\u200D\u26A7\uFE0F", "\u{1F3F3}\uFE0F\u200D\u{1F308}", "\u{1F3F4}\u200D\u2620\uFE0F", "\u{1F408}\u200D\u2B1B", "\u{1F415}\u200D\u{1F9BA}", "\u{1F426}\u200D\u2B1B", "\u{1F43B}\u200D\u2744\uFE0F", "\u{1F441}\uFE0F\u200D\u{1F5E8}\uFE0F", "\u{1F62E}\u200D\u{1F4A8}", "\u{1F635}\u200D\u{1F4AB}", "\u{1F636}\u200D\u{1F32B}\uFE0F", "\u{1F9D1}\u200D\u{1F384}"];
+      module2.exports = {
+        random: function(options) {
+          var numberOfEmojis = options.count;
+          var result = [];
+          emojis.push.apply(emojis, options.custom);
+          for (var i2 = 0; i2 < numberOfEmojis; i2++) {
+            randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+            result.push(randomEmoji);
+          }
+          return result;
+        }
+      };
+    }
+  });
+
   // frontend/App.jsx
-  var import_react7 = __toESM(require_react());
+  var import_react9 = __toESM(require_react());
   var import_client = __toESM(require_client());
 
   // node_modules/react-router-dom/dist/index.js
@@ -25492,10 +25511,10 @@
   }
 
   // frontend/Root.jsx
-  var import_react6 = __toESM(require_react());
+  var import_react8 = __toESM(require_react());
 
   // frontend/pages/Index.jsx
-  var import_react3 = __toESM(require_react());
+  var import_react4 = __toESM(require_react());
 
   // node_modules/tslib/tslib.es6.mjs
   var __assign = function() {
@@ -26830,8 +26849,26 @@
     background: linear-gradient(#171a21, #2a475e);
 `;
   var ButtonCard = (props) => {
-    const { title, Badge, description, onClicked } = props;
-    return /* @__PURE__ */ import_react2.default.createElement(Card, { onClick: onClicked }, /* @__PURE__ */ import_react2.default.createElement(IconImage, null, /* @__PURE__ */ import_react2.default.createElement("svg", { width: "32px", height: "32px", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, /* @__PURE__ */ import_react2.default.createElement("g", { id: "SVGRepo_bgCarrier", strokeWidth: "0" }), /* @__PURE__ */ import_react2.default.createElement("g", { id: "SVGRepo_tracerCarrier", strokeLinecap: "round", strokeLinejoin: "round" }), /* @__PURE__ */ import_react2.default.createElement("g", { id: "SVGRepo_iconCarrier" }, " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M5.5 15.5C5.5 14.5572 5.5 14.0858 5.79289 13.7929C6.08579 13.5 6.55719 13.5 7.5 13.5H8.5C9.44281 13.5 9.91421 13.5 10.2071 13.7929C10.5 14.0858 10.5 14.5572 10.5 15.5V16.5C10.5 17.4428 10.5 17.9142 10.2071 18.2071C9.91421 18.5 9.44281 18.5 8.5 18.5C7.08579 18.5 6.37868 18.5 5.93934 18.0607", stroke: "#fff", strokeWidth: "1.5", strokeLinecap: "round" }), " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M5.5 8.5C5.5 7.08579 5.5 6.37868 5.93934 5.93934C6.37868 5.5 7.08579 5.5 8.5 5.5C9.44281 5.5 9.91421 5.5 10.2071 5.79289C10.5 6.08579 10.5 6.55719 10.5 7.5V8.5C10.5 9.44281 10.5 9.91421 10.2071 10.2071C9.91421 10.5 9.44281 10.5 8.5 10.5H7.5C6.55719 10.5 6.08579 10.5 5.79289 10.2071C5.5 9.91421 5.5 9.44281 5.5 8.5Z", stroke: "#fff", strokeWidth: "1.5" }), " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M13.5 15.5C13.5 14.5572 13.5 14.0858 13.7929 13.7929C14.0858 13.5 14.5572 13.5 15.5 13.5H16.5C17.4428 13.5 17.9142 13.5 18.2071 13.7929C18.5 14.0858 18.5 14.5572 18.5 15.5C18.5 16.9142 18.5 17.6213 18.0607 18.0607C17.6213 18.5 16.9142 18.5 15.5 18.5C14.5572 18.5 14.0858 18.5 13.7929 18.2071C13.5 17.9142 13.5 17.4428 13.5 16.5V15.5Z", stroke: "#fff", strokeWidth: "1.5" }), " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M18.5 8.5C18.5 9.44281 18.5 9.91421 18.2071 10.2071C17.9142 10.5 17.4428 10.5 16.5 10.5H15.5C14.5572 10.5 14.0858 10.5 13.7929 10.2071C13.5 9.91421 13.5 9.44281 13.5 8.5V7.5C13.5 6.55719 13.5 6.08579 13.7929 5.79289C14.0858 5.5 14.5572 5.5 15.5 5.5C16.9142 5.5 17.6213 5.5 18.0607 5.93934", stroke: "#fff", strokeWidth: "1.5", strokeLinecap: "round" }), " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M22 14C22 14.3492 22 14.6822 21.9991 15M14 22C17.7712 22 19.6569 22 20.8284 20.8284C21.4816 20.1752 21.7706 19.3001 21.8985 18", stroke: "#fff", strokeWidth: "1.5", strokeLinecap: "round" }), " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M10 22C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14", stroke: "#fff", strokeWidth: "1.5", strokeLinecap: "round" }), " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M10 2C6.22876 2 4.34315 2 3.17157 3.17157C2.51839 3.82475 2.22937 4.69989 2.10149 6M2 10C2 9.65081 2 9.31779 2.00093 9", stroke: "#fff", strokeWidth: "1.5", strokeLinecap: "round" }), " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M14 2C17.7712 2 19.6569 2 20.8284 3.17157C22 4.34315 22 6.22876 22 10", stroke: "#fff", strokeWidth: "1.5", strokeLinecap: "round" }), " "))), /* @__PURE__ */ import_react2.default.createElement(TextBox, null, /* @__PURE__ */ import_react2.default.createElement(TextContent, null, /* @__PURE__ */ import_react2.default.createElement("p", { className: "h1 roboto-bold" }, title ?? ""), Badge && /* @__PURE__ */ import_react2.default.createElement(Badge, null)), /* @__PURE__ */ import_react2.default.createElement("p", { className: "p roboto-thin" }, description ?? "")));
+    const { title, badge, description, onClicked } = props;
+    return /* @__PURE__ */ import_react2.default.createElement(Card, { onClick: onClicked }, /* @__PURE__ */ import_react2.default.createElement(IconImage, null, /* @__PURE__ */ import_react2.default.createElement("svg", { width: "32px", height: "32px", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, /* @__PURE__ */ import_react2.default.createElement("g", { id: "SVGRepo_bgCarrier", strokeWidth: "0" }), /* @__PURE__ */ import_react2.default.createElement("g", { id: "SVGRepo_tracerCarrier", strokeLinecap: "round", strokeLinejoin: "round" }), /* @__PURE__ */ import_react2.default.createElement("g", { id: "SVGRepo_iconCarrier" }, " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M5.5 15.5C5.5 14.5572 5.5 14.0858 5.79289 13.7929C6.08579 13.5 6.55719 13.5 7.5 13.5H8.5C9.44281 13.5 9.91421 13.5 10.2071 13.7929C10.5 14.0858 10.5 14.5572 10.5 15.5V16.5C10.5 17.4428 10.5 17.9142 10.2071 18.2071C9.91421 18.5 9.44281 18.5 8.5 18.5C7.08579 18.5 6.37868 18.5 5.93934 18.0607", stroke: "#fff", strokeWidth: "1.5", strokeLinecap: "round" }), " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M5.5 8.5C5.5 7.08579 5.5 6.37868 5.93934 5.93934C6.37868 5.5 7.08579 5.5 8.5 5.5C9.44281 5.5 9.91421 5.5 10.2071 5.79289C10.5 6.08579 10.5 6.55719 10.5 7.5V8.5C10.5 9.44281 10.5 9.91421 10.2071 10.2071C9.91421 10.5 9.44281 10.5 8.5 10.5H7.5C6.55719 10.5 6.08579 10.5 5.79289 10.2071C5.5 9.91421 5.5 9.44281 5.5 8.5Z", stroke: "#fff", strokeWidth: "1.5" }), " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M13.5 15.5C13.5 14.5572 13.5 14.0858 13.7929 13.7929C14.0858 13.5 14.5572 13.5 15.5 13.5H16.5C17.4428 13.5 17.9142 13.5 18.2071 13.7929C18.5 14.0858 18.5 14.5572 18.5 15.5C18.5 16.9142 18.5 17.6213 18.0607 18.0607C17.6213 18.5 16.9142 18.5 15.5 18.5C14.5572 18.5 14.0858 18.5 13.7929 18.2071C13.5 17.9142 13.5 17.4428 13.5 16.5V15.5Z", stroke: "#fff", strokeWidth: "1.5" }), " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M18.5 8.5C18.5 9.44281 18.5 9.91421 18.2071 10.2071C17.9142 10.5 17.4428 10.5 16.5 10.5H15.5C14.5572 10.5 14.0858 10.5 13.7929 10.2071C13.5 9.91421 13.5 9.44281 13.5 8.5V7.5C13.5 6.55719 13.5 6.08579 13.7929 5.79289C14.0858 5.5 14.5572 5.5 15.5 5.5C16.9142 5.5 17.6213 5.5 18.0607 5.93934", stroke: "#fff", strokeWidth: "1.5", strokeLinecap: "round" }), " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M22 14C22 14.3492 22 14.6822 21.9991 15M14 22C17.7712 22 19.6569 22 20.8284 20.8284C21.4816 20.1752 21.7706 19.3001 21.8985 18", stroke: "#fff", strokeWidth: "1.5", strokeLinecap: "round" }), " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M10 22C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14", stroke: "#fff", strokeWidth: "1.5", strokeLinecap: "round" }), " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M10 2C6.22876 2 4.34315 2 3.17157 3.17157C2.51839 3.82475 2.22937 4.69989 2.10149 6M2 10C2 9.65081 2 9.31779 2.00093 9", stroke: "#fff", strokeWidth: "1.5", strokeLinecap: "round" }), " ", /* @__PURE__ */ import_react2.default.createElement("path", { d: "M14 2C17.7712 2 19.6569 2 20.8284 3.17157C22 4.34315 22 6.22876 22 10", stroke: "#fff", strokeWidth: "1.5", strokeLinecap: "round" }), " "))), /* @__PURE__ */ import_react2.default.createElement(TextBox, null, /* @__PURE__ */ import_react2.default.createElement(TextContent, null, /* @__PURE__ */ import_react2.default.createElement("p", { className: "h1 roboto-bold" }, title ?? ""), badge), /* @__PURE__ */ import_react2.default.createElement("p", { className: "p roboto-thin" }, description ?? "")));
+  };
+
+  // frontend/components/Badge.jsx
+  var import_react3 = __toESM(require_react());
+  var BadgeContainer = dt.div`
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 0px .25rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.375rem;
+  outline: none;
+  background-color: rgba(239, 68, 68, 0.10);
+  color: rgb(239 68 68);
+  border: 1px rgb(239 68 68) solid;
+`;
+  var Badge = ({ text }) => {
+    return /* @__PURE__ */ import_react3.default.createElement(BadgeContainer, { className: "roboto-regular" }, text);
   };
 
   // frontend/pages/Index.jsx
@@ -26845,24 +26882,33 @@
     justify-content: center;
     min-height: 100vh;
     padding: 0.5em;
+    gap: 16px;
 `;
   var Index = () => {
     const navigate = useNavigate();
-    return /* @__PURE__ */ import_react3.default.createElement(Container, null, /* @__PURE__ */ import_react3.default.createElement(
+    return /* @__PURE__ */ import_react4.default.createElement(Container, null, /* @__PURE__ */ import_react4.default.createElement(
       ButtonCard,
       {
-        title: "Basic Review Game",
-        description: "Guess the game from reviews",
+        title: "Journalist",
+        description: "Guess the game from a review",
         onClicked: () => navigate("/review")
+      }
+    ), /* @__PURE__ */ import_react4.default.createElement(
+      ButtonCard,
+      {
+        title: "can it run Crysis?",
+        description: "Guess which game matches the pc requirement",
+        onClicked: () => navigate("/requirement"),
+        badge: /* @__PURE__ */ import_react4.default.createElement(Badge, { text: "Hard" })
       }
     ));
   };
 
   // frontend/pages/Review.jsx
-  var import_react5 = __toESM(require_react());
+  var import_react6 = __toESM(require_react());
 
   // frontend/components/Loader.jsx
-  var import_react4 = __toESM(require_react());
+  var import_react5 = __toESM(require_react());
   var Card2 = dt.div`
     padding: 1rem 2rem;
 `;
@@ -26946,10 +26992,709 @@
     animation: ${LoaderKeyframes} 6s infinite;
 `;
   var Loader = () => {
-    return /* @__PURE__ */ import_react4.default.createElement(Card2, null, /* @__PURE__ */ import_react4.default.createElement(LoaderContainer, { className: "roboto-regular" }, /* @__PURE__ */ import_react4.default.createElement("p", null, "loading"), /* @__PURE__ */ import_react4.default.createElement(Words, null, /* @__PURE__ */ import_react4.default.createElement(Word, null, "Overwhelmingly Positive"), /* @__PURE__ */ import_react4.default.createElement(Word, null, "Very Positive"), /* @__PURE__ */ import_react4.default.createElement(Word, null, "Positive"), /* @__PURE__ */ import_react4.default.createElement(Word, null, "Mostly Positive"), /* @__PURE__ */ import_react4.default.createElement(Word, null, "Mixed"), /* @__PURE__ */ import_react4.default.createElement(Word, null, "Mostly Negative"))));
+    return /* @__PURE__ */ import_react5.default.createElement(Card2, null, /* @__PURE__ */ import_react5.default.createElement(LoaderContainer, { className: "roboto-regular" }, /* @__PURE__ */ import_react5.default.createElement("p", null, "loading"), /* @__PURE__ */ import_react5.default.createElement(Words, null, /* @__PURE__ */ import_react5.default.createElement(Word, null, "Overwhelmingly Positive"), /* @__PURE__ */ import_react5.default.createElement(Word, null, "Very Positive"), /* @__PURE__ */ import_react5.default.createElement(Word, null, "Positive"), /* @__PURE__ */ import_react5.default.createElement(Word, null, "Mostly Positive"), /* @__PURE__ */ import_react5.default.createElement(Word, null, "Mixed"), /* @__PURE__ */ import_react5.default.createElement(Word, null, "Mostly Negative"))));
   };
 
+  // node_modules/canvas-confetti/dist/confetti.module.mjs
+  var module = {};
+  (function main(global, module2, isWorker, workerSize) {
+    var canUseWorker = !!(global.Worker && global.Blob && global.Promise && global.OffscreenCanvas && global.OffscreenCanvasRenderingContext2D && global.HTMLCanvasElement && global.HTMLCanvasElement.prototype.transferControlToOffscreen && global.URL && global.URL.createObjectURL);
+    var canUsePaths = typeof Path2D === "function" && typeof DOMMatrix === "function";
+    var canDrawBitmap = function() {
+      if (!global.OffscreenCanvas) {
+        return false;
+      }
+      var canvas = new OffscreenCanvas(1, 1);
+      var ctx = canvas.getContext("2d");
+      ctx.fillRect(0, 0, 1, 1);
+      var bitmap = canvas.transferToImageBitmap();
+      try {
+        ctx.createPattern(bitmap, "no-repeat");
+      } catch (e) {
+        return false;
+      }
+      return true;
+    }();
+    function noop() {
+    }
+    function promise(func) {
+      var ModulePromise = module2.exports.Promise;
+      var Prom = ModulePromise !== void 0 ? ModulePromise : global.Promise;
+      if (typeof Prom === "function") {
+        return new Prom(func);
+      }
+      func(noop, noop);
+      return null;
+    }
+    var bitmapMapper = /* @__PURE__ */ function(skipTransform, map) {
+      return {
+        transform: function(bitmap) {
+          if (skipTransform) {
+            return bitmap;
+          }
+          if (map.has(bitmap)) {
+            return map.get(bitmap);
+          }
+          var canvas = new OffscreenCanvas(bitmap.width, bitmap.height);
+          var ctx = canvas.getContext("2d");
+          ctx.drawImage(bitmap, 0, 0);
+          map.set(bitmap, canvas);
+          return canvas;
+        },
+        clear: function() {
+          map.clear();
+        }
+      };
+    }(canDrawBitmap, /* @__PURE__ */ new Map());
+    var raf = function() {
+      var TIME = Math.floor(1e3 / 60);
+      var frame, cancel;
+      var frames = {};
+      var lastFrameTime = 0;
+      if (typeof requestAnimationFrame === "function" && typeof cancelAnimationFrame === "function") {
+        frame = function(cb) {
+          var id = Math.random();
+          frames[id] = requestAnimationFrame(function onFrame(time) {
+            if (lastFrameTime === time || lastFrameTime + TIME - 1 < time) {
+              lastFrameTime = time;
+              delete frames[id];
+              cb();
+            } else {
+              frames[id] = requestAnimationFrame(onFrame);
+            }
+          });
+          return id;
+        };
+        cancel = function(id) {
+          if (frames[id]) {
+            cancelAnimationFrame(frames[id]);
+          }
+        };
+      } else {
+        frame = function(cb) {
+          return setTimeout(cb, TIME);
+        };
+        cancel = function(timer) {
+          return clearTimeout(timer);
+        };
+      }
+      return { frame, cancel };
+    }();
+    var getWorker = /* @__PURE__ */ function() {
+      var worker;
+      var prom;
+      var resolves = {};
+      function decorate(worker2) {
+        function execute(options, callback) {
+          worker2.postMessage({ options: options || {}, callback });
+        }
+        worker2.init = function initWorker(canvas) {
+          var offscreen = canvas.transferControlToOffscreen();
+          worker2.postMessage({ canvas: offscreen }, [offscreen]);
+        };
+        worker2.fire = function fireWorker(options, size, done) {
+          if (prom) {
+            execute(options, null);
+            return prom;
+          }
+          var id = Math.random().toString(36).slice(2);
+          prom = promise(function(resolve) {
+            function workerDone(msg) {
+              if (msg.data.callback !== id) {
+                return;
+              }
+              delete resolves[id];
+              worker2.removeEventListener("message", workerDone);
+              prom = null;
+              bitmapMapper.clear();
+              done();
+              resolve();
+            }
+            worker2.addEventListener("message", workerDone);
+            execute(options, id);
+            resolves[id] = workerDone.bind(null, { data: { callback: id } });
+          });
+          return prom;
+        };
+        worker2.reset = function resetWorker() {
+          worker2.postMessage({ reset: true });
+          for (var id in resolves) {
+            resolves[id]();
+            delete resolves[id];
+          }
+        };
+      }
+      return function() {
+        if (worker) {
+          return worker;
+        }
+        if (!isWorker && canUseWorker) {
+          var code = [
+            "var CONFETTI, SIZE = {}, module = {};",
+            "(" + main.toString() + ")(this, module, true, SIZE);",
+            "onmessage = function(msg) {",
+            "  if (msg.data.options) {",
+            "    CONFETTI(msg.data.options).then(function () {",
+            "      if (msg.data.callback) {",
+            "        postMessage({ callback: msg.data.callback });",
+            "      }",
+            "    });",
+            "  } else if (msg.data.reset) {",
+            "    CONFETTI && CONFETTI.reset();",
+            "  } else if (msg.data.resize) {",
+            "    SIZE.width = msg.data.resize.width;",
+            "    SIZE.height = msg.data.resize.height;",
+            "  } else if (msg.data.canvas) {",
+            "    SIZE.width = msg.data.canvas.width;",
+            "    SIZE.height = msg.data.canvas.height;",
+            "    CONFETTI = module.exports.create(msg.data.canvas);",
+            "  }",
+            "}"
+          ].join("\n");
+          try {
+            worker = new Worker(URL.createObjectURL(new Blob([code])));
+          } catch (e) {
+            typeof console !== void 0 && typeof console.warn === "function" ? console.warn("\u{1F38A} Could not load worker", e) : null;
+            return null;
+          }
+          decorate(worker);
+        }
+        return worker;
+      };
+    }();
+    var defaults = {
+      particleCount: 50,
+      angle: 90,
+      spread: 45,
+      startVelocity: 45,
+      decay: 0.9,
+      gravity: 1,
+      drift: 0,
+      ticks: 200,
+      x: 0.5,
+      y: 0.5,
+      shapes: ["square", "circle"],
+      zIndex: 100,
+      colors: [
+        "#26ccff",
+        "#a25afd",
+        "#ff5e7e",
+        "#88ff5a",
+        "#fcff42",
+        "#ffa62d",
+        "#ff36ff"
+      ],
+      // probably should be true, but back-compat
+      disableForReducedMotion: false,
+      scalar: 1
+    };
+    function convert(val, transform) {
+      return transform ? transform(val) : val;
+    }
+    function isOk(val) {
+      return !(val === null || val === void 0);
+    }
+    function prop(options, name, transform) {
+      return convert(
+        options && isOk(options[name]) ? options[name] : defaults[name],
+        transform
+      );
+    }
+    function onlyPositiveInt(number) {
+      return number < 0 ? 0 : Math.floor(number);
+    }
+    function randomInt(min, max) {
+      return Math.floor(Math.random() * (max - min)) + min;
+    }
+    function toDecimal(str) {
+      return parseInt(str, 16);
+    }
+    function colorsToRgb(colors) {
+      return colors.map(hexToRgb);
+    }
+    function hexToRgb(str) {
+      var val = String(str).replace(/[^0-9a-f]/gi, "");
+      if (val.length < 6) {
+        val = val[0] + val[0] + val[1] + val[1] + val[2] + val[2];
+      }
+      return {
+        r: toDecimal(val.substring(0, 2)),
+        g: toDecimal(val.substring(2, 4)),
+        b: toDecimal(val.substring(4, 6))
+      };
+    }
+    function getOrigin(options) {
+      var origin = prop(options, "origin", Object);
+      origin.x = prop(origin, "x", Number);
+      origin.y = prop(origin, "y", Number);
+      return origin;
+    }
+    function setCanvasWindowSize(canvas) {
+      canvas.width = document.documentElement.clientWidth;
+      canvas.height = document.documentElement.clientHeight;
+    }
+    function setCanvasRectSize(canvas) {
+      var rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width;
+      canvas.height = rect.height;
+    }
+    function getCanvas(zIndex) {
+      var canvas = document.createElement("canvas");
+      canvas.style.position = "fixed";
+      canvas.style.top = "0px";
+      canvas.style.left = "0px";
+      canvas.style.pointerEvents = "none";
+      canvas.style.zIndex = zIndex;
+      return canvas;
+    }
+    function ellipse(context, x2, y2, radiusX, radiusY, rotation, startAngle, endAngle, antiClockwise) {
+      context.save();
+      context.translate(x2, y2);
+      context.rotate(rotation);
+      context.scale(radiusX, radiusY);
+      context.arc(0, 0, 1, startAngle, endAngle, antiClockwise);
+      context.restore();
+    }
+    function randomPhysics(opts) {
+      var radAngle = opts.angle * (Math.PI / 180);
+      var radSpread = opts.spread * (Math.PI / 180);
+      return {
+        x: opts.x,
+        y: opts.y,
+        wobble: Math.random() * 10,
+        wobbleSpeed: Math.min(0.11, Math.random() * 0.1 + 0.05),
+        velocity: opts.startVelocity * 0.5 + Math.random() * opts.startVelocity,
+        angle2D: -radAngle + (0.5 * radSpread - Math.random() * radSpread),
+        tiltAngle: (Math.random() * (0.75 - 0.25) + 0.25) * Math.PI,
+        color: opts.color,
+        shape: opts.shape,
+        tick: 0,
+        totalTicks: opts.ticks,
+        decay: opts.decay,
+        drift: opts.drift,
+        random: Math.random() + 2,
+        tiltSin: 0,
+        tiltCos: 0,
+        wobbleX: 0,
+        wobbleY: 0,
+        gravity: opts.gravity * 3,
+        ovalScalar: 0.6,
+        scalar: opts.scalar,
+        flat: opts.flat
+      };
+    }
+    function updateFetti(context, fetti) {
+      fetti.x += Math.cos(fetti.angle2D) * fetti.velocity + fetti.drift;
+      fetti.y += Math.sin(fetti.angle2D) * fetti.velocity + fetti.gravity;
+      fetti.velocity *= fetti.decay;
+      if (fetti.flat) {
+        fetti.wobble = 0;
+        fetti.wobbleX = fetti.x + 10 * fetti.scalar;
+        fetti.wobbleY = fetti.y + 10 * fetti.scalar;
+        fetti.tiltSin = 0;
+        fetti.tiltCos = 0;
+        fetti.random = 1;
+      } else {
+        fetti.wobble += fetti.wobbleSpeed;
+        fetti.wobbleX = fetti.x + 10 * fetti.scalar * Math.cos(fetti.wobble);
+        fetti.wobbleY = fetti.y + 10 * fetti.scalar * Math.sin(fetti.wobble);
+        fetti.tiltAngle += 0.1;
+        fetti.tiltSin = Math.sin(fetti.tiltAngle);
+        fetti.tiltCos = Math.cos(fetti.tiltAngle);
+        fetti.random = Math.random() + 2;
+      }
+      var progress = fetti.tick++ / fetti.totalTicks;
+      var x1 = fetti.x + fetti.random * fetti.tiltCos;
+      var y1 = fetti.y + fetti.random * fetti.tiltSin;
+      var x2 = fetti.wobbleX + fetti.random * fetti.tiltCos;
+      var y2 = fetti.wobbleY + fetti.random * fetti.tiltSin;
+      context.fillStyle = "rgba(" + fetti.color.r + ", " + fetti.color.g + ", " + fetti.color.b + ", " + (1 - progress) + ")";
+      context.beginPath();
+      if (canUsePaths && fetti.shape.type === "path" && typeof fetti.shape.path === "string" && Array.isArray(fetti.shape.matrix)) {
+        context.fill(transformPath2D(
+          fetti.shape.path,
+          fetti.shape.matrix,
+          fetti.x,
+          fetti.y,
+          Math.abs(x2 - x1) * 0.1,
+          Math.abs(y2 - y1) * 0.1,
+          Math.PI / 10 * fetti.wobble
+        ));
+      } else if (fetti.shape.type === "bitmap") {
+        var rotation = Math.PI / 10 * fetti.wobble;
+        var scaleX = Math.abs(x2 - x1) * 0.1;
+        var scaleY = Math.abs(y2 - y1) * 0.1;
+        var width = fetti.shape.bitmap.width * fetti.scalar;
+        var height = fetti.shape.bitmap.height * fetti.scalar;
+        var matrix = new DOMMatrix([
+          Math.cos(rotation) * scaleX,
+          Math.sin(rotation) * scaleX,
+          -Math.sin(rotation) * scaleY,
+          Math.cos(rotation) * scaleY,
+          fetti.x,
+          fetti.y
+        ]);
+        matrix.multiplySelf(new DOMMatrix(fetti.shape.matrix));
+        var pattern = context.createPattern(bitmapMapper.transform(fetti.shape.bitmap), "no-repeat");
+        pattern.setTransform(matrix);
+        context.globalAlpha = 1 - progress;
+        context.fillStyle = pattern;
+        context.fillRect(
+          fetti.x - width / 2,
+          fetti.y - height / 2,
+          width,
+          height
+        );
+        context.globalAlpha = 1;
+      } else if (fetti.shape === "circle") {
+        context.ellipse ? context.ellipse(fetti.x, fetti.y, Math.abs(x2 - x1) * fetti.ovalScalar, Math.abs(y2 - y1) * fetti.ovalScalar, Math.PI / 10 * fetti.wobble, 0, 2 * Math.PI) : ellipse(context, fetti.x, fetti.y, Math.abs(x2 - x1) * fetti.ovalScalar, Math.abs(y2 - y1) * fetti.ovalScalar, Math.PI / 10 * fetti.wobble, 0, 2 * Math.PI);
+      } else if (fetti.shape === "star") {
+        var rot = Math.PI / 2 * 3;
+        var innerRadius = 4 * fetti.scalar;
+        var outerRadius = 8 * fetti.scalar;
+        var x3 = fetti.x;
+        var y3 = fetti.y;
+        var spikes = 5;
+        var step = Math.PI / spikes;
+        while (spikes--) {
+          x3 = fetti.x + Math.cos(rot) * outerRadius;
+          y3 = fetti.y + Math.sin(rot) * outerRadius;
+          context.lineTo(x3, y3);
+          rot += step;
+          x3 = fetti.x + Math.cos(rot) * innerRadius;
+          y3 = fetti.y + Math.sin(rot) * innerRadius;
+          context.lineTo(x3, y3);
+          rot += step;
+        }
+      } else {
+        context.moveTo(Math.floor(fetti.x), Math.floor(fetti.y));
+        context.lineTo(Math.floor(fetti.wobbleX), Math.floor(y1));
+        context.lineTo(Math.floor(x2), Math.floor(y2));
+        context.lineTo(Math.floor(x1), Math.floor(fetti.wobbleY));
+      }
+      context.closePath();
+      context.fill();
+      return fetti.tick < fetti.totalTicks;
+    }
+    function animate(canvas, fettis, resizer, size, done) {
+      var animatingFettis = fettis.slice();
+      var context = canvas.getContext("2d");
+      var animationFrame;
+      var destroy;
+      var prom = promise(function(resolve) {
+        function onDone() {
+          animationFrame = destroy = null;
+          context.clearRect(0, 0, size.width, size.height);
+          bitmapMapper.clear();
+          done();
+          resolve();
+        }
+        function update() {
+          if (isWorker && !(size.width === workerSize.width && size.height === workerSize.height)) {
+            size.width = canvas.width = workerSize.width;
+            size.height = canvas.height = workerSize.height;
+          }
+          if (!size.width && !size.height) {
+            resizer(canvas);
+            size.width = canvas.width;
+            size.height = canvas.height;
+          }
+          context.clearRect(0, 0, size.width, size.height);
+          animatingFettis = animatingFettis.filter(function(fetti) {
+            return updateFetti(context, fetti);
+          });
+          if (animatingFettis.length) {
+            animationFrame = raf.frame(update);
+          } else {
+            onDone();
+          }
+        }
+        animationFrame = raf.frame(update);
+        destroy = onDone;
+      });
+      return {
+        addFettis: function(fettis2) {
+          animatingFettis = animatingFettis.concat(fettis2);
+          return prom;
+        },
+        canvas,
+        promise: prom,
+        reset: function() {
+          if (animationFrame) {
+            raf.cancel(animationFrame);
+          }
+          if (destroy) {
+            destroy();
+          }
+        }
+      };
+    }
+    function confettiCannon(canvas, globalOpts) {
+      var isLibCanvas = !canvas;
+      var allowResize = !!prop(globalOpts || {}, "resize");
+      var hasResizeEventRegistered = false;
+      var globalDisableForReducedMotion = prop(globalOpts, "disableForReducedMotion", Boolean);
+      var shouldUseWorker = canUseWorker && !!prop(globalOpts || {}, "useWorker");
+      var worker = shouldUseWorker ? getWorker() : null;
+      var resizer = isLibCanvas ? setCanvasWindowSize : setCanvasRectSize;
+      var initialized = canvas && worker ? !!canvas.__confetti_initialized : false;
+      var preferLessMotion = typeof matchMedia === "function" && matchMedia("(prefers-reduced-motion)").matches;
+      var animationObj;
+      function fireLocal(options, size, done) {
+        var particleCount = prop(options, "particleCount", onlyPositiveInt);
+        var angle = prop(options, "angle", Number);
+        var spread = prop(options, "spread", Number);
+        var startVelocity = prop(options, "startVelocity", Number);
+        var decay = prop(options, "decay", Number);
+        var gravity = prop(options, "gravity", Number);
+        var drift = prop(options, "drift", Number);
+        var colors = prop(options, "colors", colorsToRgb);
+        var ticks = prop(options, "ticks", Number);
+        var shapes = prop(options, "shapes");
+        var scalar = prop(options, "scalar");
+        var flat = !!prop(options, "flat");
+        var origin = getOrigin(options);
+        var temp = particleCount;
+        var fettis = [];
+        var startX = canvas.width * origin.x;
+        var startY = canvas.height * origin.y;
+        while (temp--) {
+          fettis.push(
+            randomPhysics({
+              x: startX,
+              y: startY,
+              angle,
+              spread,
+              startVelocity,
+              color: colors[temp % colors.length],
+              shape: shapes[randomInt(0, shapes.length)],
+              ticks,
+              decay,
+              gravity,
+              drift,
+              scalar,
+              flat
+            })
+          );
+        }
+        if (animationObj) {
+          return animationObj.addFettis(fettis);
+        }
+        animationObj = animate(canvas, fettis, resizer, size, done);
+        return animationObj.promise;
+      }
+      function fire(options) {
+        var disableForReducedMotion = globalDisableForReducedMotion || prop(options, "disableForReducedMotion", Boolean);
+        var zIndex = prop(options, "zIndex", Number);
+        if (disableForReducedMotion && preferLessMotion) {
+          return promise(function(resolve) {
+            resolve();
+          });
+        }
+        if (isLibCanvas && animationObj) {
+          canvas = animationObj.canvas;
+        } else if (isLibCanvas && !canvas) {
+          canvas = getCanvas(zIndex);
+          document.body.appendChild(canvas);
+        }
+        if (allowResize && !initialized) {
+          resizer(canvas);
+        }
+        var size = {
+          width: canvas.width,
+          height: canvas.height
+        };
+        if (worker && !initialized) {
+          worker.init(canvas);
+        }
+        initialized = true;
+        if (worker) {
+          canvas.__confetti_initialized = true;
+        }
+        function onResize() {
+          if (worker) {
+            var obj = {
+              getBoundingClientRect: function() {
+                if (!isLibCanvas) {
+                  return canvas.getBoundingClientRect();
+                }
+              }
+            };
+            resizer(obj);
+            worker.postMessage({
+              resize: {
+                width: obj.width,
+                height: obj.height
+              }
+            });
+            return;
+          }
+          size.width = size.height = null;
+        }
+        function done() {
+          animationObj = null;
+          if (allowResize) {
+            hasResizeEventRegistered = false;
+            global.removeEventListener("resize", onResize);
+          }
+          if (isLibCanvas && canvas) {
+            if (document.body.contains(canvas)) {
+              document.body.removeChild(canvas);
+            }
+            canvas = null;
+            initialized = false;
+          }
+        }
+        if (allowResize && !hasResizeEventRegistered) {
+          hasResizeEventRegistered = true;
+          global.addEventListener("resize", onResize, false);
+        }
+        if (worker) {
+          return worker.fire(options, size, done);
+        }
+        return fireLocal(options, size, done);
+      }
+      fire.reset = function() {
+        if (worker) {
+          worker.reset();
+        }
+        if (animationObj) {
+          animationObj.reset();
+        }
+      };
+      return fire;
+    }
+    var defaultFire;
+    function getDefaultFire() {
+      if (!defaultFire) {
+        defaultFire = confettiCannon(null, { useWorker: true, resize: true });
+      }
+      return defaultFire;
+    }
+    function transformPath2D(pathString, pathMatrix, x2, y2, scaleX, scaleY, rotation) {
+      var path2d = new Path2D(pathString);
+      var t1 = new Path2D();
+      t1.addPath(path2d, new DOMMatrix(pathMatrix));
+      var t2 = new Path2D();
+      t2.addPath(t1, new DOMMatrix([
+        Math.cos(rotation) * scaleX,
+        Math.sin(rotation) * scaleX,
+        -Math.sin(rotation) * scaleY,
+        Math.cos(rotation) * scaleY,
+        x2,
+        y2
+      ]));
+      return t2;
+    }
+    function shapeFromPath(pathData) {
+      if (!canUsePaths) {
+        throw new Error("path confetti are not supported in this browser");
+      }
+      var path, matrix;
+      if (typeof pathData === "string") {
+        path = pathData;
+      } else {
+        path = pathData.path;
+        matrix = pathData.matrix;
+      }
+      var path2d = new Path2D(path);
+      var tempCanvas = document.createElement("canvas");
+      var tempCtx = tempCanvas.getContext("2d");
+      if (!matrix) {
+        var maxSize = 1e3;
+        var minX = maxSize;
+        var minY = maxSize;
+        var maxX = 0;
+        var maxY = 0;
+        var width, height;
+        for (var x2 = 0; x2 < maxSize; x2 += 2) {
+          for (var y2 = 0; y2 < maxSize; y2 += 2) {
+            if (tempCtx.isPointInPath(path2d, x2, y2, "nonzero")) {
+              minX = Math.min(minX, x2);
+              minY = Math.min(minY, y2);
+              maxX = Math.max(maxX, x2);
+              maxY = Math.max(maxY, y2);
+            }
+          }
+        }
+        width = maxX - minX;
+        height = maxY - minY;
+        var maxDesiredSize = 10;
+        var scale = Math.min(maxDesiredSize / width, maxDesiredSize / height);
+        matrix = [
+          scale,
+          0,
+          0,
+          scale,
+          -Math.round(width / 2 + minX) * scale,
+          -Math.round(height / 2 + minY) * scale
+        ];
+      }
+      return {
+        type: "path",
+        path,
+        matrix
+      };
+    }
+    function shapeFromText(textData) {
+      var text, scalar = 1, color = "#000000", fontFamily = '"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "EmojiOne Color", "Android Emoji", "Twemoji Mozilla", "system emoji", sans-serif';
+      if (typeof textData === "string") {
+        text = textData;
+      } else {
+        text = textData.text;
+        scalar = "scalar" in textData ? textData.scalar : scalar;
+        fontFamily = "fontFamily" in textData ? textData.fontFamily : fontFamily;
+        color = "color" in textData ? textData.color : color;
+      }
+      var fontSize = 10 * scalar;
+      var font = "" + fontSize + "px " + fontFamily;
+      var canvas = new OffscreenCanvas(fontSize, fontSize);
+      var ctx = canvas.getContext("2d");
+      ctx.font = font;
+      var size = ctx.measureText(text);
+      var width = Math.ceil(size.actualBoundingBoxRight + size.actualBoundingBoxLeft);
+      var height = Math.ceil(size.actualBoundingBoxAscent + size.actualBoundingBoxDescent);
+      var padding = 2;
+      var x2 = size.actualBoundingBoxLeft + padding;
+      var y2 = size.actualBoundingBoxAscent + padding;
+      width += padding + padding;
+      height += padding + padding;
+      canvas = new OffscreenCanvas(width, height);
+      ctx = canvas.getContext("2d");
+      ctx.font = font;
+      ctx.fillStyle = color;
+      ctx.fillText(text, x2, y2);
+      var scale = 1 / scalar;
+      return {
+        type: "bitmap",
+        // TODO these probably need to be transfered for workers
+        bitmap: canvas.transferToImageBitmap(),
+        matrix: [scale, 0, 0, scale, -width * scale / 2, -height * scale / 2]
+      };
+    }
+    module2.exports = function() {
+      return getDefaultFire().apply(this, arguments);
+    };
+    module2.exports.reset = function() {
+      getDefaultFire().reset();
+    };
+    module2.exports.create = confettiCannon;
+    module2.exports.shapeFromPath = shapeFromPath;
+    module2.exports.shapeFromText = shapeFromText;
+  })(function() {
+    if (typeof window !== "undefined") {
+      return window;
+    }
+    if (typeof self !== "undefined") {
+      return self;
+    }
+    return this || {};
+  }(), module, false);
+  var confetti_module_default = module.exports;
+  var create = module.exports.create;
+
   // frontend/Utils.js
+  var import_random_unicode_emoji = __toESM(require_random_unicode_emoji());
   var cyrb53 = (str, seed = 0) => {
     let h1 = 3735928559 ^ seed, h2 = 1103547991 ^ seed;
     for (let i2 = 0, ch; i2 < str.length; i2++) {
@@ -26963,6 +27708,36 @@
     h2 ^= Math.imul(h1 ^ h1 >>> 13, 3266489909);
     return 4294967296 * (2097151 & h2) + (h1 >>> 0);
   };
+  var runConfetti = (time) => {
+    const duration = 15 * time;
+    let animationEnd = Date.now() + duration;
+    const emojis = import_random_unicode_emoji.default.random({ count: 3 });
+    const shapes = [];
+    for (let i2 = 0; i2 < emojis.length; i2++) {
+      shapes.push(confetti_module_default.shapeFromText({ text: emojis[i2] }));
+    }
+    (function frame() {
+      const timeLeft = animationEnd - Date.now();
+      confetti_module_default({
+        particleCount: 2,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0, y: 1 },
+        shapes
+      });
+      confetti_module_default({
+        particleCount: 2,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1, y: 1 },
+        shapes
+      });
+      if (timeLeft > 0) {
+        requestAnimationFrame(frame);
+      }
+    })();
+  };
+  var sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
 
   // frontend/pages/Review.jsx
   var Container2 = dt.div`
@@ -26997,17 +27772,20 @@
 `;
   var ReviewBox = dt.div`
   width: 70%;
-  max-height: 300px;
+  max-height: 150px;
   border-radius: 10px;
   box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 3px;
   background: #353535;
   color: #fff;
   padding: 12px;
+  overflow-y: auto;
 `;
   var ReviewGame = () => {
-    const [loading, setLoading] = (0, import_react5.useState)(true);
-    const [games, setGames] = (0, import_react5.useState)({});
-    (0, import_react5.useEffect)(() => {
+    const [loading, setLoading] = (0, import_react6.useState)(true);
+    const [games, setGames] = (0, import_react6.useState)({});
+    const [winnerCard, setWinnerCard] = (0, import_react6.useState)(-1);
+    const [selectedCard, setSelectedCard] = (0, import_react6.useState)(-1);
+    (0, import_react6.useEffect)(() => {
       const fetchReview = async () => {
         const data = await fetch("api/review");
         const response = await data.json();
@@ -27018,7 +27796,13 @@
     }, []);
     const onCardClick = async (id) => {
       const target = games.reviews.find((game) => cyrb53(game.appId) === games.target);
-      id === target.appId ? setScore((prev2) => prev2 + 1) : setScore((prev2) => prev2 - 1);
+      setSelectedCard(id);
+      setWinnerCard(target.appId);
+      if (id === target.appId) {
+        runConfetti(10);
+      } else {
+      }
+      await sleep(4e3);
       setLoading(true);
       const data = await fetch("api/review");
       const response = await data.json();
@@ -27029,9 +27813,105 @@
       const target = games.reviews.find((game) => cyrb53(game.appId) === games.target);
       return target.review;
     };
-    return /* @__PURE__ */ import_react5.default.createElement(Container2, null, loading ? /* @__PURE__ */ import_react5.default.createElement(Loader, null) : /* @__PURE__ */ import_react5.default.createElement(import_react5.default.Fragment, null, /* @__PURE__ */ import_react5.default.createElement(CardContainer, null, games.reviews.map((game) => {
-      return /* @__PURE__ */ import_react5.default.createElement(GameCard, { key: game.appId, onClick: () => onCardClick(game.appId), src: game.img_url });
-    })), /* @__PURE__ */ import_react5.default.createElement(ReviewBox, { className: "roboto-bold" }, getTargetReview())));
+    return /* @__PURE__ */ import_react6.default.createElement(Container2, null, loading ? /* @__PURE__ */ import_react6.default.createElement(Loader, null) : /* @__PURE__ */ import_react6.default.createElement(import_react6.default.Fragment, null, /* @__PURE__ */ import_react6.default.createElement(CardContainer, null, games.reviews.map((game) => {
+      return /* @__PURE__ */ import_react6.default.createElement(
+        GameCard,
+        {
+          style: { border: `${winnerCard === game.appId ? "green 5px solid" : selectedCard === game.appId ? "orange 5px solid" : ""}` },
+          key: game.appId,
+          onClick: () => onCardClick(game.appId),
+          src: game.img_url
+        }
+      );
+    })), /* @__PURE__ */ import_react6.default.createElement(ReviewBox, { className: "roboto-bold" }, getTargetReview())));
+  };
+
+  // frontend/pages/Requirement.jsx
+  var import_react7 = __toESM(require_react());
+  var Container3 = dt.div`
+    background-color: #222;
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+    padding: 2em;
+`;
+  var CardContainer2 = dt.div`
+  height: fit-content;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+`;
+  var GameCard2 = dt.img`
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 16px;
+    transform: scale(1.05);
+  }
+`;
+  var ReviewBox2 = dt.div`
+  width: 70%;
+  max-height: 175px;
+  border-radius: 10px;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 3px;
+  background: #353535;
+  color: #fff;
+  padding: 12px;
+  overflow-y: auto;
+`;
+  var RequirementGame = () => {
+    const [loading, setLoading] = (0, import_react7.useState)(true);
+    const [games, setGames] = (0, import_react7.useState)({});
+    const [winnerCard, setWinnerCard] = (0, import_react7.useState)(-1);
+    const [selectedCard, setSelectedCard] = (0, import_react7.useState)(-1);
+    (0, import_react7.useEffect)(() => {
+      const fetchRequirement = async () => {
+        const data = await fetch("api/requirement");
+        const response = await data.json();
+        setGames(response);
+        setLoading(false);
+      };
+      fetchRequirement();
+    }, []);
+    const onCardClick = async (id) => {
+      const target = games.requirements.find((game) => cyrb53(game.appId) === games.target);
+      setSelectedCard(id);
+      setWinnerCard(target.appId);
+      if (id === target.appId) {
+        runConfetti(10);
+      } else {
+      }
+      await sleep(4e3);
+      setLoading(true);
+      const data = await fetch("api/requirement");
+      const response = await data.json();
+      setGames(response);
+      setLoading(false);
+    };
+    const getTargetReview = () => {
+      const target = games.requirements.find((game) => cyrb53(game.appId) === games.target);
+      return target.requirement;
+    };
+    return /* @__PURE__ */ import_react7.default.createElement(Container3, null, loading ? /* @__PURE__ */ import_react7.default.createElement(Loader, null) : /* @__PURE__ */ import_react7.default.createElement(import_react7.default.Fragment, null, /* @__PURE__ */ import_react7.default.createElement(CardContainer2, null, games.requirements.map((game) => {
+      return /* @__PURE__ */ import_react7.default.createElement(
+        GameCard2,
+        {
+          style: { border: `${winnerCard === game.appId ? "green 5px solid" : selectedCard === game.appId ? "orange 5px solid" : ""}` },
+          key: game.appId,
+          onClick: () => onCardClick(game.appId),
+          src: game.img_url
+        }
+      );
+    })), /* @__PURE__ */ import_react7.default.createElement(ReviewBox2, { className: "roboto-bold", dangerouslySetInnerHTML: { __html: getTargetReview() } })));
   };
 
   // frontend/Root.jsx
@@ -27041,6 +27921,17 @@
 }
 * {
   margin: 0;
+}
+*::-webkit-scrollbar,
+*::-webkit-scrollbar-thumb {
+  width: 26px;
+  border-radius: 13px;
+  background-clip: padding-box;
+  border: 10px solid transparent;
+}
+
+*::-webkit-scrollbar-thumb {        
+  box-shadow: inset 0 0 0 10px;
 }
 body {
   line-height: 1.5;
@@ -27132,13 +28023,13 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 `;
   var Root = () => {
-    return /* @__PURE__ */ import_react6.default.createElement("div", null, /* @__PURE__ */ import_react6.default.createElement(GlobalStyle, null), /* @__PURE__ */ import_react6.default.createElement(Routes, null, /* @__PURE__ */ import_react6.default.createElement(Route, { path: "/", element: /* @__PURE__ */ import_react6.default.createElement(Index, null) }), /* @__PURE__ */ import_react6.default.createElement(Route, { path: "/review", element: /* @__PURE__ */ import_react6.default.createElement(ReviewGame, null) })));
+    return /* @__PURE__ */ import_react8.default.createElement("div", null, /* @__PURE__ */ import_react8.default.createElement(GlobalStyle, null), /* @__PURE__ */ import_react8.default.createElement(Routes, null, /* @__PURE__ */ import_react8.default.createElement(Route, { path: "/", element: /* @__PURE__ */ import_react8.default.createElement(Index, null) }), /* @__PURE__ */ import_react8.default.createElement(Route, { path: "/review", element: /* @__PURE__ */ import_react8.default.createElement(ReviewGame, null) }), /* @__PURE__ */ import_react8.default.createElement(Route, { path: "/requirement", element: /* @__PURE__ */ import_react8.default.createElement(RequirementGame, null) })));
   };
 
   // frontend/App.jsx
   var root = import_client.default.createRoot(document.getElementById("root"));
   root.render(
-    /* @__PURE__ */ import_react7.default.createElement(import_react7.default.StrictMode, null, /* @__PURE__ */ import_react7.default.createElement(BrowserRouter, null, /* @__PURE__ */ import_react7.default.createElement(Root, null)))
+    /* @__PURE__ */ import_react9.default.createElement(import_react9.default.StrictMode, null, /* @__PURE__ */ import_react9.default.createElement(BrowserRouter, null, /* @__PURE__ */ import_react9.default.createElement(Root, null)))
   );
 })();
 /*! Bundled license information:

@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Index } from "./pages/Index";
 import { createGlobalStyle } from "styled-components";
 import { ReviewGame } from "./pages/Review";
+import { RequirementGame } from "./pages/Requirement";
 
 const GlobalStyle = createGlobalStyle`
 *, *::before, *::after {
@@ -10,6 +11,17 @@ const GlobalStyle = createGlobalStyle`
 }
 * {
   margin: 0;
+}
+*::-webkit-scrollbar,
+*::-webkit-scrollbar-thumb {
+  width: 26px;
+  border-radius: 13px;
+  background-clip: padding-box;
+  border: 10px solid transparent;
+}
+
+*::-webkit-scrollbar-thumb {        
+  box-shadow: inset 0 0 0 10px;
 }
 body {
   line-height: 1.5;
@@ -108,6 +120,7 @@ export const Root = () => {
       <Routes>
         <Route path='/' element={<Index />} />
         <Route path='/review' element={<ReviewGame />} />
+        <Route path='/requirement' element={<RequirementGame />} />
       </Routes>
     </div>
   )

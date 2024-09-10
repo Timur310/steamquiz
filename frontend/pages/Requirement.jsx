@@ -38,7 +38,7 @@ const GameCard = styled.img`
 
 const ReviewBox = styled.div`
   width: 70%;
-  max-height: 150px;
+  max-height: 175px;
   border-radius: 10px;
   box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 3px;
   background: #353535;
@@ -47,7 +47,8 @@ const ReviewBox = styled.div`
   overflow-y: auto;
 `
 
-export const ReviewGame = () => {
+
+export const RequirementGame = () => {
 
   const [loading, setLoading] = useState(true)
   const [games, setGames] = useState({})
@@ -55,17 +56,17 @@ export const ReviewGame = () => {
   const [selectedCard, setSelectedCard] = useState(-1)
 
   useEffect(() => {
-    const fetchReview = async () => {
-      const data = await fetch('api/review')
+    const fetchRequirement = async () => {
+      const data = await fetch('api/requirement')
       const response = await data.json()
       setGames(response)
       setLoading(false)
     }
-    fetchReview()
+    fetchRequirement()
   }, [])
 
   const onCardClick = async (id) => {
-    const target = games.reviews.find(game => cyrb53(game.appId) === games.target)
+    const target = games.requirements.find(game => cyrb53(game.appId) === games.target)
 
     setSelectedCard(id)
     setWinnerCard(target.appId)
@@ -79,15 +80,15 @@ export const ReviewGame = () => {
     await sleep(4000)
 
     setLoading(true)
-    const data = await fetch('api/review')
+    const data = await fetch('api/requirement')
     const response = await data.json()
     setGames(response)
     setLoading(false)
   }
 
   const getTargetReview = () => {
-    const target = games.reviews.find(game => cyrb53(game.appId) === games.target)
-    return target.review
+    const target = games.requirements.find(game => cyrb53(game.appId) === games.target)
+    return target.requirement
   }
 
   return (
@@ -95,16 +96,16 @@ export const ReviewGame = () => {
       {loading ? <Loader /> :
         <>
           <CardContainer>
-            {games.reviews.map(game => {
+            {games.requirements.map(game => {
               return (
-                <GameCard 
+                <GameCard
                   style={{ border: `${winnerCard === game.appId ? 'green 5px solid' : selectedCard === game.appId ? 'orange 5px solid' : ''}` }}
                   key={game.appId} onClick={() => onCardClick(game.appId)}
                   src={game.img_url} />
               )
             })}
           </CardContainer>
-          <ReviewBox className="roboto-bold">{getTargetReview()}</ReviewBox>
+          <ReviewBox className="roboto-bold" dangerouslySetInnerHTML={{__html: getTargetReview()}} />
         </>
       }
     </Container>

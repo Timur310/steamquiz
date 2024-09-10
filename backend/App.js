@@ -1,4 +1,5 @@
 import Fastify from 'fastify'
+import { cyrb53 } from './Utils';
 import appIds from "../apps.json" with {type: "json"};
 const path = require('node:path')
 
@@ -8,21 +9,6 @@ app.register(require('@fastify/static'), {
 	root: path.join(__dirname, 'public'),
 	prefix: '/public/', // optional: default '/'
 })
-
-const cyrb53 = (str, seed = 0) => {
-	let h1 = 0xdeadbeef ^ seed, h2 = 0x41c6ce57 ^ seed;
-	for (let i = 0, ch; i < str.length; i++) {
-		ch = str.charCodeAt(i);
-		h1 = Math.imul(h1 ^ ch, 2654435761);
-		h2 = Math.imul(h2 ^ ch, 1597334677);
-	}
-	h1 = Math.imul(h1 ^ (h1 >>> 16), 2246822507);
-	h1 ^= Math.imul(h2 ^ (h2 >>> 13), 3266489909);
-	h2 = Math.imul(h2 ^ (h2 >>> 16), 2246822507);
-	h2 ^= Math.imul(h1 ^ (h1 >>> 13), 3266489909);
-
-	return 4294967296 * (2097151 & h2) + (h1 >>> 0);
-};
 
 app.get('/', function (request, reply) {
 	reply.sendFile('index.html')
@@ -68,6 +54,33 @@ app.get('/api/review', async function handler(request, reply) {
 	const response = {
 		"target": cyrb53(targetGame.appId),
 		"reviews": gamesObject
+	}
+	return response
+})
+
+app.get('/api/requirement', async function handler(request, reply) {
+	const gamesObject = []
+	let targetGame
+	while (gamesObject.length != 3) {
+		id = appIds[(Math.floor(Math.random() * appIds.length))]
+		const gameRequest = await fetch(`https://store.steampowered.com/api/appdetails?appids=${id}`)
+		const gameResponse = await gameRequest.json()
+
+		if (gameResponse[id].data === undefined || !gameResponse[id].data.pc_requirements || !gameResponse[id].data.pc_requirements.minimum) continue
+
+		gamesObject.push({
+			appId: id,
+			title: gameResponse[id].data.name,
+			img_url: gameResponse[id].data.header_image,
+			requirement: gameResponse[id].data.pc_requirements.minimum
+		})
+
+		targetGame = gamesObject[(Math.floor(Math.random() * gamesObject.length))]
+
+	}
+	const response = {
+		"target": cyrb53(targetGame.appId),
+		"requirements": gamesObject
 	}
 	return response
 })
