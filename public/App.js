@@ -26996,28 +26996,29 @@
   }
 `;
   var ReviewBox = dt.div`
-  width: 100;
+  width: 70%;
   max-height: 300px;
   border-radius: 10px;
   box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 3px;
   background: #353535;
   color: #fff;
   padding: 12px;
-  text-overflow: clip;
 `;
   var ReviewGame = () => {
     const [loading, setLoading] = (0, import_react5.useState)(true);
     const [games, setGames] = (0, import_react5.useState)({});
     (0, import_react5.useEffect)(() => {
-      const fetchReview2 = async () => {
+      const fetchReview = async () => {
         const data = await fetch("api/review");
         const response = await data.json();
         setGames(response);
         setLoading(false);
       };
-      fetchReview2();
+      fetchReview();
     }, []);
-    const fetchReview = async () => {
+    const onCardClick = async (id) => {
+      const target = games.reviews.find((game) => cyrb53(game.appId) === games.target);
+      id === target.appId ? setScore((prev2) => prev2 + 1) : setScore((prev2) => prev2 - 1);
       setLoading(true);
       const data = await fetch("api/review");
       const response = await data.json();
@@ -27029,7 +27030,7 @@
       return target.review;
     };
     return /* @__PURE__ */ import_react5.default.createElement(Container2, null, loading ? /* @__PURE__ */ import_react5.default.createElement(Loader, null) : /* @__PURE__ */ import_react5.default.createElement(import_react5.default.Fragment, null, /* @__PURE__ */ import_react5.default.createElement(CardContainer, null, games.reviews.map((game) => {
-      return /* @__PURE__ */ import_react5.default.createElement(GameCard, { onClick: fetchReview, src: game.img_url });
+      return /* @__PURE__ */ import_react5.default.createElement(GameCard, { key: game.appId, onClick: () => onCardClick(game.appId), src: game.img_url });
     })), /* @__PURE__ */ import_react5.default.createElement(ReviewBox, { className: "roboto-bold" }, getTargetReview())));
   };
 

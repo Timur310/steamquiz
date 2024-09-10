@@ -37,14 +37,13 @@ const GameCard = styled.img`
 `
 
 const ReviewBox = styled.div`
-  width: 100;
+  width: 70%;
   max-height: 300px;
   border-radius: 10px;
   box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 3px;
   background: #353535;
   color: #fff;
   padding: 12px;
-  text-overflow: clip;
 `
 
 export const ReviewGame = () => {
@@ -62,7 +61,11 @@ export const ReviewGame = () => {
     fetchReview()
   }, [])
 
-  const fetchReview = async () => {
+  const onCardClick = async (id) => {
+    const target = games.reviews.find(game => cyrb53(game.appId) === games.target)
+
+    id === target.appId ? setScore(prev => prev + 1) : setScore(prev => prev - 1)
+
     setLoading(true)
     const data = await fetch('api/review')
     const response = await data.json()
@@ -82,7 +85,7 @@ export const ReviewGame = () => {
           <CardContainer>
             {games.reviews.map(game => {
               return (
-                <GameCard onClick={fetchReview} src={game.img_url} />
+                <GameCard key={game.appId} onClick={() => onCardClick(game.appId)} src={game.img_url} />
               )
             })}
           </CardContainer>
