@@ -1,6 +1,5 @@
-import Fastify from 'fastify'
-import { cyrb53 } from './Utils';
-import appIds from "../apps.json" with {type: "json"};
+import Fastify from 'fastify';
+import appIds from "../apps.json" with { type: "json" };
 const path = require('node:path')
 
 const app = Fastify({ logger: true })
@@ -17,7 +16,6 @@ app.get('/', function (request, reply) {
 // for the basic single game 3 review
 app.get('/api/review', async function handler(request, reply) {
 	const gamesObject = []
-	let targetGame
 	while (gamesObject.length != 3) {
 		id = appIds[(Math.floor(Math.random() * appIds.length))]
 		const gameRequest = await fetch(`https://store.steampowered.com/api/appdetails?appids=${id}`)
@@ -48,11 +46,11 @@ app.get('/api/review', async function handler(request, reply) {
 			review: finalReview.review
 		})
 
-		targetGame = gamesObject[(Math.floor(Math.random() * gamesObject.length))]
 
 	}
+	const targetGame = gamesObject[(Math.floor(Math.random() * gamesObject.length))]
 	const response = {
-		"target": cyrb53(targetGame.appId),
+		"target": targetGame.appId,
 		"reviews": gamesObject
 	}
 	return response
@@ -60,7 +58,6 @@ app.get('/api/review', async function handler(request, reply) {
 
 app.get('/api/requirement', async function handler(request, reply) {
 	const gamesObject = []
-	let targetGame
 	while (gamesObject.length != 3) {
 		id = appIds[(Math.floor(Math.random() * appIds.length))]
 		const gameRequest = await fetch(`https://store.steampowered.com/api/appdetails?appids=${id}`)
@@ -75,11 +72,11 @@ app.get('/api/requirement', async function handler(request, reply) {
 			requirement: gameResponse[id].data.pc_requirements.minimum
 		})
 
-		targetGame = gamesObject[(Math.floor(Math.random() * gamesObject.length))]
 
 	}
+	const targetGame = gamesObject[(Math.floor(Math.random() * gamesObject.length))]
 	const response = {
-		"target": cyrb53(targetGame.appId),
+		"target": targetGame.appId,
 		"requirements": gamesObject
 	}
 	return response

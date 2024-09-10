@@ -2383,9 +2383,9 @@
           if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
           }
-          var React11 = require_react();
+          var React12 = require_react();
           var Scheduler = require_scheduler();
-          var ReactSharedInternals = React11.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var ReactSharedInternals = React12.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           var suppressWarning = false;
           function setSuppressWarning(newSuppressWarning) {
             {
@@ -3990,7 +3990,7 @@
             {
               if (props.value == null) {
                 if (typeof props.children === "object" && props.children !== null) {
-                  React11.Children.forEach(props.children, function(child) {
+                  React12.Children.forEach(props.children, function(child) {
                     if (child == null) {
                       return;
                     }
@@ -23580,7 +23580,7 @@
   });
 
   // frontend/App.jsx
-  var import_react9 = __toESM(require_react());
+  var import_react10 = __toESM(require_react());
   var import_client = __toESM(require_client());
 
   // node_modules/react-router-dom/dist/index.js
@@ -25511,10 +25511,10 @@
   }
 
   // frontend/Root.jsx
-  var import_react8 = __toESM(require_react());
+  var import_react9 = __toESM(require_react());
 
   // frontend/pages/Index.jsx
-  var import_react4 = __toESM(require_react());
+  var import_react5 = __toESM(require_react());
 
   // node_modules/tslib/tslib.es6.mjs
   var __assign = function() {
@@ -26871,46 +26871,70 @@
     return /* @__PURE__ */ import_react3.default.createElement(BadgeContainer, { className: "roboto-regular" }, text);
   };
 
+  // frontend/components/BackgroundFade.jsx
+  var import_react4 = __toESM(require_react());
+  var BackgroundFadeContainer = dt.div`
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(#222, transparent);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+  var BackgroundFade = () => /* @__PURE__ */ import_react4.default.createElement(BackgroundFadeContainer, null);
+
   // frontend/pages/Index.jsx
   var Container = dt.div`
-    background-color: #222;
-    color: #fff;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 0.5em;
-    gap: 16px;
+  position: relative;
+  background-color: transparent;
+  background-image: radial-gradient(#fff 1px, #222 1px);
+  background-size: 30px 30px;
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0.5em;
+  gap: 16px;
 `;
   var Index = () => {
     const navigate = useNavigate();
-    return /* @__PURE__ */ import_react4.default.createElement(Container, null, /* @__PURE__ */ import_react4.default.createElement(
+    return /* @__PURE__ */ import_react5.default.createElement(Container, null, /* @__PURE__ */ import_react5.default.createElement(BackgroundFade, null), /* @__PURE__ */ import_react5.default.createElement(
       ButtonCard,
       {
         title: "Journalist",
         description: "Guess the game from a review",
         onClicked: () => navigate("/review")
       }
-    ), /* @__PURE__ */ import_react4.default.createElement(
+    ), /* @__PURE__ */ import_react5.default.createElement(
       ButtonCard,
       {
         title: "can it run Crysis?",
         description: "Guess which game matches the pc requirement",
         onClicked: () => navigate("/requirement"),
-        badge: /* @__PURE__ */ import_react4.default.createElement(Badge, { text: "Hard" })
+        badge: /* @__PURE__ */ import_react5.default.createElement(Badge, { text: "Hard" })
       }
     ));
   };
 
   // frontend/pages/Review.jsx
-  var import_react6 = __toESM(require_react());
+  var import_react7 = __toESM(require_react());
 
   // frontend/components/Loader.jsx
-  var import_react5 = __toESM(require_react());
+  var import_react6 = __toESM(require_react());
   var Card2 = dt.div`
-    padding: 1rem 2rem;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 2;
+  background-color: #222
 `;
   var LoaderKeyframes = mt`
   10% {
@@ -26966,6 +26990,10 @@
   display: -ms-flexbox;
   display: flex;
   border-radius: 8px;
+
+  & > p {
+    color: #878787;
+  }
 `;
   var Words = dt.div`
     overflow: hidden;
@@ -26990,9 +27018,10 @@
     padding-left: 6px;
     color: #5D3FD3;
     animation: ${LoaderKeyframes} 6s infinite;
+    
 `;
   var Loader = () => {
-    return /* @__PURE__ */ import_react5.default.createElement(Card2, null, /* @__PURE__ */ import_react5.default.createElement(LoaderContainer, { className: "roboto-regular" }, /* @__PURE__ */ import_react5.default.createElement("p", null, "loading"), /* @__PURE__ */ import_react5.default.createElement(Words, null, /* @__PURE__ */ import_react5.default.createElement(Word, null, "Overwhelmingly Positive"), /* @__PURE__ */ import_react5.default.createElement(Word, null, "Very Positive"), /* @__PURE__ */ import_react5.default.createElement(Word, null, "Positive"), /* @__PURE__ */ import_react5.default.createElement(Word, null, "Mostly Positive"), /* @__PURE__ */ import_react5.default.createElement(Word, null, "Mixed"), /* @__PURE__ */ import_react5.default.createElement(Word, null, "Mostly Negative"))));
+    return /* @__PURE__ */ import_react6.default.createElement(Card2, null, /* @__PURE__ */ import_react6.default.createElement(LoaderContainer, { className: "roboto-regular" }, /* @__PURE__ */ import_react6.default.createElement("p", null, "loading"), /* @__PURE__ */ import_react6.default.createElement(Words, null, /* @__PURE__ */ import_react6.default.createElement(Word, null, "Overwhelmingly Positive"), /* @__PURE__ */ import_react6.default.createElement(Word, null, "Very Positive"), /* @__PURE__ */ import_react6.default.createElement(Word, null, "Positive"), /* @__PURE__ */ import_react6.default.createElement(Word, null, "Mostly Positive"), /* @__PURE__ */ import_react6.default.createElement(Word, null, "Mixed"), /* @__PURE__ */ import_react6.default.createElement(Word, null, "Mostly Negative"))));
   };
 
   // node_modules/canvas-confetti/dist/confetti.module.mjs
@@ -27695,19 +27724,6 @@
 
   // frontend/Utils.js
   var import_random_unicode_emoji = __toESM(require_random_unicode_emoji());
-  var cyrb53 = (str, seed = 0) => {
-    let h1 = 3735928559 ^ seed, h2 = 1103547991 ^ seed;
-    for (let i2 = 0, ch; i2 < str.length; i2++) {
-      ch = str.charCodeAt(i2);
-      h1 = Math.imul(h1 ^ ch, 2654435761);
-      h2 = Math.imul(h2 ^ ch, 1597334677);
-    }
-    h1 = Math.imul(h1 ^ h1 >>> 16, 2246822507);
-    h1 ^= Math.imul(h2 ^ h2 >>> 13, 3266489909);
-    h2 = Math.imul(h2 ^ h2 >>> 16, 2246822507);
-    h2 ^= Math.imul(h1 ^ h1 >>> 13, 3266489909);
-    return 4294967296 * (2097151 & h2) + (h1 >>> 0);
-  };
   var runConfetti = (time) => {
     const duration = 15 * time;
     let animationEnd = Date.now() + duration;
@@ -27741,7 +27757,9 @@
 
   // frontend/pages/Review.jsx
   var Container2 = dt.div`
-    background-color: #222;
+    background-color: transparent;
+    background-image: radial-gradient(#fff 1px, #222 1px);
+    background-size: 30px 30px;
     color: #fff;
     position: relative;
     display: flex;
@@ -27756,6 +27774,7 @@
   max-width: 100%;
   display: flex;
   justify-content: space-around;
+  z-index: 2;
 `;
   var GameCard = dt.img`
   width: 100%;
@@ -27769,23 +27788,24 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 16px;
     transform: scale(1.05);
   }
+  z-index: 2;
 `;
   var ReviewBox = dt.div`
   width: 70%;
   max-height: 150px;
   border-radius: 10px;
-  box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 3px;
   background: #353535;
   color: #fff;
   padding: 12px;
   overflow-y: auto;
+  z-index: 2;
 `;
   var ReviewGame = () => {
-    const [loading, setLoading] = (0, import_react6.useState)(true);
-    const [games, setGames] = (0, import_react6.useState)({});
-    const [winnerCard, setWinnerCard] = (0, import_react6.useState)(-1);
-    const [selectedCard, setSelectedCard] = (0, import_react6.useState)(-1);
-    (0, import_react6.useEffect)(() => {
+    const [loading, setLoading] = (0, import_react7.useState)(true);
+    const [games, setGames] = (0, import_react7.useState)({});
+    const [winnerCard, setWinnerCard] = (0, import_react7.useState)(-1);
+    const [selectedCard, setSelectedCard] = (0, import_react7.useState)(-1);
+    (0, import_react7.useEffect)(() => {
       const fetchReview = async () => {
         const data = await fetch("api/review");
         const response = await data.json();
@@ -27795,10 +27815,9 @@
       fetchReview();
     }, []);
     const onCardClick = async (id) => {
-      const target = games.reviews.find((game) => cyrb53(game.appId) === games.target);
       setSelectedCard(id);
-      setWinnerCard(target.appId);
-      if (id === target.appId) {
+      setWinnerCard(games.target);
+      if (id === games.target) {
         runConfetti(10);
       } else {
       }
@@ -27810,11 +27829,11 @@
       setLoading(false);
     };
     const getTargetReview = () => {
-      const target = games.reviews.find((game) => cyrb53(game.appId) === games.target);
+      const target = games.reviews.find((game) => game.appId === games.target);
       return target.review;
     };
-    return /* @__PURE__ */ import_react6.default.createElement(Container2, null, loading ? /* @__PURE__ */ import_react6.default.createElement(Loader, null) : /* @__PURE__ */ import_react6.default.createElement(import_react6.default.Fragment, null, /* @__PURE__ */ import_react6.default.createElement(CardContainer, null, games.reviews.map((game) => {
-      return /* @__PURE__ */ import_react6.default.createElement(
+    return /* @__PURE__ */ import_react7.default.createElement(Container2, null, loading ? /* @__PURE__ */ import_react7.default.createElement(Loader, null) : /* @__PURE__ */ import_react7.default.createElement(import_react7.default.Fragment, null, /* @__PURE__ */ import_react7.default.createElement(CardContainer, null, games.reviews.map((game) => {
+      return /* @__PURE__ */ import_react7.default.createElement(
         GameCard,
         {
           style: { border: `${winnerCard === game.appId ? "green 5px solid" : selectedCard === game.appId ? "orange 5px solid" : ""}` },
@@ -27823,13 +27842,15 @@
           src: game.img_url
         }
       );
-    })), /* @__PURE__ */ import_react6.default.createElement(ReviewBox, { className: "roboto-bold" }, getTargetReview())));
+    })), /* @__PURE__ */ import_react7.default.createElement(ReviewBox, { className: "roboto-bold" }, getTargetReview())));
   };
 
   // frontend/pages/Requirement.jsx
-  var import_react7 = __toESM(require_react());
+  var import_react8 = __toESM(require_react());
   var Container3 = dt.div`
-    background-color: #222;
+    background-color: transparent;
+    background-image: radial-gradient(#fff 1px, #222 1px);
+    background-size: 30px 30px;
     color: #fff;
     position: relative;
     display: flex;
@@ -27844,6 +27865,7 @@
   max-width: 100%;
   display: flex;
   justify-content: space-around;
+  z-index: 2;
 `;
   var GameCard2 = dt.img`
   width: 100%;
@@ -27857,23 +27879,24 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 16px;
     transform: scale(1.05);
   }
+  z-index: 2;
 `;
   var ReviewBox2 = dt.div`
   width: 70%;
   max-height: 175px;
   border-radius: 10px;
-  box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 3px;
   background: #353535;
   color: #fff;
   padding: 12px;
   overflow-y: auto;
+  z-index: 2;
 `;
   var RequirementGame = () => {
-    const [loading, setLoading] = (0, import_react7.useState)(true);
-    const [games, setGames] = (0, import_react7.useState)({});
-    const [winnerCard, setWinnerCard] = (0, import_react7.useState)(-1);
-    const [selectedCard, setSelectedCard] = (0, import_react7.useState)(-1);
-    (0, import_react7.useEffect)(() => {
+    const [loading, setLoading] = (0, import_react8.useState)(true);
+    const [games, setGames] = (0, import_react8.useState)({});
+    const [winnerCard, setWinnerCard] = (0, import_react8.useState)(-1);
+    const [selectedCard, setSelectedCard] = (0, import_react8.useState)(-1);
+    (0, import_react8.useEffect)(() => {
       const fetchRequirement = async () => {
         const data = await fetch("api/requirement");
         const response = await data.json();
@@ -27883,12 +27906,11 @@
       fetchRequirement();
     }, []);
     const onCardClick = async (id) => {
-      const target = games.requirements.find((game) => cyrb53(game.appId) === games.target);
       setSelectedCard(id);
-      setWinnerCard(target.appId);
-      if (id === target.appId) {
+      setWinnerCard(games.target);
+      console.log(games.target, id);
+      if (id === games.target) {
         runConfetti(10);
-      } else {
       }
       await sleep(4e3);
       setLoading(true);
@@ -27898,11 +27920,11 @@
       setLoading(false);
     };
     const getTargetReview = () => {
-      const target = games.requirements.find((game) => cyrb53(game.appId) === games.target);
+      const target = games.requirements.find((game) => game.appId === games.target);
       return target.requirement;
     };
-    return /* @__PURE__ */ import_react7.default.createElement(Container3, null, loading ? /* @__PURE__ */ import_react7.default.createElement(Loader, null) : /* @__PURE__ */ import_react7.default.createElement(import_react7.default.Fragment, null, /* @__PURE__ */ import_react7.default.createElement(CardContainer2, null, games.requirements.map((game) => {
-      return /* @__PURE__ */ import_react7.default.createElement(
+    return /* @__PURE__ */ import_react8.default.createElement(Container3, null, loading ? /* @__PURE__ */ import_react8.default.createElement(Loader, null) : /* @__PURE__ */ import_react8.default.createElement(import_react8.default.Fragment, null, /* @__PURE__ */ import_react8.default.createElement(CardContainer2, null, games.requirements.map((game) => {
+      return /* @__PURE__ */ import_react8.default.createElement(
         GameCard2,
         {
           style: { border: `${winnerCard === game.appId ? "green 5px solid" : selectedCard === game.appId ? "orange 5px solid" : ""}` },
@@ -27911,7 +27933,7 @@
           src: game.img_url
         }
       );
-    })), /* @__PURE__ */ import_react7.default.createElement(ReviewBox2, { className: "roboto-bold", dangerouslySetInnerHTML: { __html: getTargetReview() } })));
+    })), /* @__PURE__ */ import_react8.default.createElement(ReviewBox2, { className: "roboto-bold", dangerouslySetInnerHTML: { __html: getTargetReview() } })));
   };
 
   // frontend/Root.jsx
@@ -28023,13 +28045,13 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 `;
   var Root = () => {
-    return /* @__PURE__ */ import_react8.default.createElement("div", null, /* @__PURE__ */ import_react8.default.createElement(GlobalStyle, null), /* @__PURE__ */ import_react8.default.createElement(Routes, null, /* @__PURE__ */ import_react8.default.createElement(Route, { path: "/", element: /* @__PURE__ */ import_react8.default.createElement(Index, null) }), /* @__PURE__ */ import_react8.default.createElement(Route, { path: "/review", element: /* @__PURE__ */ import_react8.default.createElement(ReviewGame, null) }), /* @__PURE__ */ import_react8.default.createElement(Route, { path: "/requirement", element: /* @__PURE__ */ import_react8.default.createElement(RequirementGame, null) })));
+    return /* @__PURE__ */ import_react9.default.createElement("div", null, /* @__PURE__ */ import_react9.default.createElement(GlobalStyle, null), /* @__PURE__ */ import_react9.default.createElement(Routes, null, /* @__PURE__ */ import_react9.default.createElement(Route, { path: "/", element: /* @__PURE__ */ import_react9.default.createElement(Index, null) }), /* @__PURE__ */ import_react9.default.createElement(Route, { path: "/review", element: /* @__PURE__ */ import_react9.default.createElement(ReviewGame, null) }), /* @__PURE__ */ import_react9.default.createElement(Route, { path: "/requirement", element: /* @__PURE__ */ import_react9.default.createElement(RequirementGame, null) })));
   };
 
   // frontend/App.jsx
   var root = import_client.default.createRoot(document.getElementById("root"));
   root.render(
-    /* @__PURE__ */ import_react9.default.createElement(import_react9.default.StrictMode, null, /* @__PURE__ */ import_react9.default.createElement(BrowserRouter, null, /* @__PURE__ */ import_react9.default.createElement(Root, null)))
+    /* @__PURE__ */ import_react10.default.createElement(import_react10.default.StrictMode, null, /* @__PURE__ */ import_react10.default.createElement(BrowserRouter, null, /* @__PURE__ */ import_react10.default.createElement(Root, null)))
   );
 })();
 /*! Bundled license information:

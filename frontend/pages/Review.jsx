@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { Loader } from "../components/Loader"
-import { cyrb53, runConfetti, sleep } from "../Utils"
+import { runConfetti, sleep } from "../Utils"
 
 const Container = styled.div`
-    background-color: #222;
+    background-color: transparent;
+    background-image: radial-gradient(#fff 1px, #222 1px);
+    background-size: 30px 30px;
     color: #fff;
     position: relative;
     display: flex;
@@ -20,6 +22,7 @@ const CardContainer = styled.div`
   max-width: 100%;
   display: flex;
   justify-content: space-around;
+  z-index: 2;
 `
 
 const GameCard = styled.img`
@@ -34,17 +37,18 @@ const GameCard = styled.img`
     box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 16px;
     transform: scale(1.05);
   }
+  z-index: 2;
 `
 
 const ReviewBox = styled.div`
   width: 70%;
   max-height: 150px;
   border-radius: 10px;
-  box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 3px;
   background: #353535;
   color: #fff;
   padding: 12px;
   overflow-y: auto;
+  z-index: 2;
 `
 
 export const ReviewGame = () => {
@@ -65,12 +69,10 @@ export const ReviewGame = () => {
   }, [])
 
   const onCardClick = async (id) => {
-    const target = games.reviews.find(game => cyrb53(game.appId) === games.target)
-
     setSelectedCard(id)
-    setWinnerCard(target.appId)
+    setWinnerCard(games.target)
 
-    if (id === target.appId) {
+    if (id === games.target) {
       runConfetti(10)
     } else {
 
@@ -86,7 +88,7 @@ export const ReviewGame = () => {
   }
 
   const getTargetReview = () => {
-    const target = games.reviews.find(game => cyrb53(game.appId) === games.target)
+    const target = games.reviews.find(game => game.appId === games.target)
     return target.review
   }
 
@@ -97,7 +99,7 @@ export const ReviewGame = () => {
           <CardContainer>
             {games.reviews.map(game => {
               return (
-                <GameCard 
+                <GameCard
                   style={{ border: `${winnerCard === game.appId ? 'green 5px solid' : selectedCard === game.appId ? 'orange 5px solid' : ''}` }}
                   key={game.appId} onClick={() => onCardClick(game.appId)}
                   src={game.img_url} />

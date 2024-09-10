@@ -2,7 +2,15 @@ import React from "react"
 import styled, { keyframes } from "styled-components"
 
 const Card = styled.div`
-    padding: 1rem 2rem;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 2;
+  background-color: #222
 `
 
 const LoaderKeyframes = keyframes`
@@ -60,6 +68,10 @@ const LoaderContainer = styled.div`
   display: -ms-flexbox;
   display: flex;
   border-radius: 8px;
+
+  & > p {
+    color: #878787;
+  }
 `
 
 const Words = styled.div`
@@ -86,6 +98,7 @@ const Word = styled.span`
     padding-left: 6px;
     color: #5D3FD3;
     animation: ${LoaderKeyframes} 6s infinite;
+    
 `
 
 export const Loader = () => {
